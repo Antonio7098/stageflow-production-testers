@@ -1,0 +1,2 @@
+# This directory contains individual agent runs organized by roadmap entry.
+# Structure: runs/{ROADMAP_ENTRY_ID}/run-{DATE}-{SEQ}/

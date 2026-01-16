@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "roadmap_entry_id": "EXAMPLE-001",
+    "roadmap_entry_title": "Example Entry for Reference",
+    "agent_run_id": "00000000-0000-0000-0000-000000000000",
+    "started_at": "2026-01-14T09:00:00Z",
+    "completed_at": "2026-01-14T12:00:00Z",
+    "status": "completed",
+    "stageflow_version": "0.5.0",
+    "agent_model": "claude-3.5-sonnet",
+    "total_findings": 0,
+    "summary": "This is an example findings.json file showing the expected structure. No actual findings - this is a template."
+  },
+  "findings": []
+}

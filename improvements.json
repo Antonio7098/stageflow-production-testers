@@ -1,0 +1,57 @@
+{
+  "template": {
+    "id": "IMP-XXX",
+    "agent": "AGENT_MODEL",
+    "title": "Improvement title",
+    "description": "Detailed description of the improvement",
+    "type": "feature_request|enhancement|optimization|pattern_suggestion|stagekind_suggestion|component_suggestion",
+    "priority": "P0|P1|P2",
+    "category": "core|plus_package|abstraction|component|pattern",
+    "context": "Context where this would be valuable",
+    "rationale": "Why this improvement is needed",
+    "proposed_solution": "Description of suggested approach",
+    "roleplay_perspective": "From your roleplay persona, why would this be valuable for builders?"
+  },
+  "entries": [
+    {
+      "title": "Batch processing stage",
+      "description": "A stage that processes items in batches with configurable size",
+      "type": "component_suggestion",
+      "priority": "P1",
+      "category": "plus_package",
+      "context": "Need to process thousands of records efficiently",
+      "roleplay_perspective": "Would reduce boilerplate for ETL pipelines",
+      "id": "IMP-001",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T09:30:17.715628Z"
+    },
+    {
+      "title": "Batch processing stage",
+      "description": "A stage that processes items in batches with configurable size and overlap",
+      "type": "component_suggestion",
+      "priority": "P1",
+      "category": "plus_package",
+      "context": "Need to process thousands of records efficiently without memory spikes",
+      "rationale": "Current approach requires manual batching logic in every pipeline",
+      "proposed_solution": "Create BatchStage that takes an iterable and batch_size, yields batches",
+      "roleplay_perspective": "As an ETL developer, I would use this in every pipeline to simplify data loading",
+      "id": "IMP-002",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T09:32:01.064635Z"
+    },
+    {
+      "title": "Event-driven trigger stage",
+      "description": "A stage that triggers pipeline execution based on external events like webhooks or message queues",
+      "type": "stagekind_suggestion",
+      "priority": "P0",
+      "category": "plus_package",
+      "context": "Building event-driven architectures where pipelines should react to external triggers",
+      "rationale": "Currently no built-in way to trigger pipelines from webhooks or message events",
+      "proposed_solution": "Create TriggerStage that exposes HTTP endpoint or subscribes to message queue",
+      "roleplay_perspective": "As a real-time data architect, this would enable event-driven workflows without needing external orchestration",
+      "id": "IMP-003",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T09:32:08.085788Z"
+    }
+  ]
+}

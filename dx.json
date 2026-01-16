@@ -1,0 +1,40 @@
+{
+  "template": {
+    "id": "DX-XXX",
+    "agent": "AGENT_MODEL",
+    "title": "DX issue title",
+    "description": "Detailed description of the DX issue",
+    "category": "discoverability|clarity|documentation|error_messages|debugging|boilerplate|flexibility|performance",
+    "severity": "high|medium|low",
+    "component": "Component or area affected",
+    "context": "When this issue was encountered",
+    "impact": "How this affects developer productivity",
+    "recommendation": "Suggested improvement"
+  },
+  "entries": [
+    {
+      "title": "Unclear error messages",
+      "description": "Error messages dont indicate which stage failed",
+      "category": "error_messages",
+      "severity": "medium",
+      "component": "Error handling",
+      "impact": "Debugging takes longer than necessary",
+      "id": "DX-001",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T09:30:16.142719Z"
+    },
+    {
+      "title": "Unclear error messages",
+      "description": "Error messages dont indicate which stage failed",
+      "category": "error_messages",
+      "severity": "medium",
+      "component": "Error handling",
+      "context": "When debugging pipeline failures",
+      "impact": "Debugging takes longer than necessary",
+      "recommendation": "Include stage name and ID in all error messages",
+      "id": "DX-002",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T09:31:58.696398Z"
+    }
+  ]
+}

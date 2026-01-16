@@ -1,0 +1,45 @@
+{
+  "template": {
+    "id": "BUG-XXX",
+    "agent": "AGENT_MODEL",
+    "title": "Bug title",
+    "description": "Detailed description of the bug",
+    "type": "correctness|reliability|security|performance|silent_failure",
+    "severity": "critical|high|medium|low",
+    "component": "Component where bug was found",
+    "reproduction": "Minimal code to reproduce the bug",
+    "expected_behavior": "What should have happened",
+    "actual_behavior": "What actually happened",
+    "impact": "Why this bug matters",
+    "recommendation": "Suggested fix or mitigation"
+  },
+  "entries": [
+    {
+      "title": "Memory leak in RetryStage",
+      "description": "Connections not closed on failure",
+      "type": "reliability",
+      "severity": "high",
+      "component": "RetryStage",
+      "reproduction": "When retry exceeds max_attempts, connections remain open",
+      "impact": "Resource exhaustion in long-running pipelines",
+      "id": "BUG-001",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T09:30:15.193450Z"
+    },
+    {
+      "title": "Memory leak in RetryStage",
+      "description": "Connections not closed on failure",
+      "type": "reliability",
+      "severity": "high",
+      "component": "RetryStage",
+      "reproduction": "When retry exceeds max_attempts, connections remain open",
+      "expected_behavior": "Connections should be closed",
+      "actual_behavior": "Connections stay open",
+      "impact": "Resource exhaustion in long-running pipelines",
+      "recommendation": "Add context manager or finally block to close connections",
+      "id": "BUG-002",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T09:31:57.409539Z"
+    }
+  ]
+}

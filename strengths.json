@@ -1,0 +1,35 @@
+{
+  "template": {
+    "id": "STR-XXX",
+    "agent": "AGENT_MODEL",
+    "title": "Title of the strength",
+    "description": "Detailed description of what makes this a strength",
+    "component": "Specific component or feature",
+    "evidence": "Evidence from testing that demonstrates this strength",
+    "context": "When this strength is most valuable",
+    "impact": "high/medium/low"
+  },
+  "entries": [
+    {
+      "title": "Clean API design",
+      "description": "The Stage API is intuitive and well-documented",
+      "component": "Stage",
+      "evidence": "Built baseline pipeline in under 30 minutes",
+      "impact": "high",
+      "id": "STR-001",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T09:30:10.492001Z"
+    },
+    {
+      "title": "Clean API design",
+      "description": "The Stage API is intuitive and well-documented",
+      "component": "Stage",
+      "evidence": "Built baseline pipeline in under 30 minutes",
+      "context": "When building new pipelines",
+      "impact": "high",
+      "id": "STR-002",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T09:31:55.259792Z"
+    }
+  ]
+}
