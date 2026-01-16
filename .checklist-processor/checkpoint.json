@@ -1,0 +1,1237 @@
+{
+  "timestamp": "2026-01-16T12:08:29.218Z",
+  "items": [
+    {
+      "id": "CORE-001",
+      "status": "☑ Completed (2026-01-16)"
+    },
+    {
+      "id": "CORE-002",
+      "status": "✅ Completed"
+    },
+    {
+      "id": "CORE-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CORE-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CORE-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CORE-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CORE-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CORE-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CORE-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CORE-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DAG-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DAG-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DAG-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DAG-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DAG-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DAG-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DAG-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DAG-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DAG-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DAG-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CONTRACT-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CONTRACT-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CONTRACT-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CONTRACT-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CONTRACT-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CONTRACT-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CONTRACT-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CONTRACT-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TRANSFORM-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TRANSFORM-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TRANSFORM-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TRANSFORM-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TRANSFORM-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TRANSFORM-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TRANSFORM-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TRANSFORM-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENRICH-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENRICH-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENRICH-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENRICH-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENRICH-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENRICH-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENRICH-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENRICH-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENRICH-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENRICH-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ROUTE-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ROUTE-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ROUTE-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ROUTE-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ROUTE-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ROUTE-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ROUTE-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GUARD-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GUARD-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GUARD-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GUARD-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GUARD-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GUARD-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GUARD-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GUARD-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GUARD-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GUARD-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "WORK-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "WORK-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "WORK-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "WORK-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "WORK-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "WORK-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "WORK-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "WORK-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "WORK-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "WORK-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AGENT-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AGENT-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AGENT-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AGENT-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AGENT-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AGENT-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AGENT-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AGENT-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AGENT-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AGENT-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "K8S-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "K8S-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "K8S-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "K8S-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "K8S-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "K8S-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "K8S-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "K8S-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SERVERLESS-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SERVERLESS-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SERVERLESS-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SERVERLESS-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SERVERLESS-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SERVERLESS-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SERVERLESS-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDGE-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDGE-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDGE-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDGE-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDGE-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDGE-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDGE-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AIRGAP-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AIRGAP-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AIRGAP-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AIRGAP-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "AIRGAP-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MULTIREGION-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MULTIREGION-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MULTIREGION-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MULTIREGION-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MULTIREGION-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MULTIREGION-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "FIN-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "FIN-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "FIN-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "FIN-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "FIN-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "FIN-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "FIN-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "FIN-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "FIN-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "FIN-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "HEALTH-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "HEALTH-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "HEALTH-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "HEALTH-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "HEALTH-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "HEALTH-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "HEALTH-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "HEALTH-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "HEALTH-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "HEALTH-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DEF-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DEF-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DEF-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DEF-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DEF-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DEF-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DEF-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DEF-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "RETAIL-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "RETAIL-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "RETAIL-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "RETAIL-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "RETAIL-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "RETAIL-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "RETAIL-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "RETAIL-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GAME-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GAME-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GAME-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GAME-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GAME-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GAME-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GAME-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GAME-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "IND-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "IND-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "IND-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "IND-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "IND-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "IND-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "IND-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "IND-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TELECOM-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TELECOM-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TELECOM-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TELECOM-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TELECOM-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TELECOM-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "TELECOM-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MEDIA-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MEDIA-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MEDIA-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MEDIA-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MEDIA-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MEDIA-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "MEDIA-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDU-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDU-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDU-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDU-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDU-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDU-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "EDU-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GOV-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GOV-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GOV-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GOV-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GOV-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GOV-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "GOV-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENERGY-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENERGY-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENERGY-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENERGY-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENERGY-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENERGY-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "ENERGY-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "BIO-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "BIO-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "BIO-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "BIO-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "BIO-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "BIO-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "BIO-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LEGAL-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LEGAL-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LEGAL-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LEGAL-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LEGAL-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LEGAL-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LEGAL-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-REASON-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-REASON-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-REASON-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-REASON-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-REASON-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-REASON-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-REASON-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-INPUT-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-INPUT-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-INPUT-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-INPUT-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-INPUT-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-INPUT-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-INPUT-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-SYS-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-SYS-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-SYS-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-SYS-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-SYS-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-SYS-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "LLM-SYS-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-011",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-012",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-013",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-014",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "OBS-015",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-011",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-012",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-013",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "CHAOS-014",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-011",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-012",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-013",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-014",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "SEC-015",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-011",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-012",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-013",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "DX-014",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-001",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-002",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-003",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-004",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-005",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-006",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-007",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-008",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-009",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-010",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-011",
+      "status": "☐ Not Started"
+    },
+    {
+      "id": "PERF-012",
+      "status": "☐ Not Started"
+    }
+  ]
+}

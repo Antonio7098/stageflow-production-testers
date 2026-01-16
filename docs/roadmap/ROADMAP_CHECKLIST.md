@@ -9,8 +9,8 @@
 ### 1.1 Context & State Management
 | ID | Target | Priority | Risk | Status |
 |----|--------|----------|------|--------|
-| CORE-001 | OutputBag race conditions in parallel fan-out | P0 | Catastrophic | ☐ Not Started |
-| CORE-002 | ContextSnapshot serialization under load (>100MB) | P0 | Severe | ☐ Not Started |
+| CORE-001 | OutputBag race conditions in parallel fan-out | P0 | Catastrophic | ☑ Completed (2026-01-16) |
+| CORE-002 | ContextSnapshot serialization under load (>100MB) | P0 | Severe | ✅ Completed |
 | CORE-003 | Context overwrite in subpipeline spawning | P0 | Severe | ☐ Not Started |
 | CORE-004 | UUID collision in high-scale deployments | P0 | Severe | ☐ Not Started |
 | CORE-005 | Snapshot versioning and rollback integrity | P1 | High | ☐ Not Started |

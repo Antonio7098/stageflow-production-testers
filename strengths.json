@@ -30,6 +30,26 @@
       "id": "STR-002",
       "agent": "claude-3.5-sonnet",
       "created_at": "2026-01-16T09:31:55.259792Z"
+    },
+    {
+      "id": "STR-003",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T11:52:31.773038+00:00",
+      "title": "OutputBag asyncio.Lock protects concurrent writes",
+      "description": "The async write() method in OutputBag is properly protected by asyncio.Lock(), preventing race conditions during concurrent writes. Multiple parallel stages can safely write to OutputBag without corrupting state.",
+      "component": "OutputBag",
+      "evidence": "Stress tests with 20 parallel writers writing 10 outputs each (200 total writes) completed successfully with no data corruption or inconsistent state.",
+      "impact": "high"
+    },
+    {
+      "id": "STR-004",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T12:06:41.510029+00:00",
+      "title": "ContextSnapshot handles 200MB+ payloads successfully",
+      "description": "Successfully serialized and deserialized a 209MB ContextSnapshot with 10000 messages and 100 documents",
+      "component": "ContextSnapshot serialization",
+      "evidence": "Test with 10,000 messages (10KB each) and 100 documents (100KB each) completed successfully",
+      "impact": "high"
     }
   ]
 }

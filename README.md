@@ -19,7 +19,7 @@ Each agent targets a specific roadmap entry, conducts research, builds simulatio
 
 ### 1. Select a Roadmap Entry
 
-Browse `ROADMAP.md` to find an untested entry. Entries are organized by:
+Browse `docs/roadmap/ROADMAP.md` to find an untested entry. Entries are organized by:
 - **Tier**: Foundation → Industry-specific
 - **Priority**: P0 (critical) → P2 (nice-to-have)
 - **Risk**: Catastrophic → Low
@@ -38,7 +38,7 @@ mkdir -p "${RUN_DIR}"/{research,mocks/data/{happy_path,edge_cases,adversarial,sc
 
 ### 3. Initialize the Agent
 
-Pass the system prompt from `AGENT_SYSTEM_PROMPT.md` to your agent with the appropriate template variables filled in.
+Pass the system prompt from `docs/prompts/AGENT_SYSTEM_PROMPT.md` to your agent with the appropriate template variables filled in.
 
 ### 4. Let the Agent Work
 
@@ -60,21 +60,28 @@ Check `findings.json` and `FINAL_REPORT.md` in the run directory.
 
 ```
 production-testers/
-├── README.md                     # This file
-├── ROADMAP.md                    # Master roadmap (200+ entries)
-├── AGENT_SYSTEM_PROMPT.md        # System prompt for agents
-├── REPORTING_SCHEMA.md           # JSON schema for findings
-├── FOLDER_STRUCTURE.md           # Standardized folder layout
-├── FINAL_REPORT_TEMPLATE.md      # Template for final reports
-│
-├── templates/                    # Reusable templates
-│   ├── mock_data/               # Data generators
-│   ├── pipeline_templates/      # Starter pipelines
-│   └── test_utilities/          # Shared test code
-│
-└── runs/                         # Agent run outputs
-    └── {ENTRY_ID}/
-        └── run-{DATE}-{SEQ}/
+├── README.md
+├── docs/
+│   ├── roadmap/
+│   │   ├── ROADMAP.md                    # Master roadmap (200+ entries)
+│   │   ├── ROADMAP_CHECKLIST.md          # Batch-processing checklist
+│   │   └── Stageflow Stress-Testing Mission Brief.md
+│   ├── prompts/
+│   │   └── AGENT_SYSTEM_PROMPT.md        # System prompt for agents
+│   └── reference/
+│       ├── REPORTING_SCHEMA.md           # JSON schema for findings
+│       ├── FOLDER_STRUCTURE.md           # Standardized folder layout
+│       └── FINAL_REPORT_TEMPLATE.md      # Template for final reports
+├── scripts/
+│   ├── add_finding.py                    # Structured logging helper
+│   ├── checklist-processor.js            # Parallel OpenCode loop
+│   └── run-checklist.sh                  # Convenience wrapper
+├── templates/                            # Reusable templates
+│   ├── mock_data/
+│   ├── pipeline_templates/
+│   └── test_utilities/
+└── runs/                                 # Agent run outputs
+    └── {ENTRY_ID}/run-{DATE}-{SEQ}/
 ```
 
 ---
@@ -83,11 +90,11 @@ production-testers/
 
 | File | Purpose |
 |------|---------|
-| `ROADMAP.md` | Exhaustive list of all test targets |
-| `AGENT_SYSTEM_PROMPT.md` | Instructions for testing agents |
-| `REPORTING_SCHEMA.md` | JSON schema for `findings.json` |
-| `FOLDER_STRUCTURE.md` | Required folder/file layout |
-| `FINAL_REPORT_TEMPLATE.md` | Template for human-readable reports |
+| `docs/roadmap/ROADMAP.md` | Exhaustive list of all test targets |
+| `docs/prompts/AGENT_SYSTEM_PROMPT.md` | Instructions for testing agents |
+| `docs/reference/REPORTING_SCHEMA.md` | JSON schema for `findings.json` |
+| `docs/reference/FOLDER_STRUCTURE.md` | Required folder/file layout |
+| `docs/reference/FINAL_REPORT_TEMPLATE.md` | Template for human-readable reports |
 
 ---
 
@@ -197,6 +204,42 @@ Every finding should be evaluated against these principles.
 3. Execute the agent workflow
 4. Submit findings via PR
 5. Mark the roadmap entry as tested
+
+---
+
+## Automated Checklist Processing
+
+For high-volume runs, use the parallel checklist processor included in this repo:
+
+```bash
+./scripts/run-checklist.sh            # runs with defaults
+# or
+node scripts/checklist-processor.js   # same script without wrapper
+```
+
+### Requirements
+- `opencode` CLI installed and authenticated
+- `ROADMAP_CHECKLIST.md` present (the script updates rows in-place)
+- Node.js 18+
+
+### What It Does
+1. Parses every table in `docs/roadmap/ROADMAP_CHECKLIST.md`
+2. Filters rows still marked `☐ Not Started`
+3. Batches them (default 5 at a time)
+4. Builds the OpenCode prompt by combining `docs/prompts/AGENT_SYSTEM_PROMPT.md` (with `{{ENTRY_*}}` tokens filled) and the checklist row details
+5. Spawns one OpenCode session per row (`opencode run <prompt>`)
+6. Waits for `<promise>ITEM_COMPLETE</promise>` before marking a row `✅ Completed`
+
+### Common Flags
+```bash
+node scripts/checklist-processor.js --dry-run               # preview batches without agents
+node scripts/checklist-processor.js --batch-size 3          # fan out to 3 concurrent sessions
+node scripts/checklist-processor.js --max-iterations 30     # allow longer Ralph loops
+node scripts/checklist-processor.js --resume                # continue after an interruption
+node scripts/checklist-processor.js --status                # show progress summary
+```
+
+State is stored in `.checklist-processor/state.json`, and checkpoints live in `.checklist-processor/checkpoint.json`. Keep `docs/roadmap/ROADMAP_CHECKLIST.md` under version control so you can review any automated edits.
 
 ---
 

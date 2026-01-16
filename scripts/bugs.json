@@ -1,0 +1,50 @@
+{
+  "template": {},
+  "entries": [
+    {
+      "title": "OutputBag read operations are not thread-safe",
+      "description": "All read methods in OutputBag (get, has, keys, entries, outputs, to_dict, etc.) access the internal _entries dictionary without any lock protection. While write operations are protected by asyncio.Lock(), concurrent reads during writes can observe inconsistent state.",
+      "type": "reliability",
+      "severity": "high",
+      "component": "OutputBag",
+      "reproduction": "In stageflow/context/output_bag.py, lines 189-317: All read methods access self._entries directly without synchronization. The write method at line 132 uses async with self._lock, but reads have no protection.",
+      "expected_behavior": "Reads should be atomic and consistent, or should raise appropriate errors when concurrent writes are occurring.",
+      "actual_behavior": "Reads can see partially updated dictionary states, inconsistent iteration results, or miss entries during concurrent writes.",
+      "impact": "Silent data corruption or inconsistent state in parallel pipeline execution scenarios where multiple stages read outputs while others are writing.",
+      "recommendation": "Add read-side synchronization using the same lock, or use copy-on-read pattern to return immutable snapshots.",
+      "id": "BUG-001",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T11:53:38.310487Z"
+    },
+    {
+      "title": "write_sync method lacks any thread-safety",
+      "description": "The write_sync method (lines 149-187) performs writes without any locking mechanism. This is explicitly marked as not thread-safe in the docstring, but this creates a dangerous API that could be misused.",
+      "type": "reliability",
+      "severity": "medium",
+      "component": "OutputBag",
+      "reproduction": "stageflow/context/output_bag.py lines 149-187: write_sync has no locking and no documentation warning beyond the single-sentence warning.",
+      "expected_behavior": "Synchronous writes should either use threading locks or be clearly documented as single-threaded only.",
+      "actual_behavior": "write_sync can corrupt data if called from multiple threads or during async writes.",
+      "impact": "Data corruption in mixed sync/async code or multi-threaded scenarios.",
+      "recommendation": "Either add threading.Lock() for thread-safety or deprecate the method and require async code.",
+      "id": "BUG-002",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T11:53:46.287529Z"
+    },
+    {
+      "title": "OutputBag iteration methods can raise RuntimeError",
+      "description": "The entries(), outputs(), to_dict(), keys(), and get_retry_stages() methods iterate over self._entries. If a write occurs during iteration, Python raises RuntimeError: dictionary changed size during iteration.",
+      "type": "reliability",
+      "severity": "medium",
+      "component": "OutputBag",
+      "reproduction": "Calling outputs() (line 262-270) while another coroutine is writing can raise RuntimeError. The dict.items() comprehension at line 270 is not atomic.",
+      "expected_behavior": "Iteration should either complete atomically or raise a clear error about concurrent modification.",
+      "actual_behavior": "May raise generic RuntimeError from Python dict iteration.",
+      "impact": "Pipeline crashes with cryptic error messages during concurrent access.",
+      "recommendation": "Acquire lock during iteration or return immutable copies.",
+      "id": "BUG-003",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T11:54:22.956390Z"
+    }
+  ]
+}

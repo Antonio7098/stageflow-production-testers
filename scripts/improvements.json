@@ -1,0 +1,19 @@
+{
+  "template": {},
+  "entries": [
+    {
+      "title": "Add thread-safe read methods to OutputBag",
+      "description": "OutputBag should provide thread-safe read operations that either acquire the lock or return immutable snapshots. Consider adding a snapshot() method that returns a consistent view of the OutputBag state.",
+      "type": "component_suggestion",
+      "priority": "P1",
+      "category": "core",
+      "context": "Current read methods are unprotected while writes use asyncio.Lock()",
+      "rationale": "Users expect consistent reads from a shared data structure",
+      "proposed_solution": "Add: 1) A snapshot() method that returns a frozen copy of all entries, 2) Make all existing read methods acquire the lock for consistency",
+      "roleplay_perspective": "As a reliability engineer, I need to know that reading from OutputBag during parallel execution will always return consistent results.",
+      "id": "IMP-001",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T11:53:58.462505Z"
+    }
+  ]
+}

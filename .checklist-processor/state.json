@@ -1,0 +1,16 @@
+{
+  "active": true,
+  "currentBatch": 3,
+  "totalBatches": 308,
+  "itemsProcessed": [
+    "CORE-001",
+    "CORE-002"
+  ],
+  "itemsCompleted": [
+    "CORE-001",
+    "CORE-002"
+  ],
+  "itemsFailed": [],
+  "startedAt": "2026-01-16T11:50:10.643Z",
+  "lastCheckpoint": "2026-01-16T12:08:29.197Z"
+}

@@ -35,6 +35,18 @@
       "id": "DX-002",
       "agent": "claude-3.5-sonnet",
       "created_at": "2026-01-16T09:31:58.696398Z"
+    },
+    {
+      "id": "DX-003",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T11:52:48.706991+00:00",
+      "title": "OutputBag thread-safety documentation incomplete",
+      "description": "The documentation states that write() is thread-safe due to asyncio.Lock(), but does not clearly document which read operations are safe and which are not. This ambiguity could lead developers to incorrectly assume all operations are protected.",
+      "category": "documentation",
+      "severity": "medium",
+      "component": "Documentation",
+      "impact": "Developers may write code that reads from OutputBag during concurrent writes, potentially encountering inconsistent state.",
+      "recommendation": "Add a section to the OutputBag documentation explicitly stating which methods are thread-safe and which require external synchronization."
     }
   ]
 }

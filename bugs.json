@@ -40,6 +40,66 @@
       "id": "BUG-002",
       "agent": "claude-3.5-sonnet",
       "created_at": "2026-01-16T09:31:57.409539Z"
+    },
+    {
+      "id": "BUG-003",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T11:52:37.695826+00:00",
+      "title": "OutputBag read methods lack lock protection",
+      "description": "The get(), has(), keys(), entries(), outputs(), get_attempt_count(), get_retry_stages(), __contains__(), and __len__() methods access the internal _entries dictionary without any lock protection. While Python GIL provides some protection, these methods can observe inconsistent state during concurrent writes.",
+      "type": "reliability",
+      "severity": "medium",
+      "component": "OutputBag",
+      "reproduction": "In a high-concurrency scenario with rapid writes and reads, the outputs() method can potentially return a snapshot where the number of keys does not match the number of entries, or where iteration sees inconsistent state.",
+      "expected_behavior": "All read operations should see a consistent snapshot of the OutputBag state.",
+      "actual_behavior": "Read operations access _entries directly without synchronization, potentially seeing partially updated state.",
+      "impact": "In production pipelines, downstream stages might see inconsistent views of completed stages, potentially causing incorrect behavior.",
+      "recommendation": "Add read-side locking using asyncio.Lock() or return atomic snapshots of the data to ensure consistency."
+    },
+    {
+      "id": "BUG-004",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T11:52:42.234298+00:00",
+      "title": "write_sync is not thread-safe for async contexts",
+      "description": "The write_sync() method explicitly states it is not thread-safe, but there is no protection against calling it from async code where concurrent access could occur. This can lead to data corruption or unexpected OutputConflictError exceptions.",
+      "type": "reliability",
+      "severity": "medium",
+      "component": "OutputBag",
+      "reproduction": "When multiple concurrent async tasks call write_sync() on the same stage name, the first call succeeds but subsequent calls may see inconsistent state or raise unexpected errors.",
+      "expected_behavior": "Either prevent write_sync() from being used in async contexts, or provide proper synchronization.",
+      "actual_behavior": "write_sync() can be called from async code without any protection, potentially causing race conditions.",
+      "impact": "Developers using write_sync() in async contexts may experience data corruption or unexpected errors.",
+      "recommendation": "Either add asyncio.Lock() protection to write_sync(), or document clearly that it should only be used in synchronous contexts with explicit external synchronization."
+    },
+    {
+      "id": "BUG-005",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T12:05:32.203461+00:00",
+      "title": "ContextSnapshot crashes on huge integers",
+      "description": "When a ContextSnapshot contains extremely large integers (10^10000), serialization crashes with ValueError: Exceeds the limit for integer string conversion",
+      "type": "reliability",
+      "severity": "low",
+      "component": "ContextSnapshot.to_dict",
+      "reproduction": "Create a ProfileEnrichment with preferences containing huge_int = 10**10000, then call snapshot.to_dict()",
+      "expected_behavior": "Large integers should be serialized as strings or handled gracefully",
+      "actual_behavior": "ValueError is raised: Exceeds the limit (4300 digits) for integer string conversion",
+      "impact": "Cannot serialize ContextSnapshots containing extremely large integers, potential data loss",
+      "recommendation": "Add sys.set_int_max_str_digits() call or convert large integers to strings before serialization"
+    },
+    {
+      "id": "BUG-006",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T12:06:44.536509+00:00",
+      "title": "Performance degradation in deserialization at larger scales",
+      "description": "Deserialization time increased from ~5ms at 4MB to ~25ms at 5.7MB, showing non-linear scaling",
+      "type": "performance",
+      "severity": "low",
+      "component": "ContextSnapshot.from_dict",
+      "reproduction": "Run scale tests with increasing payload sizes and observe deserialization times",
+      "expected_behavior": "Deserialization time should scale linearly with data size",
+      "actual_behavior": "Deserialization time increases more than linearly at larger sizes (from ~5ms at 4MB to ~25ms at 5.7MB)",
+      "impact": "Potential latency issues for very large contexts",
+      "recommendation": "Investigate cause of non-linear scaling in from_dict method"
     }
   ]
 }

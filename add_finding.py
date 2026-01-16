@@ -1,36 +1,40 @@
 #!/usr/bin/env python3
-"""
-Stageflow Findings Entry Script
-
-Allows agents to add entries to structured JSON files without manual editing.
-Agents run this script with a JSON entry and it inserts it with a unique ID.
+"""Script for logging findings to structured JSON files.
 
 Usage:
     python add_finding.py --file <type> --entry '<json_entry>' --agent <agent_model>
 
+File type mappings:
+    - strength: strengths.json (Positive aspects)
+    - bug: bugs.json (Defects and incorrect behavior)
+    - dx: dx.json (Developer experience issues)
+    - improvement: improvements.json (Enhancement suggestions)
+
 Examples:
-    python add_finding.py --file bug --entry '{"title": "Memory leak", "severity": "high"}' --agent claude-3.5-sonnet
-    python add_finding.py --file dx --entry '{"title": "Confusing error messages", "category": "error_messages"}' --agent claude-3.5-sonnet
-    python add_finding.py --file improvement --entry '{"title": "Retry stage", "type": "component_suggestion"}' --agent claude-3.5-sonnet
-    python add_finding.py --file strength --entry '{"title": "Clean API", "component": "Stage"}' --agent claude-3.5-sonnet
+    python add_finding.py --file bug --entry '{"title": "...", "description": "..."}' --agent claude-3.5-sonnet
+    python add_finding.py --file improvement --entry '{"title": "...", "type": "stagekind_suggestion"}' --agent claude-3.5-sonnet
 """
 
-import json
 import argparse
-import sys
+import json
 import os
-from datetime import datetime
+import sys
+from datetime import datetime, UTC
 from pathlib import Path
+from typing import Any
 
+# Base directory for findings files
 BASE_DIR = Path(__file__).parent
 
-FILE_MAP = {
+# File mappings
+FILE_MAPPINGS = {
     "strength": "strengths.json",
     "bug": "bugs.json",
     "dx": "dx.json",
     "improvement": "improvements.json",
 }
 
+# ID prefixes
 ID_PREFIXES = {
     "strength": "STR",
     "bug": "BUG",
@@ -39,102 +43,95 @@ ID_PREFIXES = {
 }
 
 
-def generate_id(entry_type: str, existing_ids: list[str]) -> str:
-    prefix = ID_PREFIXES.get(entry_type, "ENT")
-    max_num = 0
-    for eid in existing_ids:
-        if eid.startswith(prefix + "-"):
-            try:
-                num = int(eid.split("-")[1])
-                if num > max_num:
-                    max_num = num
-            except (ValueError, IndexError):
-                pass
-    new_num = max_num + 1
-    return f"{prefix}-{new_num:03d}"
-
-
-def load_json_file(filepath: Path) -> dict:
+def load_json_file(filepath: Path) -> dict[str, Any]:
+    """Load a JSON file, returning empty template if it doesn't exist."""
     if filepath.exists():
         with open(filepath, "r") as f:
             return json.load(f)
     return {"template": {}, "entries": []}
 
 
-def save_json_file(filepath: Path, data: dict) -> None:
+def save_json_file(filepath: Path, data: dict[str, Any]) -> None:
+    """Save data to a JSON file."""
     with open(filepath, "w") as f:
         json.dump(data, f, indent=2)
 
 
-def add_entry(
-    file_type: str, entry_json: str, agent: str, title: str | None = None
-) -> dict:
-    filepath = BASE_DIR / FILE_MAP[file_type]
+def generate_id(finding_type: str, entries: list[dict]) -> str:
+    """Generate a unique ID for a new finding."""
+    prefix = ID_PREFIXES.get(finding_type, "FIND")
+    # Count existing entries with this prefix
+    count = len([e for e in entries if e.get("id", "").startswith(prefix)])
+    return f"{prefix}-{count + 1:03d}"
+
+
+def add_finding(
+    finding_type: str,
+    entry_data: dict[str, Any],
+    agent_model: str,
+) -> dict[str, Any]:
+    """Add a finding to the appropriate JSON file."""
+    filepath = BASE_DIR / FILE_MAPPINGS[finding_type]
     data = load_json_file(filepath)
 
-    entry = json.loads(entry_json)
-    existing_ids = [e.get("id", "") for e in data.get("entries", [])]
+    # Generate ID
+    entry_id = generate_id(finding_type, data.get("entries", []))
 
-    entry_id = generate_id(file_type, existing_ids)
+    # Add metadata
+    entry = {
+        "id": entry_id,
+        "agent": agent_model,
+        "created_at": datetime.now(UTC).isoformat(),
+        **entry_data,
+    }
 
-    entry["id"] = entry_id
-    entry["agent"] = agent
-    entry["created_at"] = datetime.utcnow().isoformat() + "Z"
-
-    if title and "title" not in entry:
-        entry["title"] = title
-
+    # Add to entries
     if "entries" not in data:
         data["entries"] = []
-
     data["entries"].append(entry)
 
+    # Save
     save_json_file(filepath, data)
 
-    return {"id": entry_id, "status": "success", "file": FILE_MAP[file_type]}
+    return entry
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Add entries to Stageflow JSON finding files"
+        description="Log findings to structured JSON files"
     )
     parser.add_argument(
         "--file",
-        "-f",
+        type=str,
         required=True,
         choices=["strength", "bug", "dx", "improvement"],
-        help="Type of entry to add",
+        help="Type of finding to log",
     )
     parser.add_argument(
         "--entry",
-        "-e",
+        type=str,
         required=True,
-        help="JSON string of the entry to add",
+        help="JSON string containing the finding entry",
     )
     parser.add_argument(
         "--agent",
-        "-a",
+        type=str,
         required=True,
-        help="Agent model identifier",
-    )
-    parser.add_argument(
-        "--title",
-        "-t",
-        help="Title for the entry (optional, uses existing title if not provided)",
+        help="Agent model that discovered the finding",
     )
 
     args = parser.parse_args()
 
     try:
-        result = add_entry(args.file, args.entry, args.agent, args.title)
-        print(json.dumps(result, indent=2))
-        print(f"\nEntry {result['id']} added to {result['file']}")
+        entry_data = json.loads(args.entry)
     except json.JSONDecodeError as e:
-        print(f"Error: Invalid JSON entry: {e}", file=sys.stderr)
+        print(f"Error: Invalid JSON in entry: {e}", file=sys.stderr)
         sys.exit(1)
-    except Exception as e:
-        print(f"Error: {e}", file=sys.stderr)
-        sys.exit(1)
+
+    entry = add_finding(args.file, entry_data, args.agent)
+
+    print(f"Added finding: {entry['id']}")
+    print(json.dumps(entry, indent=2))
 
 
 if __name__ == "__main__":

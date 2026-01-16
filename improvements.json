@@ -52,6 +52,76 @@
       "id": "IMP-003",
       "agent": "claude-3.5-sonnet",
       "created_at": "2026-01-16T09:32:08.085788Z"
+    },
+    {
+      "id": "IMP-004",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T11:52:45.876094+00:00",
+      "title": "Add thread-safe snapshot method to OutputBag",
+      "description": "OutputBag should provide a thread-safe method to get a consistent snapshot of all outputs, similar to how databases provide snapshot isolation. This would prevent readers from seeing partial updates.",
+      "type": "component_suggestion",
+      "priority": "P1",
+      "category": "plus_package",
+      "context": "During stress testing, we needed to verify consistency of outputs() by comparing against entries(). A snapshot method would simplify this.",
+      "rationale": "Thread-safe snapshots are a common pattern in concurrent data structures and would make OutputBag safer to use in high-concurrency scenarios.",
+      "proposed_solution": "Add a snapshot() method that acquires the lock, copies all entries, and returns a frozen snapshot object.",
+      "roleplay_perspective": "As a reliability engineer, having atomic snapshots would give me confidence that reads are always consistent, even under heavy write contention."
+    },
+    {
+      "id": "IMP-005",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T12:08:07.326269+00:00",
+      "title": "Streaming serialization for large payloads",
+      "description": "Add streaming serialization API for ContextSnapshot to handle very large payloads (>100MB) more efficiently",
+      "type": "feature_request",
+      "priority": "P1",
+      "category": "core",
+      "context": "Encountered while testing 209MB payloads - standard to_dict() blocks during serialization",
+      "rationale": "Streaming would reduce memory pressure and improve latency for large payloads",
+      "proposed_solution": "Add async generator method that yields chunks of serialized data",
+      "roleplay_perspective": "As a health IT architect, streaming serialization would help us process patient records without memory spikes"
+    },
+    {
+      "id": "IMP-006",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T12:08:09.962264+00:00",
+      "title": "Compression option for to_dict/from_dict",
+      "description": "Add optional compression parameter to ContextSnapshot serialization methods",
+      "type": "feature_request",
+      "priority": "P2",
+      "category": "core",
+      "context": "Large payloads (200MB+) take significant bandwidth for transmission",
+      "rationale": "Compression would reduce network overhead for large contexts",
+      "proposed_solution": "Add compress=True parameter that uses zlib or zstd",
+      "roleplay_perspective": "As a health IT architect, compressed contexts would reduce bandwidth costs for transmitting patient records"
+    },
+    {
+      "id": "IMP-007",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T12:08:12.696481+00:00",
+      "title": "Large payload serialization documentation",
+      "description": "Add documentation section on best practices for serializing large ContextSnapshots (>50MB)",
+      "type": "documentation",
+      "priority": "P1",
+      "category": "documentation",
+      "context": "No guidance available on handling large payloads during testing",
+      "rationale": "Users need guidance on memory management and performance optimization",
+      "proposed_solution": "Add guide covering memory profiling, streaming, and compression options",
+      "roleplay_perspective": "As a health IT architect, I need guidance on how to handle large patient record contexts efficiently"
+    },
+    {
+      "id": "IMP-008",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-16T12:08:14.535693+00:00",
+      "title": "Allow plain dict for extensions",
+      "description": "Allow extensions to be a plain dict without requiring ExtensionBundle subclass",
+      "type": "api_improvement",
+      "priority": "P2",
+      "category": "core",
+      "context": "Had to use metadata instead of extensions because ExtensionBundle requires subclass",
+      "rationale": "Plain dict would be more flexible for simple use cases",
+      "proposed_solution": "Accept both ExtensionBundle instances and plain dicts",
+      "roleplay_perspective": "As a health IT architect, sometimes we just need simple key-value storage without type safety overhead"
     }
   ]
 }
