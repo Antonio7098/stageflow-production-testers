@@ -1,0 +1,57 @@
+{
+  "operator_performance": {
+    "equals": {
+      "count": 2,
+      "avg_time_ms": 0.9174130000610603
+    },
+    "in": {
+      "count": 2,
+      "avg_time_ms": 0.9443630000532721
+    },
+    "gt": {
+      "count": 1,
+      "avg_time_ms": 0.5881099999896833
+    },
+    "lt": {
+      "count": 1,
+      "avg_time_ms": 0.49641999994491925
+    },
+    "gte": {
+      "count": 1,
+      "avg_time_ms": 0.6686299999273615
+    },
+    "range": {
+      "count": 1,
+      "avg_time_ms": 0.714729999890551
+    }
+  },
+  "edge_case_failures": [],
+  "silent_failure_patterns": [
+    {
+      "test_name": "contains_title",
+      "category": "baseline",
+      "documents_filtered": 0
+    },
+    {
+      "test_name": "empty_filter_value",
+      "category": "edge_cases",
+      "documents_filtered": 0
+    },
+    {
+      "test_name": "non_existent_category",
+      "category": "edge_cases",
+      "documents_filtered": 0
+    },
+    {
+      "test_name": "empty_in_list",
+      "category": "edge_cases",
+      "documents_filtered": 0
+    },
+    {
+      "test_name": "invalid_operator",
+      "category": "edge_cases",
+      "documents_filtered": 0
+    }
+  ],
+  "performance_metrics": {}
+}

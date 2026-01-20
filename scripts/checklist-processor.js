@@ -349,7 +349,7 @@ function runChecklistItem(item, prompt) {
       "opencode/minimax-m2.1-free"
     ];
 
-    const child = spawn("opencode", args, { env: process.env });
+    const child = spawn("opencode", args, { env: process.env, shell: true });
     
     // Write prompt to stdin to avoid argument length limits
     child.stdin.write(prompt);

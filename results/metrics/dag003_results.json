@@ -1,0 +1,101 @@
+{
+  "test_run_id": "1031cfbb-80fa-4d76-ad60-6742e26ddcfe",
+  "timestamp": "2026-01-19T10:50:57.059517+00:00",
+  "roadmap_entry": "DAG-003",
+  "title": "Livelock in autocorrection loops",
+  "priority": "P0",
+  "risk": "Severe",
+  "tests": [
+    {
+      "name": "Basic Guard-Transform Loop",
+      "test_name": "test_basic_guard_transform_loop",
+      "passed": false,
+      "duration_ms": 0,
+      "details": {},
+      "error": "Stage 'mock_guard' failed: Config set to always fail",
+      "stack_trace": "Traceback (most recent call last):\n  File \"C:\\ANTONIO\\Coding\\stageflow-production-testers\\runs\\DAG-003\\run-2026-01-19-001\\pipelines\\run_dag003_tests.py\", line 306, in test_basic_guard_transform_loop\n    results = await graph.run(ctx)\n              ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 495, in run\n    raise exc  # type: ignore[misc]\n    ^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 597, in _execute_node\n    return name, await self._run_stage(spec, stage_ctx)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 685, in _run_stage\n    raise UnifiedStageExecutionError(\nstageflow.pipeline.dag.UnifiedStageExecutionError: Stage 'mock_guard' failed: Config set to always fail\n",
+      "loop_detected": false,
+      "iterations_detected": 0
+    },
+    {
+      "name": "Oscillating Guard Rejections",
+      "test_name": "test_oscillating_guard_rejections",
+      "passed": false,
+      "duration_ms": 0,
+      "details": {},
+      "error": "Stage 'mock_guard' failed: Failed first 1 calls",
+      "stack_trace": "Traceback (most recent call last):\n  File \"C:\\ANTONIO\\Coding\\stageflow-production-testers\\runs\\DAG-003\\run-2026-01-19-001\\pipelines\\run_dag003_tests.py\", line 374, in test_oscillating_guard_rejections\n    results = await graph.run(ctx)\n              ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 495, in run\n    raise exc  # type: ignore[misc]\n    ^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 597, in _execute_node\n    return name, await self._run_stage(spec, stage_ctx)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 685, in _run_stage\n    raise UnifiedStageExecutionError(\nstageflow.pipeline.dag.UnifiedStageExecutionError: Stage 'mock_guard' failed: Failed first 1 calls\n",
+      "loop_detected": false,
+      "iterations_detected": 0
+    },
+    {
+      "name": "Trapped Correction Loop",
+      "test_name": "test_trapped_correction_loop",
+      "passed": false,
+      "duration_ms": 3.0570030212402344,
+      "details": {
+        "description": "Agent trapped in endless correction attempts",
+        "max_iterations": 15,
+        "loop_detected": false,
+        "llm_calls": 1,
+        "guard_calls": 1
+      },
+      "error": null,
+      "stack_trace": null,
+      "loop_detected": false,
+      "iterations_detected": 1
+    },
+    {
+      "name": "Silent Failure Detection",
+      "test_name": "test_silent_failure_detection",
+      "passed": true,
+      "duration_ms": 1.9676685333251953,
+      "details": {
+        "description": "Silent failures in autocorrection loop",
+        "empty_content_passed_guard": true,
+        "llm_calls": 1,
+        "content_length": 0
+      },
+      "error": null,
+      "stack_trace": null,
+      "loop_detected": false,
+      "iterations_detected": 0
+    },
+    {
+      "name": "Context Memory Growth",
+      "test_name": "test_context_memory_growth",
+      "passed": false,
+      "duration_ms": 0,
+      "details": {},
+      "error": "Stage 'mock_guard' failed: Config set to always fail",
+      "stack_trace": "Traceback (most recent call last):\n  File \"C:\\ANTONIO\\Coding\\stageflow-production-testers\\runs\\DAG-003\\run-2026-01-19-001\\pipelines\\run_dag003_tests.py\", line 573, in test_context_memory_growth\n    results = await graph.run(ctx)\n              ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 495, in run\n    raise exc  # type: ignore[misc]\n    ^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 597, in _execute_node\n    return name, await self._run_stage(spec, stage_ctx)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 685, in _run_stage\n    raise UnifiedStageExecutionError(\nstageflow.pipeline.dag.UnifiedStageExecutionError: Stage 'mock_guard' failed: Config set to always fail\n",
+      "loop_detected": false,
+      "iterations_detected": 0
+    },
+    {
+      "name": "Multi-Guard Chain Loop",
+      "test_name": "test_multi_guard_chain_loop",
+      "passed": true,
+      "duration_ms": 3.971099853515625,
+      "details": {
+        "description": "Multiple GUARD stages in chain",
+        "num_guards": 3,
+        "llm_calls": 1,
+        "pipeline_terminated": true
+      },
+      "error": null,
+      "stack_trace": null,
+      "loop_detected": false,
+      "iterations_detected": 0
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 2,
+    "failed": 4,
+    "pass_rate": "33.3%",
+    "loops_detected": 0,
+    "timestamp": "2026-01-19T10:50:57.095341+00:00"
+  },
+  "findings": []
+}

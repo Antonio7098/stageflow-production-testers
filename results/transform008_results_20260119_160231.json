@@ -1,0 +1,108 @@
+{
+  "baseline": {
+    "test_name": "baseline",
+    "success": true,
+    "items_processed": 100,
+    "output_status": "completed",
+    "data": {}
+  },
+  "partial_failure": {
+    "test_name": "partial_failure",
+    "success": true,
+    "expected_failure": true,
+    "error": "Stage 'partial_transform' failed: Simulated failure after 5 items",
+    "error_type": "UnifiedStageExecutionError"
+  },
+  "retry": {
+    "test_name": "retry",
+    "success": true,
+    "attempts_required": 0,
+    "expected_attempts": 3,
+    "output": {
+      "attempt": 1,
+      "will_succeed": false
+    }
+  },
+  "validation_valid": {
+    "test_name": "validation",
+    "success": true,
+    "expected_success": true,
+    "output": {
+      "transform": "StageOutput(status=<StageStatus.OK: 'ok'>, data={'items': [{'item_id': 1, 'processed': True, 'running_total': 100}], 'final_total': 100, 'processed_count': 1, 'state_snapshot': {'items_processed': 1, 'sum': 100}}, artifacts=[], events=[], error=None, duration_ms=0)",
+      "validate": "StageOutput(status=<StageStatus.OK: 'ok'>, data={'valid': True}, artifacts=[], events=[], error=None, duration_ms=0)"
+    }
+  },
+  "validation_invalid": {
+    "test_name": "validation",
+    "success": true,
+    "expected_failure": true,
+    "error": "Stage 'validate' failed: Validation failed: INVALID marker found",
+    "error_type": "UnifiedStageExecutionError"
+  },
+  "silent_failure": {
+    "test_name": "silent_failure_detection",
+    "success": true,
+    "silent_failures_detected": 5,
+    "total_items": 5,
+    "silent_failure_items": [
+      {
+        "item": {
+          "id": 1,
+          "input": 10,
+          "expected_output": 20
+        },
+        "expected": 20,
+        "actual": 42
+      },
+      {
+        "item": {
+          "id": 2,
+          "input": 20,
+          "expected_output": 40
+        },
+        "expected": 40,
+        "actual": 42
+      },
+      {
+        "item": {
+          "id": 3,
+          "input": "invalid_type",
+          "expected_output": "ERROR"
+        },
+        "expected": "ERROR",
+        "actual": 42
+      },
+      {
+        "item": {
+          "id": 4,
+          "input": 30,
+          "expected_output": 60
+        },
+        "expected": 60,
+        "actual": 42
+      },
+      {
+        "item": {
+          "id": 5,
+          "input": 40,
+          "expected_output": 80
+        },
+        "expected": 80,
+        "actual": 42
+      }
+    ]
+  },
+  "idempotency": {
+    "test_name": "idempotency",
+    "success": true,
+    "execution_count": 3,
+    "unique_results": 1,
+    "is_idempotent": true
+  },
+  "parallel_recovery": {
+    "test_name": "parallel_recovery",
+    "success": false,
+    "error": "Stage 'stage_a' failed: Invalid JSON input",
+    "error_type": "UnifiedStageExecutionError"
+  }
+}

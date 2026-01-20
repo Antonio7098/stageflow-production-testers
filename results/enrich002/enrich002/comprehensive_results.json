@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-01-20T13:09:42.139088",
+  "summary": {
+    "total_tests": 8,
+    "passed": 8,
+    "failed": 0,
+    "silent_failures": 0
+  },
+  "results": [
+    {
+      "test_name": "baseline",
+      "success": true,
+      "execution_time_ms": 10.212800000317657,
+      "documents_retrieved": 5,
+      "drift_score": 0.0,
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "is_desynced": false,
+        "status": "completed"
+      }
+    },
+    {
+      "test_name": "text_shape_drift",
+      "success": true,
+      "execution_time_ms": 9.648700000070676,
+      "documents_retrieved": 5,
+      "drift_score": 0.001,
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "is_desynced": false,
+        "status": "completed"
+      }
+    },
+    {
+      "test_name": "hidden_char_drift",
+      "success": true,
+      "execution_time_ms": 10.15319999987696,
+      "documents_retrieved": 5,
+      "drift_score": 0.001,
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "is_desynced": false,
+        "status": "completed"
+      }
+    },
+    {
+      "test_name": "index_desync",
+      "success": true,
+      "execution_time_ms": 8.421300000009069,
+      "documents_retrieved": 5,
+      "drift_score": 0.2,
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "is_desynced": true,
+        "status": "completed"
+      }
+    },
+    {
+      "test_name": "partial_reembed",
+      "success": true,
+      "execution_time_ms": 8.721400000013091,
+      "documents_retrieved": 2,
+      "drift_score": 0.0,
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "is_desynced": false,
+        "status": "completed"
+      }
+    },
+    {
+      "test_name": "silent_failure",
+      "success": true,
+      "execution_time_ms": 7.998699999916425,
+      "documents_retrieved": 5,
+      "drift_score": 0.0,
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "is_desynced": false,
+        "status": "completed"
+      }
+    },
+    {
+      "test_name": "mixed_versions",
+      "success": true,
+      "execution_time_ms": 8.665599999858387,
+      "documents_retrieved": 5,
+      "drift_score": 0.25,
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "is_desynced": true,
+        "status": "completed"
+      }
+    },
+    {
+      "test_name": "high_drift",
+      "success": true,
+      "execution_time_ms": 8.371400000214635,
+      "documents_retrieved": 5,
+      "drift_score": 0.001,
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "is_desynced": false,
+        "status": "completed"
+      }
+    }
+  ]
+}

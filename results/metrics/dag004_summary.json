@@ -1,0 +1,11 @@
+{
+  "test_run_id": "9925e2b6-11cf-4de6-98d2-3e1ffbb8314b",
+  "timestamp": "2026-01-19T10:59:38.850260",
+  "total_tests": 9,
+  "passed": 5,
+  "failed": 0,
+  "errors": 4,
+  "pass_rate": 0.5555555555555556,
+  "starvation_tests_failed": 0,
+  "contention_tests_failed": 0
+}

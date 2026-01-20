@@ -1,0 +1,34 @@
+{
+  "run_id": "run-2026-01-20-001",
+  "test_id": "ROUTE-003",
+  "test_name": "Dynamic routing under load",
+  "timestamp": "2026-01-20T17:20:56.449241",
+  "status": "completed",
+  "metrics": {
+    "baseline": {
+      "total": 8,
+      "passed": 7,
+      "failed": 1,
+      "pass_rate": 0.875
+    },
+    "concurrent": {
+      "concurrent_requests": 20,
+      "passed": 20,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "route_distribution": {
+        "standard": 5,
+        "fast": 5,
+        "premium": 5,
+        "escalation": 5
+      }
+    }
+  },
+  "findings_summary": {
+    "strengths": 2,
+    "dx_issues": 1,
+    "improvements": 3,
+    "bugs": 0
+  },
+  "verdict": "PASS"
+}

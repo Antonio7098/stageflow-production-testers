@@ -1,0 +1,17 @@
+{
+  "python_version": "3.11.5",
+  "os": "Windows 11",
+  "cpu": "AMD64 Family 25 Model 80 Stepping 0 AuthenticAMD",
+  "memory_gb": 32,
+  "dependencies": {
+    "stageflow-core": "0.5.1",
+    "pydantic": "2.11.7",
+    "pytest": "8.3.4",
+    "pytest-asyncio": "0.25.2"
+  },
+  "test_environment": {
+    "backend": "in-process",
+    "isolation": "per-test",
+    "logging_level": "DEBUG"
+  }
+}

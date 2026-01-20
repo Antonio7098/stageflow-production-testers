@@ -1,0 +1,265 @@
+{
+  "test_run_id": "contract008_20260119_142353",
+  "timestamp": "2026-01-19T14:23:53.087876",
+  "duration_seconds": 0.015994,
+  "summary": {
+    "total_tests": 6,
+    "passed": 6,
+    "failed": 0,
+    "pass_rate": "100.0%"
+  },
+  "tests": [
+    {
+      "name": "subpipeline_context_inheritance",
+      "category": "context_inheritance",
+      "passed": true,
+      "duration_ms": 4.000186920166016,
+      "expected_behavior": "Child pipeline should inherit user_id and org_id from parent",
+      "actual_behavior": "Pipeline executed without errors",
+      "contract_violated": false,
+      "silent_failure": false,
+      "error_message": null,
+      "output_data": {
+        "context_setup": {
+          "status": "ok",
+          "data": {
+            "setup_complete": true,
+            "user_id": "3baee38a-018e-4c4f-8c1a-ed53ff819a14",
+            "org_id": "b7da620f-74f9-4615-b062-46d6c152a654"
+          }
+        },
+        "subpipeline_parent": {
+          "status": "ok",
+          "data": {
+            "parent_result": "completed",
+            "child_run_id": "9ae5ed99-87b0-4f1d-8de9-1a8d694a6e44",
+            "child_result": null,
+            "inherited_context": {
+              "user_id": "3baee38a-018e-4c4f-8c1a-ed53ff819a14",
+              "org_id": "b7da620f-74f9-4615-b062-46d6c152a654"
+            }
+          }
+        },
+        "verify_inheritance": {
+          "status": "ok",
+          "data": {
+            "inheritance_verified": true,
+            "user_id_present": true,
+            "org_id_present": true
+          }
+        }
+      }
+    },
+    {
+      "name": "base_derived_validation_chaining",
+      "category": "validation_chaining",
+      "passed": true,
+      "duration_ms": 3.0002593994140625,
+      "expected_behavior": "Both base and derived validation should run in sequence",
+      "actual_behavior": "Pipeline executed without errors",
+      "contract_violated": false,
+      "silent_failure": false,
+      "error_message": null,
+      "output_data": {
+        "base_test": {
+          "status": "ok",
+          "data": {
+            "validated": true,
+            "base_validated": true
+          }
+        },
+        "derived_test": {
+          "status": "ok",
+          "data": {
+            "validated": true,
+            "base_validated": true,
+            "derived_validated": true
+          }
+        },
+        "verify_chain": {
+          "status": "ok",
+          "data": {
+            "chain_verified": true,
+            "base_validation_passed": true,
+            "derived_validation_passed": true
+          }
+        }
+      }
+    },
+    {
+      "name": "polymorphic_contract_extension",
+      "category": "polymorphic_contracts",
+      "passed": true,
+      "duration_ms": 3.0019283294677734,
+      "expected_behavior": "Derived stage contract should extend base stage contract",
+      "actual_behavior": "Pipeline executed without errors",
+      "contract_violated": false,
+      "silent_failure": false,
+      "error_message": null,
+      "output_data": {
+        "base_polymorphic": {
+          "status": "ok",
+          "data": {
+            "output_type": "base",
+            "base_field": "base_value",
+            "contract": {
+              "required": [
+                "output_type",
+                "base_field"
+              ],
+              "types": {
+                "output_type": "<class 'str'>",
+                "base_field": "<class 'str'>"
+              }
+            }
+          }
+        },
+        "derived_polymorphic": {
+          "status": "ok",
+          "data": {
+            "output_type": "derived",
+            "base_field": "base_value",
+            "derived_field": "derived_value",
+            "contract": {
+              "required": [
+                "output_type",
+                "base_field",
+                "derived_field"
+              ],
+              "types": {
+                "output_type": "<class 'str'>",
+                "base_field": "<class 'str'>",
+                "derived_field": "<class 'str'>"
+              }
+            }
+          }
+        },
+        "check_contracts": {
+          "status": "ok",
+          "data": {
+            "contract_check": true,
+            "base_contract": {
+              "required": [
+                "output_type",
+                "base_field"
+              ],
+              "types": {
+                "output_type": "<class 'str'>",
+                "base_field": "<class 'str'>"
+              }
+            },
+            "derived_contract": {
+              "required": [
+                "output_type",
+                "base_field",
+                "derived_field"
+              ],
+              "types": {
+                "output_type": "<class 'str'>",
+                "base_field": "<class 'str'>",
+                "derived_field": "<class 'str'>"
+              }
+            },
+            "contract_extends_base": true
+          }
+        }
+      }
+    },
+    {
+      "name": "contract_composition",
+      "category": "contract_composition",
+      "passed": true,
+      "duration_ms": 1.0006427764892578,
+      "expected_behavior": "Output should satisfy all composed contracts",
+      "actual_behavior": "Pipeline executed without errors",
+      "contract_violated": false,
+      "silent_failure": false,
+      "error_message": null,
+      "output_data": {
+        "composition": {
+          "status": "ok",
+          "data": {
+            "validated": true,
+            "contracts_composed": 2
+          }
+        }
+      }
+    },
+    {
+      "name": "silent_failure_detection",
+      "category": "silent_failure",
+      "passed": true,
+      "duration_ms": 1.9996166229248047,
+      "expected_behavior": "Missing contract fields should be detected as silent failure",
+      "actual_behavior": "Pipeline executed without errors",
+      "contract_violated": false,
+      "silent_failure": true,
+      "error_message": null,
+      "output_data": {
+        "silent_failure": {
+          "status": "ok",
+          "data": {
+            "partial_data": true,
+            "required_field_1": "value1"
+          }
+        },
+        "verify_missing": {
+          "status": "ok",
+          "data": {
+            "missing_fields": [
+              "required_field_2",
+              "required_field_3"
+            ],
+            "silent_failure_detected": true,
+            "stage_reported_partial": true
+          }
+        }
+      }
+    },
+    {
+      "name": "contract_violation_no_enforcement",
+      "category": "contract_enforcement",
+      "passed": true,
+      "duration_ms": 1.9977092742919922,
+      "expected_behavior": "Child stage output missing 'extra_field' should NOT raise error (no automatic enforcement)",
+      "actual_behavior": "Pipeline executed without errors",
+      "contract_violated": true,
+      "silent_failure": false,
+      "error_message": null,
+      "output_data": {
+        "incomplete": {
+          "status": "ok",
+          "data": {
+            "result": "test_result",
+            "status": "success",
+            "contract_validated": true
+          }
+        },
+        "expect_fields": {
+          "status": "ok",
+          "data": {
+            "contract_check_passed": false,
+            "missing_fields": [
+              "result",
+              "status",
+              "extra_field"
+            ],
+            "contract_violated": true
+          }
+        }
+      }
+    }
+  ],
+  "findings": {
+    "contract_inheritance_gaps": [],
+    "silent_failures": [
+      {
+        "test": "silent_failure_detection",
+        "description": "Pipeline executed without errors",
+        "impact": "Contract violations may go undetected"
+      }
+    ],
+    "strengths": [],
+    "improvements_needed": []
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "test_run_id": "a1cd2c86-8542-4c37-8201-eed9596ac098",
+  "start_time": "2026-01-19T08:27:25.407637+00:00",
+  "target": "CORE-005",
+  "description": "Snapshot versioning and rollback integrity",
+  "tests": [
+    {
+      "test_name": "baseline_pipeline",
+      "start_time": "2026-01-19T08:27:25.407637+00:00",
+      "stages_expected": 3,
+      "stages_completed": 3,
+      "outputs": {
+        "create": {
+          "data": {
+            "initial": "data",
+            "timestamp": "2026-01-19T08:27:25.407637+00:00"
+          },
+          "status": "StageStatus.OK"
+        },
+        "modify": {
+          "data": {
+            "modified_data": {
+              "modified": true,
+              "version": "v2",
+              "modification_time": "2026-01-19T08:27:25.407637+00:00"
+            }
+          },
+          "status": "StageStatus.OK"
+        },
+        "verify": {
+          "data": {
+            "original_preserved": true,
+            "modified_received": true,
+            "all_keys": [
+              "run_id",
+              "enrichments",
+              "conversation",
+              "extensions",
+              "extensions_type",
+              "input_text",
+              "input_audio_duration_ms",
+              "topology",
+              "execution_mode",
+              "created_at",
+              "metadata",
+              "pipeline_run_id",
+              "request_id",
+              "session_id",
+              "user_id",
+              "org_id",
+              "interaction_id",
+              "messages",
+              "routing_decision",
+              "profile",
+              "memory",
+              "documents",
+              "web_results"
+            ]
+          },
+          "status": "StageStatus.OK"
+        }
+      },
+      "errors": [],
+      "success": true,
+      "duration_ms": 0.0,
+      "end_time": "2026-01-19T08:27:25.408635+00:00"
+    },
+    {
+      "test_name": "serialization_roundtrip",
+      "start_time": "2026-01-19T08:27:25.408635+00:00",
+      "success": true,
+      "outputs": {
+        "serialization": {
+          "original_fields": 23,
+          "restored_fields": 23,
+          "missing_fields": [],
+          "json_valid": true
+        }
+      },
+      "errors": [],
+      "duration_ms": 0.9958744049072266,
+      "end_time": "2026-01-19T08:27:25.409631+00:00"
+    },
+    {
+      "test_name": "snapshot_versioning",
+      "start_time": "2026-01-19T08:27:25.409631+00:00",
+      "success": true,
+      "outputs": {
+        "versioning": {
+          "versions_created": 50,
+          "total_size_bytes": 78040,
+          "avg_size_per_version": 1560.8
+        }
+      },
+      "errors": [],
+      "duration_ms": 3.999471664428711,
+      "end_time": "2026-01-19T08:27:25.413630+00:00"
+    },
+    {
+      "test_name": "checkpoint_rollback",
+      "start_time": "2026-01-19T08:27:25.414633+00:00",
+      "success": true,
+      "outputs": {
+        "checkpoint": {
+          "checkpoint_created": true,
+          "checkpoint_size_bytes": 1636,
+          "rollback_possible": true,
+          "state_preserved": true
+        }
+      },
+      "errors": [],
+      "duration_ms": 0.0,
+      "end_time": "2026-01-19T08:27:25.414633+00:00"
+    },
+    {
+      "test_name": "null_field_handling",
+      "start_time": "2026-01-19T08:27:25.414633+00:00",
+      "success": true,
+      "outputs": {
+        "null_handling": {
+          "input_text_accessible": true,
+          "messages_accessible": true,
+          "profile_accessible": false,
+          "memory_accessible": false,
+          "input_text_type": "str",
+          "messages_count": 2
+        }
+      },
+      "errors": [],
+      "duration_ms": 0.0,
+      "end_time": "2026-01-19T08:27:25.414633+00:00"
+    }
+  ],
+  "summary": {
+    "total_tests": 5,
+    "passed": 5,
+    "failed": 0,
+    "end_time": "2026-01-19T08:27:25.414633+00:00"
+  }
+}

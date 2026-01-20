@@ -1,0 +1,112 @@
+{
+  "baseline": [
+    {
+      "run_id": "baseline_empty_fixed_size",
+      "payload_size": 0,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "baseline_empty_semantic",
+      "payload_size": 0,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "baseline_tiny_fixed_size",
+      "payload_size": 100,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "baseline_tiny_semantic",
+      "payload_size": 100,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "baseline_small_fixed_size",
+      "payload_size": 10240,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "baseline_small_semantic",
+      "payload_size": 10240,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "baseline_medium_fixed_size",
+      "payload_size": 102400,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "baseline_medium_semantic",
+      "payload_size": 102400,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    }
+  ],
+  "stress": [
+    {
+      "run_id": "stress_empty",
+      "payload_size": 0,
+      "success": false,
+      "error": "Stage 'memory' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "stress_tiny",
+      "payload_size": 100,
+      "success": false,
+      "error": "Stage 'memory' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "stress_small",
+      "payload_size": 10240,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    }
+  ],
+  "chaos": [
+    {
+      "run_id": "chaos_empty",
+      "payload_size": 0,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "chaos_tiny",
+      "payload_size": 100,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    }
+  ],
+  "edge_cases": [
+    {
+      "run_id": "edge_empty",
+      "payload_size": 0,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "edge_exactly_4kb",
+      "payload_size": 4096,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    },
+    {
+      "run_id": "edge_one_over_4kb",
+      "payload_size": 4097,
+      "success": false,
+      "error": "Stage 'chunking' failed: 'StageContext' object has no attribute 'emit_event'"
+    }
+  ],
+  "summary": {
+    "total_tests": 16,
+    "passed": 0,
+    "failed": 16,
+    "success_rate": 0.0
+  }
+}

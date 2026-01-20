@@ -1,0 +1,189 @@
+{
+  "test_run_id": "run-2026-01-19-001",
+  "roadmap_entry": "CONTRACT-002",
+  "title": "Schema evolution and backward compatibility",
+  "timestamp": "2026-01-19T12:00:00Z",
+  "scenarios": {
+    "field_addition": {
+      "scenario": "field_addition",
+      "description": "Adding new fields should not break downstream consumers",
+      "v1_output": {
+        "result": "success",
+        "count": 42,
+        "message": "Hello from v1",
+        "tags": [
+          "v1",
+          "original"
+        ]
+      },
+      "v2_output": {
+        "result": "success",
+        "count": 42,
+        "message": "Hello from v2",
+        "tags": [
+          "v2",
+          "updated"
+        ],
+        "metadata": {
+          "version": 2,
+          "timestamp": "2026-01-19"
+        }
+      },
+      "downstream_result": {
+        "status": "ok",
+        "data": {
+          "consumed": {
+            "result": "success",
+            "count": 42,
+            "message": "Hello from v2"
+          },
+          "all_fields_found": true
+        },
+        "error": null
+      },
+      "success": true,
+      "errors": []
+    },
+    "field_removal": {
+      "scenario": "field_removal",
+      "description": "Removing fields should produce clear error messages",
+      "v1_output": {
+        "result": "success",
+        "count": 42,
+        "message": "Hello from v1",
+        "tags": [
+          "v1",
+          "original"
+        ]
+      },
+      "v3_output": {
+        "result": "success",
+        "count": 42,
+        "metadata": {
+          "version": 3,
+          "breaking": true
+        }
+      },
+      "downstream_result": {
+        "status": "fail",
+        "data": {
+          "missing_fields": [
+            "Field 'message' not found in upstream output",
+            "Field 'tags' not found in upstream output"
+          ],
+          "found_fields": {
+            "result": "success",
+            "count": 42,
+            "message": null,
+            "tags": null
+          }
+        },
+        "error": "Field 'message' not found in upstream output; Field 'tags' not found in upstream output"
+      },
+      "success": true,
+      "errors": []
+    },
+    "type_change": {
+      "scenario": "type_change",
+      "description": "Type changes should be detected and reported",
+      "v1_output": {
+        "count": 42
+      },
+      "v4_output": {
+        "result": "success",
+        "count": "42",
+        "message": "Hello from v4"
+      },
+      "downstream_result": {
+        "status": "fail",
+        "data": {
+          "type_check_results": {
+            "count": {
+              "value": "42",
+              "expected_type": "int",
+              "actual_type": "str",
+              "type_match": false
+            }
+          }
+        },
+        "error": "Field 'count': expected int, got str"
+      },
+      "success": true,
+      "errors": []
+    },
+    "optional_field": {
+      "scenario": "optional_field",
+      "description": "Missing optional fields should not cause failures",
+      "with_optional": {
+        "result": "success",
+        "required_field": "always_present",
+        "optional_field": "sometimes_present"
+      },
+      "without_optional": {
+        "result": "success",
+        "required_field": "always_present"
+      },
+      "downstream_with": {
+        "status": "ok",
+        "error": null
+      },
+      "downstream_without": {
+        "status": "fail",
+        "error": "Field 'optional_field' not found in upstream output"
+      },
+      "success": true,
+      "errors": []
+    },
+    "nested_changes": {
+      "scenario": "nested_changes",
+      "description": "Nested field changes should be traceable",
+      "v6_output": {
+        "user": {
+          "name": "John",
+          "age": 30,
+          "email": "john@example.com"
+        },
+        "settings": {
+          "theme": "dark",
+          "notifications": true
+        }
+      },
+      "v7_output": {
+        "user": {
+          "display_name": "John",
+          "age": 30
+        }
+      },
+      "downstream_v6": {
+        "status": "ok",
+        "data": {
+          "nested_values": {
+            "user_name": "John",
+            "user_email": "john@example.com",
+            "settings_theme": "dark"
+          },
+          "all_paths_valid": true
+        },
+        "error": null
+      },
+      "downstream_v7": {
+        "status": "fail",
+        "data": {
+          "found_values": {
+            "user_name": null,
+            "user_email": null,
+            "settings_theme": null
+          }
+        },
+        "error": "Path user->name failed at 'name': field not found; Path user->email failed at 'email': field not found; Path settings->theme failed at 'settings': field not found"
+      },
+      "success": true,
+      "errors": []
+    }
+  },
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0
+  }
+}

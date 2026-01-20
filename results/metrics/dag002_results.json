@@ -1,0 +1,79 @@
+{
+  "test_run_id": "a7c6dc55-9bb8-478b-b20e-00a9856bfec8",
+  "timestamp": "2026-01-19T10:41:44.524981+00:00",
+  "tests": [
+    {
+      "name": "Counter Concurrency",
+      "test_name": "test_counter_concurrency",
+      "passed": true,
+      "duration_ms": 16.99972152709961,
+      "details": {
+        "num_stages": 20,
+        "expected": 20,
+        "actual": 20,
+        "lost_updates": 0,
+        "data_corruption": false
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "Context Write Race",
+      "test_name": "test_context_write_race",
+      "passed": false,
+      "duration_ms": 0,
+      "details": {},
+      "error": "Stage 'write_7' failed: 'StageContext' object has no attribute 'pipeline_ctx'",
+      "stack_trace": "Traceback (most recent call last):\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 641, in _run_stage\n    raw_output = await spec.runner(ctx)\n                 ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\pipeline.py\", line 133, in runner_wrapper\n    return await stage.execute(ctx)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\ANTONIO\\Coding\\stageflow-production-testers\\pipelines\\run_dag002_tests.py\", line 170, in execute\n    if self._key not in ctx.pipeline_ctx.data:\n                        ^^^^^^^^^^^^^^^^\nAttributeError: 'StageContext' object has no attribute 'pipeline_ctx'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\ANTONIO\\Coding\\stageflow-production-testers\\pipelines\\run_dag002_tests.py\", line 323, in test_context_write_race\n    results = await graph.run(ctx)\n              ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 495, in run\n    raise exc  # type: ignore[misc]\n    ^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 597, in _execute_node\n    return name, await self._run_stage(spec, stage_ctx)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\pipeline\\dag.py\", line 703, in _run_stage\n    raise UnifiedStageExecutionError(spec.name, exc) from exc\nstageflow.pipeline.dag.UnifiedStageExecutionError: Stage 'write_7' failed: 'StageContext' object has no attribute 'pipeline_ctx'\n"
+    },
+    {
+      "name": "Parallel OutputBag",
+      "test_name": "test_parallel_output_bag",
+      "passed": true,
+      "duration_ms": 48.97165298461914,
+      "details": {
+        "num_stages": 10,
+        "expected": 10,
+        "actual": 10,
+        "lost_outputs": 0
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "High Fan-out (50)",
+      "test_name": "test_high_fanout",
+      "passed": true,
+      "duration_ms": 34.17563438415527,
+      "details": {
+        "num_stages": 50,
+        "expected": 50,
+        "actual": 50,
+        "lost_outputs": 0
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "Mixed Priority",
+      "test_name": "test_mixed_priority",
+      "passed": true,
+      "duration_ms": 70.84059715270996,
+      "details": {
+        "num_low_priority": 5,
+        "high_completed": true,
+        "all_low_completed": true,
+        "duration_ms": 70.84059715270996
+      },
+      "error": null,
+      "stack_trace": null
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "passed": 4,
+    "failed": 1,
+    "pass_rate": "80.0%"
+  },
+  "findings": []
+}

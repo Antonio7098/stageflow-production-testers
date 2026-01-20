@@ -1,0 +1,17 @@
+{
+  "low_security": {
+    "bypass_rate": 0.8,
+    "bypassed_count": 24,
+    "total_count": 30
+  },
+  "medium_security": {
+    "bypass_rate": 0.8666666666666667,
+    "bypassed_count": 26,
+    "total_count": 30
+  },
+  "high_security": {
+    "bypass_rate": 0.9666666666666667,
+    "bypassed_count": 29,
+    "total_count": 30
+  }
+}

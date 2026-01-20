@@ -1,0 +1,11 @@
+{
+  "test_suite": "DAG-007",
+  "target": "Dynamic DAG modification during execution",
+  "completed_at": "2026-01-19T11:36:14.135438",
+  "summary": {
+    "total_tests": 9,
+    "passed": 7,
+    "failed": 2,
+    "pass_rate": 77.77777777777779
+  }
+}

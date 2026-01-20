@@ -1,0 +1,141 @@
+{
+  "mission_id": "GUARD-003",
+  "target": "PII/PHI redaction accuracy (>99% recall)",
+  "priority": "P0",
+  "risk": "Severe",
+  "timestamp": "2026-01-20T19:15:28.600893",
+  "overall_metrics": {
+    "total_tests": 260,
+    "total_passed": 222,
+    "overall_pass_rate": 0.8538461538461538,
+    "average_recall_rate": 0.6353333333333333,
+    "average_false_negative_rate": 0.36466666666666664,
+    "average_false_positive_rate": 0.0,
+    "average_latency_ms": 0.6778731331966508,
+    "total_silent_failures": 38,
+    "recall_target_met": false
+  },
+  "pipeline_results": {
+    "baseline": {
+      "total_tests": 100,
+      "passed": 89,
+      "failed": 11,
+      "recall_rate": 0.89,
+      "false_negative_rate": 0.10999999999999999,
+      "false_positive_rate": 0.0,
+      "avg_latency_ms": 0.7734889999119332,
+      "p95_latency_ms": 1.101000001654029,
+      "silent_failures_count": 11,
+      "silent_failures": [
+        "PHI missed: ip_address - IP: 98.138.112.176...",
+        "PHI missed: phone_number - Phone: 451462704845146270484514627048X...",
+        "PHI missed: ip_address - IP: 5.57.185.225...",
+        "PHI missed: date_of_birth - DOB: 2000-08-10...",
+        "PHI missed: phone_number - Phone: 136193990913619399091361939909X...",
+        "PHI missed: phone_number - Phone: 384251354238425135423842513542X...",
+        "PHI missed: date_of_birth - DOB: 1960-12-15...",
+        "PHI missed: date_of_birth - DOB: 1960-12-04...",
+        "PHI missed: ip_address - IP: 57.102.235.90...",
+        "PHI missed: web_url - Visit: http://demo.net..."
+      ]
+    },
+    "edge_cases": {
+      "total_tests": 50,
+      "passed": 44,
+      "failed": 6,
+      "recall_rate": 0.88,
+      "false_negative_rate": 0.12,
+      "false_positive_rate": 0.0,
+      "avg_latency_ms": 0.6626459996186895,
+      "p95_latency_ms": 1.1935999973502476,
+      "silent_failures_count": 6,
+      "silent_failures": [
+        "PHI missed (edge case): Spelled out phone number - My number is one two three four five six seven eig...",
+        "PHI missed (edge case): Obfuscated email - Contact at john at doe dot com...",
+        "PHI missed (edge case): Spaced SSN - SSN is 1 2 3 - 4 5 - 6 7 8 9...",
+        "PHI missed (edge case): Multiple name formats in same text - Patient J.D. for short, full name John David Smith...",
+        "PHI missed (edge case): Written date format - Born on the 5th of January, 1985...",
+        "PHI missed (edge case): Written IP address - IP address two fifty five dot one hundred one dot ..."
+      ]
+    },
+    "adversarial": {
+      "total_tests": 50,
+      "passed": 42,
+      "failed": 8,
+      "recall_rate": 0.84,
+      "false_negative_rate": 0.16000000000000003,
+      "false_positive_rate": 0.0,
+      "avg_latency_ms": 0.6586439999955473,
+      "p95_latency_ms": 0.9494999976595864,
+      "silent_failures_count": 8,
+      "silent_failures": [
+        "PHI missed (adversarial): Numeric substitution phone - Ph0n3 numb3r: 5-5-5-1-2-3-4-5-6-7...",
+        "PHI missed (adversarial): Word-separated SSN - S-S-S-N: 1-2-3-4-5-6-7-8-9...",
+        "PHI missed (adversarial): Unicode homoglyph name - Jo\u0301hn Doe...",
+        "PHI missed (adversarial): Numeric substitution name - John D00e for short...",
+        "PHI missed (adversarial): Phone with extension - Call at +1 (555) 123-4567 ext 1234...",
+        "PHI missed (adversarial): Spaced email - Email: u s e r @ e x a m p l e . c o m...",
+        "PHI missed (adversarial): Newline-separated SSN - SSN: 1\n2\n3\n-\n4\n5\n-\n6\n7\n8\n9...",
+        "PHI missed (adversarial): Adversarial clinical text - Patient Charles Anderson presented with abdominal ..."
+      ]
+    },
+    "chaos": {
+      "total_tests": 30,
+      "passed": 17,
+      "failed": 13,
+      "recall_rate": 0.5666666666666667,
+      "false_negative_rate": 0.43333333333333335,
+      "false_positive_rate": 0.0,
+      "avg_latency_ms": 0.507389999741766,
+      "p95_latency_ms": 0.7027999999991152,
+      "silent_failures_count": 13,
+      "silent_failures": [
+        "PHI missed (chaos): person_name - Patient: Sarah Wilson...",
+        "PHI missed (chaos): date_of_birth - DOB: April 25, 1959...",
+        "PHI missed (chaos): ip_address - IP: 98.138.112.176...",
+        "PHI missed (chaos): phone_number - Phone: 9537672423.9537672423.9537672423X...",
+        "PHI missed (chaos): web_url - Visit: http://demo.net...",
+        "PHI missed (chaos): phone_number - Phone: 451462704845146270484514627048X...",
+        "PHI missed (chaos): ip_address - IP: 5.57.185.225...",
+        "PHI missed (chaos): phone_number - My number is one two three four five six seven eig...",
+        "PHI missed (chaos): email - Contact at john at doe dot com...",
+        "PHI missed (chaos): ssn - SSN is 1 2 3 - 4 5 - 6 7 8 9..."
+      ]
+    },
+    "no_phi": {
+      "total_tests": 30,
+      "passed": 30,
+      "failed": 0,
+      "recall_rate": 0.0,
+      "false_negative_rate": 1.0,
+      "false_positive_rate": 0.0,
+      "avg_latency_ms": 0.7871966667153174,
+      "p95_latency_ms": 1.3864000029570889,
+      "silent_failures_count": 0,
+      "silent_failures": []
+    }
+  },
+  "recall_comparison": {
+    "baseline": {
+      "recall_rate": 0.9209302325581395,
+      "detected": 198,
+      "missed": 17
+    },
+    "edge_optimized": {
+      "recall_rate": 0.9090909090909091,
+      "detected": 190,
+      "missed": 19
+    },
+    "high_recall": {
+      "recall_rate": 0.89,
+      "detected": 178,
+      "missed": 22
+    }
+  },
+  "verdict": "NEEDS_WORK",
+  "recommendations": [
+    "Improve detection rates for missed PII categories",
+    "Add multi-pass detection for edge cases",
+    "Consider LLM-based detection for adversarial inputs"
+  ]
+}

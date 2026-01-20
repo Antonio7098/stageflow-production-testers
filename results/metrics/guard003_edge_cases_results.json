@@ -1,0 +1,374 @@
+{
+  "pipeline_name": "edge_cases",
+  "timestamp": "2026-01-20T19:15:28.463256",
+  "total_tests": 50,
+  "passed": 44,
+  "failed": 6,
+  "recall_rate": 0.88,
+  "precision_rate": 1.0,
+  "false_negative_rate": 0.12,
+  "false_positive_rate": 0.0,
+  "avg_latency_ms": 0.6626459996186895,
+  "p95_latency_ms": 1.1935999973502476,
+  "p99_latency_ms": 1.3189999990572687,
+  "silent_failures": [
+    "PHI missed (edge case): Spelled out phone number - My number is one two three four five six seven eig...",
+    "PHI missed (edge case): Obfuscated email - Contact at john at doe dot com...",
+    "PHI missed (edge case): Spaced SSN - SSN is 1 2 3 - 4 5 - 6 7 8 9...",
+    "PHI missed (edge case): Multiple name formats in same text - Patient J.D. for short, full name John David Smith...",
+    "PHI missed (edge case): Written date format - Born on the 5th of January, 1985...",
+    "PHI missed (edge case): Written IP address - IP address two fifty five dot one hundred one dot ..."
+  ],
+  "test_results": [
+    {
+      "test_id": "edge_0",
+      "category": "phone_number",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.6690999980492052
+    },
+    {
+      "test_id": "edge_1",
+      "category": "email",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.4248000004736241
+    },
+    {
+      "test_id": "edge_2",
+      "category": "ssn",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.42129999928874895
+    },
+    {
+      "test_id": "edge_3",
+      "category": "person_name",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 1.3189999990572687
+    },
+    {
+      "test_id": "edge_4",
+      "category": "zip_code",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.1935999973502476
+    },
+    {
+      "test_id": "edge_5",
+      "category": "date_of_birth",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.5270000001473818
+    },
+    {
+      "test_id": "edge_6",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.436399997852277
+    },
+    {
+      "test_id": "edge_7",
+      "category": "ip_address",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.5047999984526541
+    },
+    {
+      "test_id": "edge_8",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6207000005815644
+    },
+    {
+      "test_id": "edge_9",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6279000008362345
+    },
+    {
+      "test_id": "edge_10",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5920000003243331
+    },
+    {
+      "test_id": "edge_11",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6036000013409648
+    },
+    {
+      "test_id": "edge_12",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5793999989691656
+    },
+    {
+      "test_id": "edge_13",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.594900000578491
+    },
+    {
+      "test_id": "edge_14",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5982000002404675
+    },
+    {
+      "test_id": "edge_15",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5734999976994004
+    },
+    {
+      "test_id": "edge_16",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5931999985477887
+    },
+    {
+      "test_id": "edge_17",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7466999995813239
+    },
+    {
+      "test_id": "edge_18",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6692999995721038
+    },
+    {
+      "test_id": "edge_19",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6109999994805548
+    },
+    {
+      "test_id": "edge_20",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.689199998305412
+    },
+    {
+      "test_id": "edge_21",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7265999993251171
+    },
+    {
+      "test_id": "edge_22",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7096000008459669
+    },
+    {
+      "test_id": "edge_23",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7537999990745448
+    },
+    {
+      "test_id": "edge_24",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.9534000018902589
+    },
+    {
+      "test_id": "edge_25",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7525999972131103
+    },
+    {
+      "test_id": "edge_26",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.2883999988844153
+    },
+    {
+      "test_id": "edge_27",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.8350999996764585
+    },
+    {
+      "test_id": "edge_28",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7578000004286878
+    },
+    {
+      "test_id": "edge_29",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7396000000881031
+    },
+    {
+      "test_id": "edge_30",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6245000004128087
+    },
+    {
+      "test_id": "edge_31",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6156999988888856
+    },
+    {
+      "test_id": "edge_32",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5837999997311272
+    },
+    {
+      "test_id": "edge_33",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6462999990617391
+    },
+    {
+      "test_id": "edge_34",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5845000014232937
+    },
+    {
+      "test_id": "edge_35",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5742000030295458
+    },
+    {
+      "test_id": "edge_36",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.589299997955095
+    },
+    {
+      "test_id": "edge_37",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6006000003253575
+    },
+    {
+      "test_id": "edge_38",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6106000000727363
+    },
+    {
+      "test_id": "edge_39",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5764000015915371
+    },
+    {
+      "test_id": "edge_40",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5619000003207475
+    },
+    {
+      "test_id": "edge_41",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.612899999396177
+    },
+    {
+      "test_id": "edge_42",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5731999990530312
+    },
+    {
+      "test_id": "edge_43",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6004999995639082
+    },
+    {
+      "test_id": "edge_44",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5657000001519918
+    },
+    {
+      "test_id": "edge_45",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.601499999902444
+    },
+    {
+      "test_id": "edge_46",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5880999997316394
+    },
+    {
+      "test_id": "edge_47",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5855999988853
+    },
+    {
+      "test_id": "edge_48",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5732999998144805
+    },
+    {
+      "test_id": "edge_49",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.751199997466756
+    }
+  ]
+}

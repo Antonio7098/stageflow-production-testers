@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-01-20T14:23:42.777560",
+  "results": [
+    {
+      "test_name": "retry_transient",
+      "success": true,
+      "retry_count": 0,
+      "documents_retrieved": 5
+    },
+    {
+      "test_name": "max_retries",
+      "success": false,
+      "retry_count": 0,
+      "error": "Query timeout"
+    }
+  ]
+}

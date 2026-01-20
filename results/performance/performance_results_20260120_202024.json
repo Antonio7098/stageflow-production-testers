@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-01-20T20:20:24.172473+00:00",
+  "config": {
+    "guard_latency_ms": 5.0,
+    "test_count": 50
+  },
+  "results": {
+    "baseline": {
+      "summary": {
+        "test_count": 50,
+        "passed_count": 0,
+        "blocked_count": 0,
+        "avg_latency_ms": 16.40281200001482,
+        "p50_latency_ms": 15.236499999446096,
+        "p95_latency_ms": 23.588799998833565,
+        "p99_latency_ms": 31.63680000216118,
+        "avg_guard_overhead_ms": 0.0,
+        "throughput_rps": 1580.437970862552
+      },
+      "silent_failures": []
+    },
+    "single_guard": {
+      "summary": {
+        "test_count": 50,
+        "passed_count": 0,
+        "blocked_count": 0,
+        "avg_latency_ms": 36.73596600012388,
+        "p50_latency_ms": 31.106599999475293,
+        "p95_latency_ms": 60.41180000102031,
+        "p99_latency_ms": 83.02999999796157,
+        "avg_guard_overhead_ms": 0.0,
+        "throughput_rps": 602.1919788176265,
+        "overhead_percent": 123.96139149854729
+      },
+      "silent_failures": []
+    },
+    "multi_guard": {
+      "summary": {
+        "test_count": 50,
+        "passed_count": 0,
+        "blocked_count": 0,
+        "avg_latency_ms": 15.048662000190234,
+        "p50_latency_ms": 15.365100000053644,
+        "p95_latency_ms": 18.31320000201231,
+        "p99_latency_ms": 21.68130000063684,
+        "avg_guard_overhead_ms": 0.0,
+        "throughput_rps": 2306.13477967333,
+        "overhead_percent": -8.255596661251511
+      },
+      "silent_failures": []
+    },
+    "parallel_guard": {
+      "summary": {
+        "test_count": 50,
+        "passed_count": 0,
+        "blocked_count": 0,
+        "avg_latency_ms": 30.53096399991773,
+        "p50_latency_ms": 30.300099999294616,
+        "p95_latency_ms": 31.457000000955304,
+        "p99_latency_ms": 43.57750000053784,
+        "avg_guard_overhead_ms": 0.0,
+        "throughput_rps": 1147.3811026190785,
+        "overhead_percent": 86.13249971950022
+      },
+      "silent_failures": []
+    },
+    "full_guard": {
+      "summary": {
+        "test_count": 50,
+        "passed_count": 0,
+        "blocked_count": 0,
+        "avg_latency_ms": 45.902528000442544,
+        "p50_latency_ms": 45.760500001051696,
+        "p95_latency_ms": 47.3338000010699,
+        "p99_latency_ms": 58.871899997029686,
+        "avg_guard_overhead_ms": 0.0,
+        "throughput_rps": 849.3016193213178,
+        "overhead_percent": 179.8454801554823
+      },
+      "silent_failures": []
+    }
+  }
+}

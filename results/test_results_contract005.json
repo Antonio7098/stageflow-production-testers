@@ -1,0 +1,61 @@
+{
+  "test_run": "CONTRACT-005_field_validation",
+  "timestamp": "2026-01-19T13:46:00Z",
+  "agent": "claude-3.5-sonnet",
+  "tests": [
+    {
+      "name": "baseline_field_contract",
+      "status": "PASS",
+      "description": "All required fields present - pipeline completed successfully"
+    },
+    {
+      "name": "missing_required_field",
+      "status": "SILENT_FAILURE",
+      "description": "Pipeline completed but field was missing - no error raised",
+      "evidence": "field_consumer received None for required_field without error"
+    },
+    {
+      "name": "strict_field_validation",
+      "status": "PASS",
+      "description": "GUARD stage correctly rejected missing field"
+    },
+    {
+      "name": "type_coercion_behavior",
+      "status": "PASS",
+      "description": "Type coercion test completed"
+    },
+    {
+      "name": "default_value_behavior",
+      "status": "PASS",
+      "description": "Default value behavior works as expected"
+    },
+    {
+      "name": "optional_field_only",
+      "status": "PASS",
+      "description": "Optional-only pipeline completed"
+    },
+    {
+      "name": "partial_output_consumer",
+      "status": "WARN",
+      "description": "Partial output test - fields may be missing"
+    },
+    {
+      "name": "concurrent_field_access",
+      "status": "PASS",
+      "description": "10/10 concurrent tests successful"
+    }
+  ],
+  "summary": {
+    "total_tests": 8,
+    "passed": 6,
+    "failed": 0,
+    "silent_failures": 1,
+    "warnings": 1
+  },
+  "findings": {
+    "bugs": ["BUG-023"],
+    "dx_issues": ["DX-029"],
+    "improvements": ["IMP-043"],
+    "strengths": ["STR-044"]
+  }
+}

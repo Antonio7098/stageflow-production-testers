@@ -1,0 +1,24 @@
+{
+  "roadmap_entry_id": "GUARD-005",
+  "roadmap_entry_title": "Rate limiting and abuse prevention",
+  "priority": "P1",
+  "risk_class": "High",
+  "industry": "N/A",
+  "deployment_mode": "N/A",
+  "run_id": "run-2026-01-20-001",
+  "started_at": "2026-01-20T00:00:00Z",
+  "agent_model": "claude-3.5-sonnet",
+  "stageflow_version": "0.5.0",
+  "test_parameters": {
+    "baseline_users": 5,
+    "baseline_requests_per_user": 15,
+    "burst_requests": 50,
+    "concurrent_users": 10,
+    "concurrent_requests_per_user": 10,
+    "stress_concurrent": 50,
+    "stress_duration_seconds": 10,
+    "token_limit_users": 3,
+    "token_limit_requests_per_user": 5,
+    "circuit_breaker_requests": 15
+  }
+}

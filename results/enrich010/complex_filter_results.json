@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-01-20T15:10:26.150179",
+  "results": [
+    {
+      "test_name": "and_filter_technical_published",
+      "success": false,
+      "execution_time_ms": 7.235299999592826,
+      "documents_filtered": 0,
+      "silent_failure": false,
+      "error": "Stage 'filter_validation' failed: Stage 'filter_validation': Attempted to access undeclared dependency 'metadata_retrieval'. Declared dependencies: ['complex_filtering']. Add 'metadata_retrieval' to depends_on to fix this error."
+    },
+    {
+      "test_name": "or_filter_multiple_statuses",
+      "success": false,
+      "execution_time_ms": 4.598699999405653,
+      "documents_filtered": 0,
+      "silent_failure": false,
+      "error": "Stage 'filter_validation' failed: Stage 'filter_validation': Attempted to access undeclared dependency 'metadata_retrieval'. Declared dependencies: ['complex_filtering']. Add 'metadata_retrieval' to depends_on to fix this error."
+    },
+    {
+      "test_name": "and_filter_high_priority",
+      "success": false,
+      "execution_time_ms": 6.763899998986744,
+      "documents_filtered": 0,
+      "silent_failure": false,
+      "error": "Stage 'filter_validation' failed: Stage 'filter_validation': Attempted to access undeclared dependency 'metadata_retrieval'. Declared dependencies: ['complex_filtering']. Add 'metadata_retrieval' to depends_on to fix this error."
+    }
+  ]
+}

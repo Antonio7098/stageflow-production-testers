@@ -1,0 +1,128 @@
+{
+  "timestamp": "2026-01-20T15:10:26.033148",
+  "summary": {
+    "total_tests": 9,
+    "passed": 8,
+    "failed": 1,
+    "silent_failures": 1
+  },
+  "results": [
+    {
+      "test_name": "equals_category",
+      "success": true,
+      "execution_time_ms": 4.950700000335928,
+      "documents_filtered": 25,
+      "filter_operator": "equals",
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true,
+        "expected_min_results": 10
+      }
+    },
+    {
+      "test_name": "equals_status",
+      "success": true,
+      "execution_time_ms": 4.718500000308268,
+      "documents_filtered": 26,
+      "filter_operator": "equals",
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true,
+        "expected_min_results": 10
+      }
+    },
+    {
+      "test_name": "in_categories",
+      "success": true,
+      "execution_time_ms": 5.007700001442572,
+      "documents_filtered": 51,
+      "filter_operator": "in",
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true,
+        "expected_min_results": 20
+      }
+    },
+    {
+      "test_name": "in_statuses",
+      "success": true,
+      "execution_time_ms": 4.936699999234406,
+      "documents_filtered": 59,
+      "filter_operator": "in",
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true,
+        "expected_min_results": 20
+      }
+    },
+    {
+      "test_name": "contains_title",
+      "success": false,
+      "execution_time_ms": 4.452399998626788,
+      "documents_filtered": 0,
+      "filter_operator": "contains",
+      "silent_failure": true,
+      "error": null,
+      "metrics": {
+        "validation_passed": true,
+        "expected_min_results": 5
+      }
+    },
+    {
+      "test_name": "gt_version",
+      "success": true,
+      "execution_time_ms": 5.881099999896833,
+      "documents_filtered": 64,
+      "filter_operator": "gt",
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true,
+        "expected_min_results": 20
+      }
+    },
+    {
+      "test_name": "lt_version",
+      "success": true,
+      "execution_time_ms": 4.9641999994491925,
+      "documents_filtered": 48,
+      "filter_operator": "lt",
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true,
+        "expected_min_results": 20
+      }
+    },
+    {
+      "test_name": "gte_confidence",
+      "success": true,
+      "execution_time_ms": 6.686299999273615,
+      "documents_filtered": 80,
+      "filter_operator": "gte",
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true,
+        "expected_min_results": 30
+      }
+    },
+    {
+      "test_name": "range_version",
+      "success": true,
+      "execution_time_ms": 7.14729999890551,
+      "documents_filtered": 106,
+      "filter_operator": "range",
+      "silent_failure": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true,
+        "expected_min_results": 30
+      }
+    }
+  ]
+}

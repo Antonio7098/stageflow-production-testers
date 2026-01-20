@@ -1,0 +1,161 @@
+{
+  "timestamp": "2026-01-20T14:23:37.092401",
+  "summary": {
+    "total_tests": 11,
+    "passed": 9,
+    "failed": 2,
+    "silent_failures": 0
+  },
+  "results": [
+    {
+      "test_name": "baseline",
+      "success": true,
+      "execution_time_ms": 81.1770999998771,
+      "documents_retrieved": 5,
+      "circuit_state": "closed",
+      "silent_failure": false,
+      "retry_count": 0,
+      "circuit_breaker_tripped": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true
+      }
+    },
+    {
+      "test_name": "connection_timeout",
+      "success": false,
+      "execution_time_ms": 3113.5180999999648,
+      "documents_retrieved": 0,
+      "circuit_state": "error",
+      "silent_failure": false,
+      "retry_count": 0,
+      "circuit_breaker_tripped": false,
+      "error": "Pipeline cancelled by stage 'validation': Validation failed",
+      "metrics": {}
+    },
+    {
+      "test_name": "query_timeout",
+      "success": true,
+      "execution_time_ms": 50.818400000025576,
+      "documents_retrieved": 5,
+      "circuit_state": "closed",
+      "silent_failure": false,
+      "retry_count": 0,
+      "circuit_breaker_tripped": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true
+      }
+    },
+    {
+      "test_name": "circuit_breaker_trip",
+      "success": false,
+      "execution_time_ms": 50.27960000006715,
+      "documents_retrieved": 0,
+      "circuit_state": "error",
+      "silent_failure": false,
+      "retry_count": 0,
+      "circuit_breaker_tripped": false,
+      "error": "Stage 'vector_db_enrich' failed: StageOutput.fail() got an unexpected keyword argument 'test_name'",
+      "metrics": {}
+    },
+    {
+      "test_name": "circuit_breaker_recovery",
+      "success": true,
+      "execution_time_ms": 45.63539999981003,
+      "documents_retrieved": 5,
+      "circuit_state": "closed",
+      "silent_failure": false,
+      "retry_count": 0,
+      "circuit_breaker_tripped": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true
+      }
+    },
+    {
+      "test_name": "silent_empty_results",
+      "success": true,
+      "execution_time_ms": 52.5154000006296,
+      "documents_retrieved": 5,
+      "circuit_state": "closed",
+      "silent_failure": false,
+      "retry_count": 0,
+      "circuit_breaker_tripped": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true
+      }
+    },
+    {
+      "test_name": "auth_failure",
+      "success": true,
+      "execution_time_ms": 47.55789999944682,
+      "documents_retrieved": 5,
+      "circuit_state": "closed",
+      "silent_failure": false,
+      "retry_count": 0,
+      "circuit_breaker_tripped": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true
+      }
+    },
+    {
+      "test_name": "service_unavailable",
+      "success": true,
+      "execution_time_ms": 54.792700000689365,
+      "documents_retrieved": 5,
+      "circuit_state": "closed",
+      "silent_failure": false,
+      "retry_count": 0,
+      "circuit_breaker_tripped": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true
+      }
+    },
+    {
+      "test_name": "resource_exhausted",
+      "success": true,
+      "execution_time_ms": 50.907400000141934,
+      "documents_retrieved": 5,
+      "circuit_state": "closed",
+      "silent_failure": false,
+      "retry_count": 0,
+      "circuit_breaker_tripped": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true
+      }
+    },
+    {
+      "test_name": "network_partition",
+      "success": true,
+      "execution_time_ms": 46.282500000415894,
+      "documents_retrieved": 5,
+      "circuit_state": "closed",
+      "silent_failure": false,
+      "retry_count": 0,
+      "circuit_breaker_tripped": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true
+      }
+    },
+    {
+      "test_name": "partial_write",
+      "success": true,
+      "execution_time_ms": 56.677599999602535,
+      "documents_retrieved": 5,
+      "circuit_state": "closed",
+      "silent_failure": false,
+      "retry_count": 0,
+      "circuit_breaker_tripped": false,
+      "error": null,
+      "metrics": {
+        "validation_passed": true
+      }
+    }
+  ]
+}

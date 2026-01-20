@@ -1,0 +1,159 @@
+{
+  "test_run_id": "388b137d-676c-488f-8163-9ca394419aa9",
+  "timestamp": "2026-01-19T10:23:28.225586+00:00",
+  "tests": [
+    {
+      "name": "test_org_id_inheritance_fork",
+      "passed": false,
+      "duration_ms": 5.0569999999999995,
+      "details": {
+        "parent_org_id": "00665413-c8d1-4b50-9e16-440053fd1c33",
+        "child_org_id": "00665413-c8d1-4b50-9e16-440053fd1c33",
+        "org_id_inherited": true,
+        "run_ids_different": true,
+        "data_isolated": false,
+        "parent_reference_correct": true
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "test_tenant_isolation_validator",
+      "passed": false,
+      "duration_ms": 3.0010000000000003,
+      "details": {},
+      "error": "Cross-tenant access to document",
+      "stack_trace": "Traceback (most recent call last):\n  File \"C:\\ANTONIO\\Coding\\stageflow-production-testers\\pipelines\\run_core010_tests.py\", line 197, in test_tenant_isolation_validator\n    attack_access = validator.record_access(\n                    ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\auth\\tenant.py\", line 247, in record_access\n    raise TenantIsolationError(\nstageflow.auth.tenant.TenantIsolationError: Cross-tenant access to document\n"
+    },
+    {
+      "name": "test_tenant_context_isolation",
+      "passed": true,
+      "duration_ms": 0.0,
+      "details": {
+        "tenant_a_org": "a89c6425-72d3-4fd3-af43-b02b2eef4f8c",
+        "tenant_b_org": "e16638ff-cdae-4be6-858a-01d6d388b306",
+        "tenant_a_can_access_own": true,
+        "tenant_a_blocked_from_b": true
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "test_org_context_features",
+      "passed": true,
+      "duration_ms": 0.0,
+      "details": {
+        "plan_tier": "enterprise",
+        "features": [
+          "analytics",
+          "custom_models"
+        ],
+        "has_analytics_feature": true,
+        "has_nonexistent_feature": false,
+        "plan_correct": true
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "test_auth_context_features",
+      "passed": true,
+      "duration_ms": 0.0,
+      "details": {
+        "is_admin": true,
+        "is_user": true,
+        "is_not_guest": true,
+        "is_authenticated": true,
+        "email": "user@example.com"
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "test_subpipeline_org_propagation",
+      "passed": true,
+      "duration_ms": 1.037,
+      "details": {
+        "parent_org_id": "3800ec06-1ac2-4e0d-8b7b-5bc9b5432c56",
+        "child_org_id": "3800ec06-1ac2-4e0d-8b7b-5bc9b5432c56",
+        "org_id_preserved": true,
+        "new_run_id_generated": true,
+        "parent_reference_set": true
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "test_cross_tenant_output_access",
+      "passed": true,
+      "duration_ms": 0.0,
+      "details": {
+        "tenant_a_output": "tenant_a_secret_data",
+        "tenant_b_output": "tenant_b_secret_data",
+        "outputs_isolated": true,
+        "no_cross_tenant_leakage": true
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "test_extension_data_isolation",
+      "passed": true,
+      "duration_ms": 0.9990000000000001,
+      "details": {
+        "org_a_api_key": "secret_key_org_a",
+        "org_b_api_key": "secret_key_org_b",
+        "org_a_isolated": true,
+        "org_b_isolated": true,
+        "no_cross_access": true
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "test_silent_context_corruption",
+      "passed": false,
+      "duration_ms": 0.0,
+      "details": {
+        "original_org_id": "29073a36-7c71-4a04-a8b9-a172e31a84cf",
+        "corrupted_dict_org_id": "cf16c839-81ed-4507-82b3-0b139d298d72",
+        "restored_org_id": "cf16c839-81ed-4507-82b3-0b139d298d72",
+        "immutability_preserved": false,
+        "corruption_detected": true
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "test_context_variables_isolation",
+      "passed": true,
+      "duration_ms": 0.9990000000000001,
+      "details": {
+        "tenant_a": "6082e803-e812-45ce-821f-c515b7e606f7",
+        "tenant_b": "0981a700-140f-49a6-b13b-1377fe4c518e",
+        "tenants_isolated": true,
+        "correct_tenant_a": true,
+        "correct_tenant_b": true,
+        "clear_works": true
+      },
+      "error": null,
+      "stack_trace": null
+    },
+    {
+      "name": "test_context_snapshot_serialization",
+      "passed": false,
+      "duration_ms": 2.97,
+      "details": {},
+      "error": "'dict' object has no attribute 'to_dict'",
+      "stack_trace": "Traceback (most recent call last):\n  File \"C:\\ANTONIO\\Coding\\stageflow-production-testers\\pipelines\\run_core010_tests.py\", line 576, in test_context_snapshot_serialization\n    serialized = snapshot.to_dict()\n                 ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sallyanes\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\stageflow\\context\\context_snapshot.py\", line 198, in to_dict\n    result[\"extensions\"] = self.extensions.to_dict()\n                           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'to_dict'\n"
+    }
+  ],
+  "summary": {
+    "total_tests": 11,
+    "passed": 7,
+    "failed": 4,
+    "pass_rate": "63.6%",
+    "timestamp": "2026-01-19T10:23:28.247615+00:00"
+  },
+  "findings": []
+}

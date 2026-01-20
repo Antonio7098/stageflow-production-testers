@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-01-20T14:23:37.581296",
+  "results": [
+    {
+      "test_name": "silent_empty_results",
+      "success": true,
+      "silent_failure_detected": false,
+      "documents_retrieved": 5
+    },
+    {
+      "test_name": "circuit_breaker_open",
+      "success": true,
+      "circuit_state": "closed",
+      "documents_retrieved": 5
+    }
+  ]
+}

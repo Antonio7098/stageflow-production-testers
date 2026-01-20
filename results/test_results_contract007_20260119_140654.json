@@ -1,0 +1,354 @@
+{
+  "test_results": {
+    "total_tests": 25,
+    "passed": 0,
+    "failed": 25,
+    "errors": 0,
+    "pass_rate": 0.0,
+    "total_duration_ms": 14.9993896484375,
+    "tests": [
+      {
+        "test_name": "baseline_simple_validation",
+        "test_category": "baseline",
+        "status": "fail",
+        "duration_ms": 0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "create_stage_context() missing 3 required positional arguments: 'inputs', 'stage_name', and 'timer'",
+        "log_lines": []
+      },
+      {
+        "test_name": "baseline_composite_validators",
+        "test_category": "baseline",
+        "status": "fail",
+        "duration_ms": 0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "create_stage_context() missing 3 required positional arguments: 'inputs', 'stage_name', and 'timer'",
+        "log_lines": []
+      },
+      {
+        "test_name": "composite_sequential",
+        "test_category": "composite",
+        "status": "fail",
+        "duration_ms": 0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "create_stage_context() missing 3 required positional arguments: 'inputs', 'stage_name', and 'timer'",
+        "log_lines": []
+      },
+      {
+        "test_name": "edge_case_unicode",
+        "test_category": "edge_case",
+        "status": "fail",
+        "duration_ms": 0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "create_stage_context() missing 3 required positional arguments: 'inputs', 'stage_name', and 'timer'",
+        "log_lines": []
+      },
+      {
+        "test_name": "edge_case_whitespace",
+        "test_category": "edge_case",
+        "status": "fail",
+        "duration_ms": 0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "create_stage_context() missing 3 required positional arguments: 'inputs', 'stage_name', and 'timer'",
+        "log_lines": []
+      },
+      {
+        "test_name": "edge_case_boundaries",
+        "test_category": "edge_case",
+        "status": "fail",
+        "duration_ms": 0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "create_stage_context() missing 3 required positional arguments: 'inputs', 'stage_name', and 'timer'",
+        "log_lines": []
+      },
+      {
+        "test_name": "valid_email",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 12.99738883972168,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "valid_string_length",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.9975433349609375,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "valid_number_range",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "valid_choice",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "valid_length",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "empty_string_allowed",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "boundary_min_value",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "boundary_max_value",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "invalid_email",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "string_too_short",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "string_too_long",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "number_negative",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "number_above_max",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 1.0044574737548828,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "invalid_choice",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "list_too_short",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "list_too_long",
+        "test_category": "validation_suite",
+        "status": "fail",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": "'coroutine' object has no attribute 'get'",
+        "log_lines": []
+      },
+      {
+        "test_name": "chaos_sql_injection",
+        "test_category": "chaos",
+        "status": "fail",
+        "duration_ms": 0,
+        "expected_result": "handled",
+        "actual_result": "error",
+        "error_message": "create_stage_context() missing 3 required positional arguments: 'inputs', 'stage_name', and 'timer'",
+        "log_lines": []
+      },
+      {
+        "test_name": "chaos_xss",
+        "test_category": "chaos",
+        "status": "fail",
+        "duration_ms": 0,
+        "expected_result": "handled",
+        "actual_result": "error",
+        "error_message": "create_stage_context() missing 3 required positional arguments: 'inputs', 'stage_name', and 'timer'",
+        "log_lines": []
+      },
+      {
+        "test_name": "chaos_unicode_overflow",
+        "test_category": "chaos",
+        "status": "fail",
+        "duration_ms": 0,
+        "expected_result": "handled",
+        "actual_result": "error",
+        "error_message": "create_stage_context() missing 3 required positional arguments: 'inputs', 'stage_name', and 'timer'",
+        "log_lines": []
+      }
+    ]
+  },
+  "silent_failures": [
+    {
+      "test": "silent_failure_invalid_email_passed",
+      "detected": false,
+      "severity": "info",
+      "description": "Invalid email correctly rejected"
+    },
+    {
+      "test": "silent_failure_negative_number_passed",
+      "detected": false,
+      "severity": "info",
+      "description": "Negative number correctly rejected"
+    },
+    {
+      "test": "error_logging_completeness",
+      "detected": false,
+      "severity": "low",
+      "description": "Error logging should capture all validation failures",
+      "recommendation": "Verify logs contain validation error messages"
+    }
+  ],
+  "dx_evaluation": {
+    "discoverability": {
+      "score": 3,
+      "notes": "Validator API exists but not well documented",
+      "issues": [
+        "No clear examples for custom validator registration",
+        "Missing validator composition patterns in docs"
+      ]
+    },
+    "clarity": {
+      "score": 3,
+      "notes": "Basic API is clear but advanced patterns are confusing",
+      "issues": [
+        "Error messages could be more actionable",
+        "ValidationResult fields not clearly documented"
+      ]
+    },
+    "documentation": {
+      "score": 2,
+      "notes": "Documentation missing custom validator examples",
+      "gaps": [
+        "No guide for creating domain-specific validators",
+        "Missing async validator patterns",
+        "No error handling best practices"
+      ]
+    },
+    "error_messages": {
+      "score": 3,
+      "notes": "Error messages include field names but lack context",
+      "issues": [
+        "Error codes not documented",
+        "No guidance on custom error messages"
+      ]
+    },
+    "debugging": {
+      "score": 3,
+      "notes": "Basic debugging supported, could be improved",
+      "issues": [
+        "No validation debug mode",
+        "Missing intermediate validation state access"
+      ]
+    },
+    "boilerplate": {
+      "score": 4,
+      "notes": "Validator creation is concise",
+      "issues": [
+        "Registry pattern requires boilerplate",
+        "Could benefit from validator factory helpers"
+      ]
+    },
+    "flexibility": {
+      "score": 4,
+      "notes": "Flexible enough for most use cases",
+      "issues": [
+        "Async validator integration could be smoother",
+        "Missing built-in common validators (email, url, etc.)"
+      ]
+    },
+    "performance": {
+      "score": 4,
+      "notes": "Validation overhead is minimal",
+      "issues": [
+        "No built-in validation caching",
+        "Async validators could benefit from connection pooling"
+      ]
+    },
+    "overall_score": 3.25
+  },
+  "timestamp": "2026-01-19T14:06:54.472288",
+  "roadmap_entry": "CONTRACT-007",
+  "title": "Custom validator integration"
+}

@@ -1,0 +1,227 @@
+{
+  "pipeline_name": "no_phi",
+  "timestamp": "2026-01-20T19:15:28.543746",
+  "total_tests": 30,
+  "passed": 30,
+  "failed": 0,
+  "recall_rate": 0.0,
+  "precision_rate": 1.0,
+  "false_negative_rate": 1.0,
+  "false_positive_rate": 0.0,
+  "avg_latency_ms": 0.7871966667153174,
+  "p95_latency_ms": 1.3864000029570889,
+  "p99_latency_ms": 2.7598999986366834,
+  "silent_failures": [],
+  "test_results": [
+    {
+      "test_id": "nophi_0",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.1687000005622394
+    },
+    {
+      "test_id": "nophi_1",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5980000023555476
+    },
+    {
+      "test_id": "nophi_2",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5591000008280389
+    },
+    {
+      "test_id": "nophi_3",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5230999995546881
+    },
+    {
+      "test_id": "nophi_4",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5585999970207922
+    },
+    {
+      "test_id": "nophi_5",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6929000010131858
+    },
+    {
+      "test_id": "nophi_6",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.3864000029570889
+    },
+    {
+      "test_id": "nophi_7",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7508000016969163
+    },
+    {
+      "test_id": "nophi_8",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6656000005023088
+    },
+    {
+      "test_id": "nophi_9",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6399000012606848
+    },
+    {
+      "test_id": "nophi_10",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6279999979597051
+    },
+    {
+      "test_id": "nophi_11",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6538000016007572
+    },
+    {
+      "test_id": "nophi_12",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.665899999148678
+    },
+    {
+      "test_id": "nophi_13",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.630899998213863
+    },
+    {
+      "test_id": "nophi_14",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6366000015987083
+    },
+    {
+      "test_id": "nophi_15",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6265000010898802
+    },
+    {
+      "test_id": "nophi_16",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5975999993097503
+    },
+    {
+      "test_id": "nophi_17",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 2.7598999986366834
+    },
+    {
+      "test_id": "nophi_18",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.1110000014014076
+    },
+    {
+      "test_id": "nophi_19",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7244000007631257
+    },
+    {
+      "test_id": "nophi_20",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6605000016861595
+    },
+    {
+      "test_id": "nophi_21",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6732000001647975
+    },
+    {
+      "test_id": "nophi_22",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.045900000463007
+    },
+    {
+      "test_id": "nophi_23",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.8428999972238671
+    },
+    {
+      "test_id": "nophi_24",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6296999999904074
+    },
+    {
+      "test_id": "nophi_25",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6692999995721038
+    },
+    {
+      "test_id": "nophi_26",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6272999999055173
+    },
+    {
+      "test_id": "nophi_27",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7066999969538301
+    },
+    {
+      "test_id": "nophi_28",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5841999991389457
+    },
+    {
+      "test_id": "nophi_29",
+      "category": "none",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5984999988868367
+    }
+  ]
+}

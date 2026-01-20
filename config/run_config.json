@@ -1,0 +1,27 @@
+{
+  "roadmap_entry_id": "TRANSFORM-002",
+  "roadmap_entry_title": "Schema mapping accuracy",
+  "priority": "P1",
+  "risk_class": "High",
+  "industry_vertical": "2.1 TRANSFORM Stages",
+  "deployment_mode": "N/A",
+  "run_id": "run-2026-01-19-001",
+  "started_at": "2026-01-19T00:00:00Z",
+  "agent_model": "claude-3.5-sonnet",
+  "stageflow_version": "0.5.1",
+  "test_parameters": {
+    "baseline_iterations": 100,
+    "stress_concurrency": 50,
+    "chaos_iterations": 200,
+    "adversarial_tests": true,
+    "schema_drift_tests": true,
+    "nested_depth_tests": 5,
+    "silent_failure_detection": true
+  },
+  "success_criteria": {
+    "schema_validation_accuracy": "100%",
+    "silent_failure_rate": "0%",
+    "error_message_actionability": "All errors actionable",
+    "type_coercion_predictability": "100% predictable"
+  }
+}

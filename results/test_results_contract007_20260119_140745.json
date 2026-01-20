@@ -1,0 +1,291 @@
+{
+  "test_results": {
+    "total_tests": 23,
+    "passed": 23,
+    "failed": 0,
+    "errors": 0,
+    "pass_rate": 100.0,
+    "total_duration_ms": 1.0170936584472656,
+    "tests": [
+      {
+        "test_name": "email_valid",
+        "test_category": "email_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": true,
+        "error_message": null
+      },
+      {
+        "test_name": "email_invalid_no_at",
+        "test_category": "email_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "email_invalid_no_domain",
+        "test_category": "email_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "string_valid_length",
+        "test_category": "string_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": true,
+        "error_message": null
+      },
+      {
+        "test_name": "string_too_short",
+        "test_category": "string_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "string_too_long",
+        "test_category": "string_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "number_valid_range",
+        "test_category": "number_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": true,
+        "error_message": null
+      },
+      {
+        "test_name": "number_negative",
+        "test_category": "number_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "number_above_max",
+        "test_category": "number_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "number_boundary_min",
+        "test_category": "number_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": true,
+        "error_message": null
+      },
+      {
+        "test_name": "number_boundary_max",
+        "test_category": "number_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": true,
+        "error_message": null
+      },
+      {
+        "test_name": "choice_valid",
+        "test_category": "choice_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": true,
+        "error_message": null
+      },
+      {
+        "test_name": "choice_invalid",
+        "test_category": "choice_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "length_valid",
+        "test_category": "length_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": true,
+        "error_message": null
+      },
+      {
+        "test_name": "length_empty",
+        "test_category": "length_validator",
+        "status": "pass",
+        "duration_ms": 1.0170936584472656,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "length_too_many",
+        "test_category": "length_validator",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "composite_both_valid",
+        "test_category": "composite",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": true,
+        "error_message": null
+      },
+      {
+        "test_name": "composite_email_fails",
+        "test_category": "composite",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "edge_unicode",
+        "test_category": "edge_case",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": true,
+        "error_message": null
+      },
+      {
+        "test_name": "edge_whitespace",
+        "test_category": "edge_case",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": true,
+        "actual_result": true,
+        "error_message": null
+      },
+      {
+        "test_name": "silent_email",
+        "test_category": "silent_failure",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "silent_negative",
+        "test_category": "silent_failure",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      },
+      {
+        "test_name": "silent_invalid_choice",
+        "test_category": "silent_failure",
+        "status": "pass",
+        "duration_ms": 0.0,
+        "expected_result": false,
+        "actual_result": false,
+        "error_message": null
+      }
+    ],
+    "silent_failures_detected": 0
+  },
+  "dx_evaluation": {
+    "discoverability": {
+      "score": 3,
+      "notes": "Validator API exists but not well documented",
+      "issues": [
+        "No clear examples for custom validator registration",
+        "Missing validator composition patterns in docs"
+      ]
+    },
+    "clarity": {
+      "score": 3,
+      "notes": "Basic API is clear but advanced patterns are confusing",
+      "issues": [
+        "Error messages could be more actionable",
+        "ValidationResult fields not clearly documented"
+      ]
+    },
+    "documentation": {
+      "score": 2,
+      "notes": "Documentation missing custom validator examples",
+      "gaps": [
+        "No guide for creating domain-specific validators",
+        "Missing async validator patterns",
+        "No error handling best practices"
+      ]
+    },
+    "error_messages": {
+      "score": 3,
+      "notes": "Error messages include field names but lack context",
+      "issues": [
+        "Error codes not documented",
+        "No guidance on custom error messages"
+      ]
+    },
+    "debugging": {
+      "score": 3,
+      "notes": "Basic debugging supported, could be improved",
+      "issues": [
+        "No validation debug mode",
+        "Missing intermediate validation state access"
+      ]
+    },
+    "boilerplate": {
+      "score": 4,
+      "notes": "Validator creation is concise",
+      "issues": [
+        "Registry pattern requires boilerplate",
+        "Could benefit from validator factory helpers"
+      ]
+    },
+    "flexibility": {
+      "score": 4,
+      "notes": "Flexible enough for most use cases",
+      "issues": [
+        "Async validator integration could be smoother",
+        "Missing built-in common validators (email, url, etc.)"
+      ]
+    },
+    "performance": {
+      "score": 4,
+      "notes": "Validation overhead is minimal",
+      "issues": [
+        "No built-in validation caching",
+        "Async validators could benefit from connection pooling"
+      ]
+    },
+    "overall_score": 3.25
+  },
+  "timestamp": "2026-01-19T14:07:45.579137+00:00",
+  "roadmap_entry": "CONTRACT-007",
+  "title": "Custom validator integration"
+}

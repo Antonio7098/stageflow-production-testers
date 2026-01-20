@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-01-20T15:10:26.113760",
+  "results": [
+    {
+      "test_name": "empty_filter_value",
+      "success": true,
+      "execution_time_ms": 6.154700000479352,
+      "documents_filtered": 0,
+      "silent_failure": true,
+      "error": null
+    },
+    {
+      "test_name": "non_existent_category",
+      "success": true,
+      "execution_time_ms": 4.714699998658034,
+      "documents_filtered": 0,
+      "silent_failure": true,
+      "error": null
+    },
+    {
+      "test_name": "empty_in_list",
+      "success": true,
+      "execution_time_ms": 4.837599999518716,
+      "documents_filtered": 0,
+      "silent_failure": true,
+      "error": null
+    },
+    {
+      "test_name": "invalid_operator",
+      "success": true,
+      "execution_time_ms": 21.665499998562154,
+      "documents_filtered": 0,
+      "silent_failure": true,
+      "error": null
+    },
+    {
+      "test_name": "multiple_categories_in",
+      "success": true,
+      "execution_time_ms": 4.196099998807767,
+      "documents_filtered": 96,
+      "silent_failure": false,
+      "error": null
+    }
+  ]
+}

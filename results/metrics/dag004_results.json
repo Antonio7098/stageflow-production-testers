@@ -1,0 +1,148 @@
+{
+  "test_run_id": "9925e2b6-11cf-4de6-98d2-3e1ffbb8314b",
+  "timestamp": "2026-01-19T10:59:38.850260",
+  "total_tests": 9,
+  "passed": 5,
+  "failed": 0,
+  "errors": 4,
+  "results": [
+    {
+      "test_name": "baseline_test",
+      "status": "PASS",
+      "duration_ms": 123.71000001439825,
+      "stages_completed": 3,
+      "stages_total": 3,
+      "high_priority_completed": 1,
+      "low_priority_completed": 1,
+      "error_message": null,
+      "metrics": {
+        "total_requests": 2,
+        "rate_limited": 0,
+        "concurrent_limited": 0,
+        "successful": 2
+      }
+    },
+    {
+      "test_name": "starvation_test_h5_l2",
+      "status": "PASS",
+      "duration_ms": 260.5380000313744,
+      "stages_completed": 8,
+      "stages_total": 8,
+      "high_priority_completed": 5,
+      "low_priority_completed": 2,
+      "error_message": null,
+      "metrics": {
+        "total_requests": 7,
+        "rate_limited": 0,
+        "concurrent_limited": 0,
+        "successful": 7,
+        "starvation_detected": false,
+        "high_to_low_ratio": 2.5
+      }
+    },
+    {
+      "test_name": "starvation_test_h10_l2",
+      "status": "PASS",
+      "duration_ms": 200.17740002367646,
+      "stages_completed": 13,
+      "stages_total": 13,
+      "high_priority_completed": 10,
+      "low_priority_completed": 2,
+      "error_message": null,
+      "metrics": {
+        "total_requests": 12,
+        "rate_limited": 0,
+        "concurrent_limited": 0,
+        "successful": 12,
+        "starvation_detected": false,
+        "high_to_low_ratio": 5.0
+      }
+    },
+    {
+      "test_name": "starvation_test_h20_l2",
+      "status": "ERROR",
+      "duration_ms": 0,
+      "stages_completed": 0,
+      "stages_total": 23,
+      "high_priority_completed": 0,
+      "low_priority_completed": 0,
+      "error_message": "Stage 'process_transaction_18' failed: Rate limited",
+      "metrics": {}
+    },
+    {
+      "test_name": "starvation_test_h50_l2",
+      "status": "ERROR",
+      "duration_ms": 0,
+      "stages_completed": 0,
+      "stages_total": 53,
+      "high_priority_completed": 0,
+      "low_priority_completed": 0,
+      "error_message": "Stage 'process_transaction_19' failed: Rate limited",
+      "metrics": {}
+    },
+    {
+      "test_name": "resource_contention_c2_r5",
+      "status": "PASS",
+      "duration_ms": 271.04989998042583,
+      "stages_completed": 7,
+      "stages_total": 7,
+      "high_priority_completed": 4,
+      "low_priority_completed": 2,
+      "error_message": null,
+      "metrics": {
+        "total_requests": 6,
+        "rate_limited": 0,
+        "concurrent_limited": 0,
+        "successful": 6,
+        "starvation_detected": false,
+        "compliance_stages": [
+          "compliance_2",
+          "compliance_1"
+        ]
+      }
+    },
+    {
+      "test_name": "resource_contention_c3_r10",
+      "status": "PASS",
+      "duration_ms": 335.8898000442423,
+      "stages_completed": 7,
+      "stages_total": 7,
+      "high_priority_completed": 4,
+      "low_priority_completed": 2,
+      "error_message": null,
+      "metrics": {
+        "total_requests": 6,
+        "rate_limited": 0,
+        "concurrent_limited": 0,
+        "successful": 6,
+        "starvation_detected": false,
+        "compliance_stages": [
+          "compliance_1",
+          "compliance_2"
+        ]
+      }
+    },
+    {
+      "test_name": "resource_contention_c1_r3",
+      "status": "ERROR",
+      "duration_ms": 0,
+      "stages_completed": 0,
+      "stages_total": 7,
+      "high_priority_completed": 0,
+      "low_priority_completed": 0,
+      "error_message": "Stage 'txn_4' failed: Rate limited",
+      "metrics": {}
+    },
+    {
+      "test_name": "silent_failure_test",
+      "status": "ERROR",
+      "duration_ms": 0,
+      "stages_completed": 0,
+      "stages_total": 8,
+      "high_priority_completed": 0,
+      "low_priority_completed": 0,
+      "error_message": "Stage 'process_transaction_4' failed: Rate limited",
+      "metrics": {}
+    }
+  ]
+}

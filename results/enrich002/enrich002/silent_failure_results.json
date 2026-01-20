@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-01-20T13:09:42.165089",
+  "results": [
+    {
+      "test_name": "silent_empty_results",
+      "success": true,
+      "silent_failure_detected": false,
+      "documents_retrieved": 5
+    },
+    {
+      "test_name": "desync_no_error",
+      "success": false,
+      "is_desynced": false,
+      "drift_score": 0
+    }
+  ]
+}

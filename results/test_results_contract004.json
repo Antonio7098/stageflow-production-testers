@@ -1,0 +1,59 @@
+{
+  "test_run_timestamp": "2026-01-19T13:17:47.625839",
+  "test_run_id": "contract004-2026-01-19-001",
+  "summary": {
+    "total_tests": 4,
+    "passed": 0,
+    "failed": 0,
+    "average_clarity_score": 0.5
+  },
+  "detailed_results": [
+    {
+      "test_name": "single_undeclared_dependency",
+      "error_type": "TypeError",
+      "message": "run_with_interceptors() got an unexpected keyword argument 'graph'",
+      "issues": [
+        "Unexpected error type: TypeError"
+      ],
+      "clarity_score": 0
+    },
+    {
+      "test_name": "multiple_undeclared_dependencies",
+      "error_type": "TypeError",
+      "message": "run_with_interceptors() got an unexpected keyword argument 'graph'",
+      "issues": [
+        "Unexpected error type: TypeError"
+      ],
+      "clarity_score": 0
+    },
+    {
+      "test_name": "stage_execution_error",
+      "error_type": "NameError",
+      "message": "name 'run_with_interceptors' is not defined",
+      "issues": [
+        "Unexpected error type: NameError"
+      ],
+      "clarity_score": 0
+    },
+    {
+      "test_name": "output_conflict",
+      "error_type": "OutputConflictError",
+      "message": "Stage 'test_key' already has output (attempt stage_a). Use allow_overwrite=True for retry scenarios.",
+      "clarity_score": 2,
+      "context_completeness": {
+        "has_stage_name": true,
+        "has_dependency_info": false,
+        "has_error_type": "Raised when a stage attempts to write output without allow_overwrite.\n\n    Attributes:\n        stage_name: The stage that attempted to write.\n        existing_attempt: The attempt number of the existing output.\n    ",
+        "has_fix_suggestion": false,
+        "has_code_example": false
+      },
+      "actionability": [],
+      "issues": [
+        "No fix guidance provided",
+        "No code example for fix"
+      ],
+      "attributes": {},
+      "evaluation_timestamp": "2026-01-19T13:17:47.626855"
+    }
+  ]
+}

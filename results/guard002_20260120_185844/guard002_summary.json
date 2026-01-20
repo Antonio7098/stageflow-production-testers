@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-01-20T18:59:15.019401",
+  "test_runs": {
+    "baseline": {
+      "passed": 0,
+      "failed": 50,
+      "total": 50,
+      "detection_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "avg_latency_ms": 0.0112720003380673,
+      "p95_latency_ms": 0.01620000330149196,
+      "silent_failure_count": 0
+    },
+    "adversarial": {
+      "passed": 0,
+      "failed": 70,
+      "total": 70,
+      "detection_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "avg_latency_ms": 0.010057142831751012,
+      "p95_latency_ms": 0.0121000011858996,
+      "silent_failure_count": 0
+    },
+    "chaos": {
+      "passed": 0,
+      "failed": 50,
+      "total": 50,
+      "detection_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "avg_latency_ms": 0.01006199985567946,
+      "p95_latency_ms": 0.01330000304733403,
+      "silent_failure_count": 0
+    },
+    "stress": {
+      "passed": 0,
+      "failed": 203350,
+      "total": 203350
+    }
+  },
+  "summary": {
+    "total_tests": 203520,
+    "total_passed": 0,
+    "overall_pass_rate": 0.0,
+    "successful": false
+  }
+}

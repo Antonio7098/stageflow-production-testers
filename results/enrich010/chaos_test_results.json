@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-01-20T15:10:26.261982",
+  "results": [
+    {
+      "test_name": "high_load_test",
+      "test_type": "high_load",
+      "success": false,
+      "execution_time_ms": 61.477600000216626,
+      "iterations": 10,
+      "documents_processed": 0,
+      "errors_encountered": 10,
+      "silent_failures": 0,
+      "error": "Stage 'chaos_validation' failed: StageInputs.get_from() missing 1 required positional argument: 'key'"
+    },
+    {
+      "test_name": "malformed_input_test",
+      "test_type": "malformed",
+      "success": false,
+      "execution_time_ms": 31.009000000267406,
+      "iterations": 10,
+      "documents_processed": 0,
+      "errors_encountered": 10,
+      "silent_failures": 0,
+      "error": "Stage 'chaos_validation' failed: StageInputs.get_from() missing 1 required positional argument: 'key'"
+    },
+    {
+      "test_name": "schema_variance_test",
+      "test_type": "schema_variance",
+      "success": false,
+      "execution_time_ms": 13.193099999625701,
+      "iterations": 10,
+      "documents_processed": 0,
+      "errors_encountered": 10,
+      "silent_failures": 0,
+      "error": "Stage 'chaos_validation' failed: StageInputs.get_from() missing 1 required positional argument: 'key'"
+    }
+  ]
+}

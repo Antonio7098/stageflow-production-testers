@@ -1,0 +1,376 @@
+{
+  "pipeline_name": "adversarial",
+  "timestamp": "2026-01-20T19:15:28.501177",
+  "total_tests": 50,
+  "passed": 42,
+  "failed": 8,
+  "recall_rate": 0.84,
+  "precision_rate": 1.0,
+  "false_negative_rate": 0.16000000000000003,
+  "false_positive_rate": 0.0,
+  "avg_latency_ms": 0.6586439999955473,
+  "p95_latency_ms": 0.9494999976595864,
+  "p99_latency_ms": 1.3814999983878806,
+  "silent_failures": [
+    "PHI missed (adversarial): Numeric substitution phone - Ph0n3 numb3r: 5-5-5-1-2-3-4-5-6-7...",
+    "PHI missed (adversarial): Word-separated SSN - S-S-S-N: 1-2-3-4-5-6-7-8-9...",
+    "PHI missed (adversarial): Unicode homoglyph name - Jo\u0301hn Doe...",
+    "PHI missed (adversarial): Numeric substitution name - John D00e for short...",
+    "PHI missed (adversarial): Phone with extension - Call at +1 (555) 123-4567 ext 1234...",
+    "PHI missed (adversarial): Spaced email - Email: u s e r @ e x a m p l e . c o m...",
+    "PHI missed (adversarial): Newline-separated SSN - SSN: 1\n2\n3\n-\n4\n5\n-\n6\n7\n8\n9...",
+    "PHI missed (adversarial): Adversarial clinical text - Patient Charles Anderson presented with abdominal ..."
+  ],
+  "test_results": [
+    {
+      "test_id": "adversarial_0",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6658000020252075
+    },
+    {
+      "test_id": "adversarial_1",
+      "category": "phone_number",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.43080000250483863
+    },
+    {
+      "test_id": "adversarial_2",
+      "category": "ssn",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.4179999996267725
+    },
+    {
+      "test_id": "adversarial_3",
+      "category": "person_name",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.3766999980143737
+    },
+    {
+      "test_id": "adversarial_4",
+      "category": "person_name",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.3728000010596588
+    },
+    {
+      "test_id": "adversarial_5",
+      "category": "phone_number",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.43000000005122274
+    },
+    {
+      "test_id": "adversarial_6",
+      "category": "email",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.4193999993731268
+    },
+    {
+      "test_id": "adversarial_7",
+      "category": "ssn",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.41909999708877876
+    },
+    {
+      "test_id": "adversarial_8",
+      "category": "zip_code",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.4619999999704305
+    },
+    {
+      "test_id": "adversarial_9",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.4517999987001531
+    },
+    {
+      "test_id": "adversarial_10",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5634000008285511
+    },
+    {
+      "test_id": "adversarial_11",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6189999985508621
+    },
+    {
+      "test_id": "adversarial_12",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.659799999993993
+    },
+    {
+      "test_id": "adversarial_13",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5947999998170417
+    },
+    {
+      "test_id": "adversarial_14",
+      "category": "other_phi",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.6017000014253426
+    },
+    {
+      "test_id": "adversarial_15",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6672000017715618
+    },
+    {
+      "test_id": "adversarial_16",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5879000018467195
+    },
+    {
+      "test_id": "adversarial_17",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5522999999811873
+    },
+    {
+      "test_id": "adversarial_18",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5580000033660326
+    },
+    {
+      "test_id": "adversarial_19",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.3814999983878806
+    },
+    {
+      "test_id": "adversarial_20",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7225999979709741
+    },
+    {
+      "test_id": "adversarial_21",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5576999974437058
+    },
+    {
+      "test_id": "adversarial_22",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5603999998129439
+    },
+    {
+      "test_id": "adversarial_23",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.0641000008035917
+    },
+    {
+      "test_id": "adversarial_24",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.79840000034892
+    },
+    {
+      "test_id": "adversarial_25",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6446000006690156
+    },
+    {
+      "test_id": "adversarial_26",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5840999983774964
+    },
+    {
+      "test_id": "adversarial_27",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.602299998718081
+    },
+    {
+      "test_id": "adversarial_28",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5719999971915968
+    },
+    {
+      "test_id": "adversarial_29",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5832000024383888
+    },
+    {
+      "test_id": "adversarial_30",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5797999983769841
+    },
+    {
+      "test_id": "adversarial_31",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6295000021054875
+    },
+    {
+      "test_id": "adversarial_32",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7167000003391877
+    },
+    {
+      "test_id": "adversarial_33",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7732000012765639
+    },
+    {
+      "test_id": "adversarial_34",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6830000020272564
+    },
+    {
+      "test_id": "adversarial_35",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.8520000010321382
+    },
+    {
+      "test_id": "adversarial_36",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.79340000229422
+    },
+    {
+      "test_id": "adversarial_37",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6700000012642704
+    },
+    {
+      "test_id": "adversarial_38",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7379999988188501
+    },
+    {
+      "test_id": "adversarial_39",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.9494999976595864
+    },
+    {
+      "test_id": "adversarial_40",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.9047999992617406
+    },
+    {
+      "test_id": "adversarial_41",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6900000007590279
+    },
+    {
+      "test_id": "adversarial_42",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6384999978763517
+    },
+    {
+      "test_id": "adversarial_43",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6677999990643002
+    },
+    {
+      "test_id": "adversarial_44",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.713100002030842
+    },
+    {
+      "test_id": "adversarial_45",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6262999995669816
+    },
+    {
+      "test_id": "adversarial_46",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.900399998499779
+    },
+    {
+      "test_id": "adversarial_47",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.9137000015471131
+    },
+    {
+      "test_id": "adversarial_48",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.8127999972202815
+    },
+    {
+      "test_id": "adversarial_49",
+      "category": "other_phi",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7583000005979557
+    }
+  ]
+}

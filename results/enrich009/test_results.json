@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-01-20T14:58:44.475406",
+  "baseline": [
+    {
+      "test_name": "baseline_20_overlap",
+      "success": false,
+      "chunks_created": 4,
+      "expected_min": 5,
+      "total_tokens": 633,
+      "overlap_count": 3,
+      "dedup_info": {
+        "strategy": "exact",
+        "removed": 0,
+        "original_count": 4,
+        "final_count": 4
+      }
+    },
+    {
+      "test_name": "baseline_no_overlap",
+      "success": true,
+      "chunks_created": 4,
+      "expected_min": 4,
+      "total_tokens": 633,
+      "overlap_count": 3,
+      "dedup_info": {
+        "strategy": "exact",
+        "removed": 0,
+        "original_count": 4,
+        "final_count": 4
+      }
+    },
+    {
+      "test_name": "baseline_50_overlap",
+      "success": false,
+      "chunks_created": 4,
+      "expected_min": 7,
+      "total_tokens": 633,
+      "overlap_count": 3,
+      "dedup_info": {
+        "strategy": "exact",
+        "removed": 0,
+        "original_count": 4,
+        "final_count": 4
+      }
+    },
+    {
+      "test_name": "semantic_chunking",
+      "success": true,
+      "chunks_created": 4,
+      "expected_min": 3,
+      "total_tokens": 633,
+      "overlap_count": 3,
+      "dedup_info": {
+        "strategy": "exact",
+        "removed": 0,
+        "original_count": 4,
+        "final_count": 4
+      }
+    },
+    {
+      "test_name": "tiny_content",
+      "success": true,
+      "chunks_created": 1,
+      "expected_min": 1,
+      "total_tokens": 8,
+      "overlap_count": 0,
+      "dedup_info": {
+        "strategy": "exact",
+        "removed": 0,
+        "original_count": 1,
+        "final_count": 1
+      }
+    },
+    {
+      "test_name": "empty_content",
+      "success": true,
+      "chunks_created": 0,
+      "expected_min": 0,
+      "total_tokens": 0,
+      "overlap_count": 0,
+      "dedup_info": {
+        "strategy": "exact",
+        "removed": 0,
+        "original_count": 0,
+        "final_count": 0
+      }
+    }
+  ],
+  "deduplication": [
+    {
+      "test_name": "exact_dedup",
+      "strategy": "exact",
+      "original_count": 8,
+      "removed": 0,
+      "success": false
+    },
+    {
+      "test_name": "fuzzy_dedup",
+      "strategy": "fuzzy",
+      "original_count": 8,
+      "removed": 4,
+      "success": true
+    }
+  ],
+  "performance": {
+    "iterations": 100,
+    "avg_time_ms": 1.608183000007557,
+    "p95_time_ms": 2.0404999995662365,
+    "throughput": 621.8197804573863
+  },
+  "summary": {
+    "total_tests": 8,
+    "passed": 5,
+    "failed": 3
+  }
+}

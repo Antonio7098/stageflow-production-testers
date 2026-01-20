@@ -1,0 +1,74 @@
+{
+  "baseline": {
+    "pipeline_name": "baseline",
+    "total_requests": 75,
+    "allowed": 75,
+    "denied": 0,
+    "avg_latency_ms": 44.511613332967194,
+    "p95_latency_ms": 62.41589999990538,
+    "p99_latency_ms": 75.6848999990325,
+    "throughput_rps": 0,
+    "silent_failures": [],
+    "timestamp": "2026-01-20T19:40:16.045394"
+  },
+  "burst": {
+    "pipeline_name": "burst",
+    "total_requests": 50,
+    "allowed": 50,
+    "denied": 0,
+    "avg_latency_ms": 37.665845999799785,
+    "p95_latency_ms": 60.60149999757414,
+    "p99_latency_ms": 61.88619999738876,
+    "throughput_rps": 0,
+    "silent_failures": [],
+    "timestamp": "2026-01-20T19:40:17.929096"
+  },
+  "concurrent": {
+    "pipeline_name": "concurrent",
+    "total_requests": 100,
+    "allowed": 100,
+    "denied": 0,
+    "avg_latency_ms": 28.263713999986066,
+    "p95_latency_ms": 59.86680000205524,
+    "p99_latency_ms": 61.40880000020843,
+    "throughput_rps": 0,
+    "silent_failures": [],
+    "timestamp": "2026-01-20T19:40:18.457176"
+  },
+  "token_limit": {
+    "pipeline_name": "token_limit",
+    "total_requests": 15,
+    "allowed": 15,
+    "denied": 0,
+    "avg_latency_ms": 15.1731066662857,
+    "p95_latency_ms": 15.602100000251085,
+    "p99_latency_ms": 15.602100000251085,
+    "throughput_rps": 0,
+    "silent_failures": [],
+    "timestamp": "2026-01-20T19:40:18.685159"
+  },
+  "circuit_breaker": {
+    "pipeline_name": "circuit_breaker",
+    "total_requests": 15,
+    "allowed": 15,
+    "denied": 0,
+    "avg_latency_ms": 42.48828666653329,
+    "p95_latency_ms": 61.3389999998617,
+    "p99_latency_ms": 61.3389999998617,
+    "throughput_rps": 0,
+    "silent_failures": [],
+    "timestamp": "2026-01-20T19:40:19.323490"
+  },
+  "adaptive": {
+    "pipeline_name": "adaptive",
+    "total_requests": 75,
+    "allowed": 75,
+    "denied": 0,
+    "avg_latency_ms": 42.56096000002193,
+    "p95_latency_ms": 61.51239999962854,
+    "p99_latency_ms": 62.63530000069295,
+    "throughput_rps": 0,
+    "silent_failures": [],
+    "timestamp": "2026-01-20T19:40:24.753040"
+  }
+}

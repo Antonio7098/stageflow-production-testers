@@ -1,0 +1,729 @@
+{
+  "pipeline_name": "baseline",
+  "timestamp": "2026-01-20T19:15:28.426372",
+  "total_tests": 100,
+  "passed": 89,
+  "failed": 11,
+  "recall_rate": 0.89,
+  "precision_rate": 1.0,
+  "false_negative_rate": 0.10999999999999999,
+  "false_positive_rate": 0.0,
+  "avg_latency_ms": 0.7734889999119332,
+  "p95_latency_ms": 1.101000001654029,
+  "p99_latency_ms": 9.27120000051218,
+  "silent_failures": [
+    "PHI missed: ip_address - IP: 98.138.112.176...",
+    "PHI missed: phone_number - Phone: 451462704845146270484514627048X...",
+    "PHI missed: ip_address - IP: 5.57.185.225...",
+    "PHI missed: date_of_birth - DOB: 2000-08-10...",
+    "PHI missed: phone_number - Phone: 136193990913619399091361939909X...",
+    "PHI missed: phone_number - Phone: 384251354238425135423842513542X...",
+    "PHI missed: date_of_birth - DOB: 1960-12-15...",
+    "PHI missed: date_of_birth - DOB: 1960-12-04...",
+    "PHI missed: ip_address - IP: 57.102.235.90...",
+    "PHI missed: web_url - Visit: http://demo.net...",
+    "PHI missed: phone_number - Phone: 374529912437452991243745299124X..."
+  ],
+  "test_results": [
+    {
+      "test_id": "baseline_0",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 9.27120000051218
+    },
+    {
+      "test_id": "baseline_1",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.2272999993001577
+    },
+    {
+      "test_id": "baseline_2",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6546000004163943
+    },
+    {
+      "test_id": "baseline_3",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7039000010991003
+    },
+    {
+      "test_id": "baseline_4",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.0336000013921876
+    },
+    {
+      "test_id": "baseline_5",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6646000001637731
+    },
+    {
+      "test_id": "baseline_6",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7012999994913116
+    },
+    {
+      "test_id": "baseline_7",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7289000022865366
+    },
+    {
+      "test_id": "baseline_8",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.663499999063788
+    },
+    {
+      "test_id": "baseline_9",
+      "category": "ip_address",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.6064000008336734
+    },
+    {
+      "test_id": "baseline_10",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.9640999996918254
+    },
+    {
+      "test_id": "baseline_11",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.930299996980466
+    },
+    {
+      "test_id": "baseline_12",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5946999990555923
+    },
+    {
+      "test_id": "baseline_13",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5734999976994004
+    },
+    {
+      "test_id": "baseline_14",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6194000015966594
+    },
+    {
+      "test_id": "baseline_15",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6399000012606848
+    },
+    {
+      "test_id": "baseline_16",
+      "category": "ip_address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6209000021044631
+    },
+    {
+      "test_id": "baseline_17",
+      "category": "phone_number",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.6637000005866867
+    },
+    {
+      "test_id": "baseline_18",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7108999998308718
+    },
+    {
+      "test_id": "baseline_19",
+      "category": "ip_address",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.6680000005871989
+    },
+    {
+      "test_id": "baseline_20",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6207000005815644
+    },
+    {
+      "test_id": "baseline_21",
+      "category": "ip_address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6311999968602322
+    },
+    {
+      "test_id": "baseline_22",
+      "category": "ip_address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.1432999999669846
+    },
+    {
+      "test_id": "baseline_23",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.9495000012975652
+    },
+    {
+      "test_id": "baseline_24",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6794000000809319
+    },
+    {
+      "test_id": "baseline_25",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6413999981305096
+    },
+    {
+      "test_id": "baseline_26",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5724000002373941
+    },
+    {
+      "test_id": "baseline_27",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.594900000578491
+    },
+    {
+      "test_id": "baseline_28",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5084999975224491
+    },
+    {
+      "test_id": "baseline_29",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5763000008300878
+    },
+    {
+      "test_id": "baseline_30",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5138999986229464
+    },
+    {
+      "test_id": "baseline_31",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5882000004930887
+    },
+    {
+      "test_id": "baseline_32",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5318000003171619
+    },
+    {
+      "test_id": "baseline_33",
+      "category": "date_of_birth",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.4842000016651582
+    },
+    {
+      "test_id": "baseline_34",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5737999999837484
+    },
+    {
+      "test_id": "baseline_35",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7847000015317462
+    },
+    {
+      "test_id": "baseline_36",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7721000001765788
+    },
+    {
+      "test_id": "baseline_37",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6596999992325436
+    },
+    {
+      "test_id": "baseline_38",
+      "category": "phone_number",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.9193999976560008
+    },
+    {
+      "test_id": "baseline_39",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6906999988132156
+    },
+    {
+      "test_id": "baseline_40",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7726000003458466
+    },
+    {
+      "test_id": "baseline_41",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6850999998277985
+    },
+    {
+      "test_id": "baseline_42",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.8023999980650842
+    },
+    {
+      "test_id": "baseline_43",
+      "category": "phone_number",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.6947000001673587
+    },
+    {
+      "test_id": "baseline_44",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.101000001654029
+    },
+    {
+      "test_id": "baseline_45",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7252000032167416
+    },
+    {
+      "test_id": "baseline_46",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.9868999986792915
+    },
+    {
+      "test_id": "baseline_47",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6831999999121763
+    },
+    {
+      "test_id": "baseline_48",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6747000006726012
+    },
+    {
+      "test_id": "baseline_49",
+      "category": "date_of_birth",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.6128000022727065
+    },
+    {
+      "test_id": "baseline_50",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7415999971271958
+    },
+    {
+      "test_id": "baseline_51",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7339000003412366
+    },
+    {
+      "test_id": "baseline_52",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7082999982230831
+    },
+    {
+      "test_id": "baseline_53",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6325000031210948
+    },
+    {
+      "test_id": "baseline_54",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6398000004992355
+    },
+    {
+      "test_id": "baseline_55",
+      "category": "date_of_birth",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.590899999224348
+    },
+    {
+      "test_id": "baseline_56",
+      "category": "ip_address",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.6107999979576562
+    },
+    {
+      "test_id": "baseline_57",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.0429000030853786
+    },
+    {
+      "test_id": "baseline_58",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.9967999976652209
+    },
+    {
+      "test_id": "baseline_59",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6809000005887356
+    },
+    {
+      "test_id": "baseline_60",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6534999993164092
+    },
+    {
+      "test_id": "baseline_61",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7873999966250267
+    },
+    {
+      "test_id": "baseline_62",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.676800002111122
+    },
+    {
+      "test_id": "baseline_63",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7439000000886153
+    },
+    {
+      "test_id": "baseline_64",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6623999979638029
+    },
+    {
+      "test_id": "baseline_65",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6676999983028509
+    },
+    {
+      "test_id": "baseline_66",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6436000003304798
+    },
+    {
+      "test_id": "baseline_67",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5584000027738512
+    },
+    {
+      "test_id": "baseline_68",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5135999999765772
+    },
+    {
+      "test_id": "baseline_69",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.515899999300018
+    },
+    {
+      "test_id": "baseline_70",
+      "category": "web_url",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.5181000014999881
+    },
+    {
+      "test_id": "baseline_71",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7365999990724958
+    },
+    {
+      "test_id": "baseline_72",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6581000016012695
+    },
+    {
+      "test_id": "baseline_73",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.610800001595635
+    },
+    {
+      "test_id": "baseline_74",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5225999993854202
+    },
+    {
+      "test_id": "baseline_75",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5031999971834011
+    },
+    {
+      "test_id": "baseline_76",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5196999991312623
+    },
+    {
+      "test_id": "baseline_77",
+      "category": "ip_address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5086999990453478
+    },
+    {
+      "test_id": "baseline_78",
+      "category": "ip_address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5798999991384335
+    },
+    {
+      "test_id": "baseline_79",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5335999994713347
+    },
+    {
+      "test_id": "baseline_80",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.528900000063004
+    },
+    {
+      "test_id": "baseline_81",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6419999990612268
+    },
+    {
+      "test_id": "baseline_82",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5445999995572492
+    },
+    {
+      "test_id": "baseline_83",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6742000005033333
+    },
+    {
+      "test_id": "baseline_84",
+      "category": "ip_address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.8238000009441748
+    },
+    {
+      "test_id": "baseline_85",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7017999996605795
+    },
+    {
+      "test_id": "baseline_86",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.662500002363231
+    },
+    {
+      "test_id": "baseline_87",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 1.377099997625919
+    },
+    {
+      "test_id": "baseline_88",
+      "category": "ip_address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6248999998206273
+    },
+    {
+      "test_id": "baseline_89",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6033999998180661
+    },
+    {
+      "test_id": "baseline_90",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5879999989701901
+    },
+    {
+      "test_id": "baseline_91",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.545599999895785
+    },
+    {
+      "test_id": "baseline_92",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5113000006531365
+    },
+    {
+      "test_id": "baseline_93",
+      "category": "ip_address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5076000015833415
+    },
+    {
+      "test_id": "baseline_94",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5844000006618444
+    },
+    {
+      "test_id": "baseline_95",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5247000008239411
+    },
+    {
+      "test_id": "baseline_96",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.8663999979034998
+    },
+    {
+      "test_id": "baseline_97",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6701999991491903
+    },
+    {
+      "test_id": "baseline_98",
+      "category": "phone_number",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.8336999999301042
+    },
+    {
+      "test_id": "baseline_99",
+      "category": "person_name",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6254999971133657
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 - Stageflow is installed at the repo root (import via `import stageflow`); share components via `from components import groq_llama, streaming_mocks`
 - Preferred LLM is Groq Llama 3.1 8B through `GroqChatStage` unless task explicitly overrides
 - Use the streaming STT/TTS mocks (duplex queue + buffer) for audio pipelines before integrating real providers
+- **Do NOT read or list files outside this repository.** External directories (e.g., global `site-packages`) are blocked. When you need Stageflow libraries, run `pip install stageflow-core` (and any other dependency) within the working directory so files stay inside the repo.
+- All authoritative documentation is vendored under `stageflow-docs/`. Link to the specific doc/section you rely on. If a required detail is missing or inconsistent with behavior, log a documentation finding immediately.
 # Stageflow Stress-Testing Agent System Prompt
 
 > **Version**: 1.0  

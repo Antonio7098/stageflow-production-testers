@@ -1,0 +1,71 @@
+{
+  "test_run_id": "contract003-2026-01-19-001",
+  "roadmap_entry_id": "CONTRACT-003",
+  "title": "Partial output handling on stage failure",
+  "agent": "claude-3.5-sonnet",
+  "date": "2026-01-19",
+  "status": "COMPLETED",
+  "summary": {
+    "total_findings": 5,
+    "bugs_found": 2,
+    "dx_issues": 1,
+    "improvements": 2,
+    "strengths": 1
+  },
+  "key_findings": {
+    "bugs": [
+      {
+        "id": "BUG-020",
+        "title": "StageExecutionError lacks partial results field",
+        "severity": "medium",
+        "impact": "Cannot recover partial pipeline state after StageOutput.fail()"
+      },
+      {
+        "id": "BUG-021",
+        "title": "Parallel branch outputs lost on single branch failure",
+        "severity": "high",
+        "impact": "Work from successful parallel branches is lost when any branch fails"
+      }
+    ],
+    "strengths": [
+      {
+        "id": "STR-042",
+        "title": "UnifiedPipelineCancelled preserves partial results",
+        "evidence": "Pipeline A -> B where B cancels provides e.results containing As output"
+      }
+    ],
+    "improvements": [
+      {
+        "id": "IMP-040",
+        "title": "Add checkpoint and resume capability",
+        "priority": "P1",
+        "rationale": "AWS Step Functions redrive and Temporal.io durable execution provide checkpoint-based recovery"
+      },
+      {
+        "id": "IMP-041",
+        "title": "Saga pattern support for compensation actions",
+        "priority": "P2",
+        "rationale": "Enable distributed transaction semantics for multi-service operations"
+      }
+    ]
+  },
+  "research_summary": {
+    "industry_patterns": [
+      "AWS Step Functions redrive for restarting from failure point",
+      "Temporal.io durable execution with automatic checkpointing",
+      "Saga pattern with compensation actions for rollback",
+      "Checkpoint-based recovery for long-running workflows"
+    ],
+    "stageflow_behavior": {
+      "cancel_preserves_partial_results": true,
+      "fail_preserves_partial_results": false,
+      "parallel_branch_output_loss": true
+    }
+  },
+  "recommendations": [
+    "Add results field to StageExecutionError for consistency with UnifiedPipelineCancelled",
+    "Document the behavior difference between fail and cancel partial result handling",
+    "Consider implementing checkpoint-based recovery for long-running pipelines",
+    "Add Saga pattern support for compensation-based rollback scenarios"
+  ]
+}

@@ -1,0 +1,127 @@
+[
+  {
+    "type": "silent_failure",
+    "details": "Expected bom_detected=False, got True",
+    "category": "bom",
+    "description": "UTF-8 BOM prefix"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected bom_type=utf-8-bom, got utf-8",
+    "category": "bom",
+    "description": "UTF-8 BOM prefix"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected bom_detected=True, got False",
+    "category": "bom",
+    "description": "UTF-16 BE BOM"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected bom_type=utf-16-be, got None",
+    "category": "bom",
+    "description": "UTF-16 BE BOM"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected bom_detected=True, got False",
+    "category": "bom",
+    "description": "UTF-16 LE BOM"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected bom_type=utf-16-le, got None",
+    "category": "bom",
+    "description": "UTF-16 LE BOM"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected bom_detected=True, got False",
+    "category": "bom",
+    "description": "UTF-32 BE BOM"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected bom_type=utf-32-be, got None",
+    "category": "bom",
+    "description": "UTF-32 BE BOM"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected bom_detected=True, got False",
+    "category": "bom",
+    "description": "UTF-32 LE BOM"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected bom_type=utf-32-le, got None",
+    "category": "bom",
+    "description": "UTF-32 LE BOM"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected bom_type=utf-8, got None",
+    "category": "bom",
+    "description": "No BOM (plain UTF-8)"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected has_surrogates=True, got False",
+    "category": "surrogates",
+    "description": "Valid emoji (\ud83d\ude00) as surrogate pair"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected has_surrogates=True, got False",
+    "category": "surrogates",
+    "description": "Valid emoji (\ud83c\udf89) as surrogate pair"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected is_valid=False, got True",
+    "category": "surrogates",
+    "description": "Lone high surrogate (invalid)"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected is_valid=False, got True",
+    "category": "surrogates",
+    "description": "Lone low surrogate (invalid)"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected encoding=utf-8, got ascii",
+    "category": "charset_detection",
+    "description": "UTF-8 with Western European characters"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected encoding=utf-8, got ascii",
+    "category": "charset_detection",
+    "description": "UTF-8 with Chinese characters"
+  },
+  {
+    "type": "encoding_exception",
+    "details": "Stage 'encoding_convert' failed: encode() takes at most 2 arguments (3 given)",
+    "category": "encoding_conversion",
+    "description": "Windows-1252 to UTF-8"
+  },
+  {
+    "type": "silent_failure",
+    "details": "Expected success=True, got False",
+    "category": "encoding_conversion",
+    "description": "Latin-1 to UTF-8"
+  },
+  {
+    "type": "encoding_exception",
+    "details": "Stage 'encoding_convert' failed: encode() takes at most 2 arguments (3 given)",
+    "category": "encoding_conversion",
+    "description": "Round-trip UTF-8"
+  },
+  {
+    "type": "test_category_failure",
+    "details": "can't concat str to bytes",
+    "category": "json_encoding"
+  }
+]

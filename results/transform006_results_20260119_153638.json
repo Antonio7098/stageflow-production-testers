@@ -1,0 +1,650 @@
+{
+  "test_run_id": "transform006-20260119-153637",
+  "timestamp": "2026-01-19T15:36:37.942598",
+  "categories": {
+    "bom": [
+      {
+        "test_id": "tf006-153638-2272",
+        "category": "bom",
+        "description": "UTF-8 BOM prefix",
+        "input_preview": "\ufeff{\"key\": \"value\"}",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "\ufeff{\"key\": \"value\"}",
+          "stripped_text": "{\"key\": \"value\"}",
+          "bom_detected": true,
+          "bom_type": "utf-8",
+          "original_length": 17,
+          "stripped_length": 16
+        },
+        "error": "Expected bom_type=utf-8-bom, got utf-8",
+        "expected": {
+          "bom_detected": false,
+          "bom_type": "utf-8-bom"
+        },
+        "timestamp": "2026-01-19T15:36:38.018587"
+      },
+      {
+        "test_id": "tf006-153638-6240",
+        "category": "bom",
+        "description": "UTF-16 BE BOM",
+        "input_preview": "\ufffd\ufffd\u0000{\u0000\"\u0000k\u0000e\u0000y\u0000\"\u0000:\u0000 \u0000\"\u0000v\u0000a\u0000l\u0000u\u0000e\u0000\"\u0000}",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "\ufffd\ufffd\u0000{\u0000\"\u0000k\u0000e\u0000y\u0000\"\u0000:\u0000 \u0000\"\u0000v\u0000a\u0000l\u0000u\u0000e\u0000\"\u0000}",
+          "stripped_text": "\ufffd\ufffd\u0000{\u0000\"\u0000k\u0000e\u0000y\u0000\"\u0000:\u0000 \u0000\"\u0000v\u0000a\u0000l\u0000u\u0000e\u0000\"\u0000}",
+          "bom_detected": false,
+          "bom_type": null,
+          "original_length": 34,
+          "stripped_length": 34
+        },
+        "error": "Expected bom_type=utf-16-be, got None",
+        "expected": {
+          "bom_detected": true,
+          "bom_type": "utf-16-be"
+        },
+        "timestamp": "2026-01-19T15:36:38.021591"
+      },
+      {
+        "test_id": "tf006-153638-7392",
+        "category": "bom",
+        "description": "UTF-16 LE BOM",
+        "input_preview": "\ufffd\ufffd{\u0000\"\u0000k\u0000e\u0000y\u0000\"\u0000:\u0000 \u0000\"\u0000v\u0000a\u0000l\u0000u\u0000e\u0000\"\u0000}\u0000",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "\ufffd\ufffd{\u0000\"\u0000k\u0000e\u0000y\u0000\"\u0000:\u0000 \u0000\"\u0000v\u0000a\u0000l\u0000u\u0000e\u0000\"\u0000}\u0000",
+          "stripped_text": "\ufffd\ufffd{\u0000\"\u0000k\u0000e\u0000y\u0000\"\u0000:\u0000 \u0000\"\u0000v\u0000a\u0000l\u0000u\u0000e\u0000\"\u0000}\u0000",
+          "bom_detected": false,
+          "bom_type": null,
+          "original_length": 34,
+          "stripped_length": 34
+        },
+        "error": "Expected bom_type=utf-16-le, got None",
+        "expected": {
+          "bom_detected": true,
+          "bom_type": "utf-16-le"
+        },
+        "timestamp": "2026-01-19T15:36:38.025597"
+      },
+      {
+        "test_id": "tf006-153638-5936",
+        "category": "bom",
+        "description": "UTF-32 BE BOM",
+        "input_preview": "\u0000\u0000\ufffd\ufffd\u0000\u0000\u0000{\u0000\u0000\u0000\"\u0000\u0000\u0000k\u0000\u0000\u0000e\u0000\u0000\u0000y\u0000\u0000\u0000\"\u0000\u0000\u0000:\u0000\u0000\u0000 \u0000\u0000\u0000\"\u0000\u0000\u0000v\u0000\u0000\u0000a\u0000\u0000\u0000l\u0000\u0000\u0000u\u0000\u0000\u0000e\u0000\u0000\u0000\"\u0000\u0000\u0000}",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "\u0000\u0000\ufffd\ufffd\u0000\u0000\u0000{\u0000\u0000\u0000\"\u0000\u0000\u0000k\u0000\u0000\u0000e\u0000\u0000\u0000y\u0000\u0000\u0000\"\u0000\u0000\u0000:\u0000\u0000\u0000 \u0000\u0000\u0000\"\u0000\u0000\u0000v\u0000\u0000\u0000a\u0000\u0000\u0000l\u0000\u0000\u0000u\u0000\u0000\u0000e\u0000\u0000\u0000\"\u0000\u0000\u0000}",
+          "stripped_text": "\u0000\u0000\ufffd\ufffd\u0000\u0000\u0000{\u0000\u0000\u0000\"\u0000\u0000\u0000k\u0000\u0000\u0000e\u0000\u0000\u0000y\u0000\u0000\u0000\"\u0000\u0000\u0000:\u0000\u0000\u0000 \u0000\u0000\u0000\"\u0000\u0000\u0000v\u0000\u0000\u0000a\u0000\u0000\u0000l\u0000\u0000\u0000u\u0000\u0000\u0000e\u0000\u0000\u0000\"\u0000\u0000\u0000}",
+          "bom_detected": false,
+          "bom_type": null,
+          "original_length": 68,
+          "stripped_length": 68
+        },
+        "error": "Expected bom_type=utf-32-be, got None",
+        "expected": {
+          "bom_detected": true,
+          "bom_type": "utf-32-be"
+        },
+        "timestamp": "2026-01-19T15:36:38.027601"
+      },
+      {
+        "test_id": "tf006-153638-5104",
+        "category": "bom",
+        "description": "UTF-32 LE BOM",
+        "input_preview": "\ufffd\ufffd\u0000\u0000{\u0000\u0000\u0000\"\u0000\u0000\u0000k\u0000\u0000\u0000e\u0000\u0000\u0000y\u0000\u0000\u0000\"\u0000\u0000\u0000:\u0000\u0000\u0000 \u0000\u0000\u0000\"\u0000\u0000\u0000v\u0000\u0000\u0000a\u0000\u0000\u0000l\u0000\u0000\u0000u\u0000\u0000\u0000e\u0000\u0000\u0000\"\u0000\u0000\u0000}\u0000\u0000\u0000",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "\ufffd\ufffd\u0000\u0000{\u0000\u0000\u0000\"\u0000\u0000\u0000k\u0000\u0000\u0000e\u0000\u0000\u0000y\u0000\u0000\u0000\"\u0000\u0000\u0000:\u0000\u0000\u0000 \u0000\u0000\u0000\"\u0000\u0000\u0000v\u0000\u0000\u0000a\u0000\u0000\u0000l\u0000\u0000\u0000u\u0000\u0000\u0000e\u0000\u0000\u0000\"\u0000\u0000\u0000}\u0000\u0000\u0000",
+          "stripped_text": "\ufffd\ufffd\u0000\u0000{\u0000\u0000\u0000\"\u0000\u0000\u0000k\u0000\u0000\u0000e\u0000\u0000\u0000y\u0000\u0000\u0000\"\u0000\u0000\u0000:\u0000\u0000\u0000 \u0000\u0000\u0000\"\u0000\u0000\u0000v\u0000\u0000\u0000a\u0000\u0000\u0000l\u0000\u0000\u0000u\u0000\u0000\u0000e\u0000\u0000\u0000\"\u0000\u0000\u0000}\u0000\u0000\u0000",
+          "bom_detected": false,
+          "bom_type": null,
+          "original_length": 68,
+          "stripped_length": 68
+        },
+        "error": "Expected bom_type=utf-32-le, got None",
+        "expected": {
+          "bom_detected": true,
+          "bom_type": "utf-32-le"
+        },
+        "timestamp": "2026-01-19T15:36:38.029596"
+      },
+      {
+        "test_id": "tf006-153638-1440",
+        "category": "bom",
+        "description": "No BOM (plain UTF-8)",
+        "input_preview": "{\"key\": \"value\"}",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "{\"key\": \"value\"}",
+          "stripped_text": "{\"key\": \"value\"}",
+          "bom_detected": false,
+          "bom_type": null,
+          "original_length": 16,
+          "stripped_length": 16
+        },
+        "error": "Expected bom_type=utf-8, got None",
+        "expected": {
+          "bom_detected": false,
+          "bom_type": "utf-8"
+        },
+        "timestamp": "2026-01-19T15:36:38.030594"
+      }
+    ],
+    "mojibake": [
+      {
+        "test_id": "tf006-153638-2208",
+        "category": "mojibake",
+        "description": "UTF-8 bytes misinterpreted as Latin-1 (Cafe)",
+        "input_preview": "Caf\u00c3\u0083\u00c2\u00a9",
+        "success": true,
+        "status": "ok",
+        "data": {
+          "original": "Caf\u00c3\u0083\u00c2\u00a9",
+          "repaired": "Caf\u00c3\u00a9",
+          "repairs_made": 1,
+          "repair_details": [
+            {
+              "type": "utf8-as-latin1",
+              "original_preview": "Caf\u00c3\u0083\u00c2\u00a9",
+              "repaired_preview": "Caf\u00c3\u00a9"
+            }
+          ],
+          "was_modified": true
+        },
+        "error": null,
+        "expected": "Cafe",
+        "timestamp": "2026-01-19T15:36:38.036599"
+      },
+      {
+        "test_id": "tf006-153638-1248",
+        "category": "mojibake",
+        "description": "UTF-8 bytes misinterpreted as Windows-1252",
+        "input_preview": "Caf\u00c2\u201a",
+        "success": true,
+        "status": "ok",
+        "data": {
+          "original": "Caf\u00c2\u201a",
+          "repaired": "Caf\u00c2\u201a",
+          "repairs_made": 0,
+          "repair_details": [],
+          "was_modified": false
+        },
+        "error": null,
+        "expected": "Cafe",
+        "timestamp": "2026-01-19T15:36:38.037601"
+      },
+      {
+        "test_id": "tf006-153638-2464",
+        "category": "mojibake",
+        "description": "Windows-1252 misinterpreted as UTF-8",
+        "input_preview": "Smart quotes: \u00c3\u0082\u00c2\u0093test\u00c3\u0082\u00c2\u0094",
+        "success": true,
+        "status": "ok",
+        "data": {
+          "original": "Smart quotes: \u00c3\u0082\u00c2\u0093test\u00c3\u0082\u00c2\u0094",
+          "repaired": "Smart quotes: \u00c3\u0192\u00c2\u201a\u00c3\u201a\u00c2\u201ctest\u00c3\u0192\u00c2\u201a\u00c3\u201a\u00c2\u201d",
+          "repairs_made": 2,
+          "repair_details": [
+            {
+              "type": "utf8-as-latin1",
+              "original_preview": "Smart quotes: \u00c3\u0082\u00c2\u0093test\u00c3\u0082\u00c2\u0094",
+              "repaired_preview": "Smart quotes: \u00c2\u0093test\u00c2\u0094"
+            },
+            {
+              "type": "windows1252-as-utf8",
+              "original_preview": "Smart quotes: \u00c3\u0082\u00c2\u0093test\u00c3\u0082\u00c2\u0094",
+              "repaired_preview": "Smart quotes: \u00c3\u0192\u00c2\u201a\u00c3\u201a\u00c2\u201ctest\u00c3\u0192\u00c2\u201a\u00c3\u201a\u00c2\u201d"
+            }
+          ],
+          "was_modified": true
+        },
+        "error": null,
+        "expected": "Smart quotes: \"test\"",
+        "timestamp": "2026-01-19T15:36:38.038584"
+      },
+      {
+        "test_id": "tf006-153638-2560",
+        "category": "mojibake",
+        "description": "Mixed mojibake with multiple characters",
+        "input_preview": "Cr\u00c3\u0083\u00c2\u00aape, na\u00c3\u0083\u00c2\u00afve, fa\u00c3\u0083\u00c2\u00a7ade",
+        "success": true,
+        "status": "ok",
+        "data": {
+          "original": "Cr\u00c3\u0083\u00c2\u00aape, na\u00c3\u0083\u00c2\u00afve, fa\u00c3\u0083\u00c2\u00a7ade",
+          "repaired": "Cr\u00c3\u00aape, na\u00c3\u00afve, fa\u00c3\u00a7ade",
+          "repairs_made": 1,
+          "repair_details": [
+            {
+              "type": "utf8-as-latin1",
+              "original_preview": "Cr\u00c3\u0083\u00c2\u00aape, na\u00c3\u0083\u00c2\u00afve, fa\u00c3\u0083\u00c2\u00a7ade",
+              "repaired_preview": "Cr\u00c3\u00aape, na\u00c3\u00afve, fa\u00c3\u00a7ade"
+            }
+          ],
+          "was_modified": true
+        },
+        "error": null,
+        "expected": "Crepe, naive, facade",
+        "timestamp": "2026-01-19T15:36:38.039559"
+      },
+      {
+        "test_id": "tf006-153638-1328",
+        "category": "mojibake",
+        "description": "Chinese characters corrupted",
+        "input_preview": "\u00c3\u00a5\u00c2\u008c\u00c2\u0097\u00c3\u00a4\u00c2\u00ba\u00c2\u00ac",
+        "success": true,
+        "status": "ok",
+        "data": {
+          "original": "\u00c3\u00a5\u00c2\u008c\u00c2\u0097\u00c3\u00a4\u00c2\u00ba\u00c2\u00ac",
+          "repaired": "\u00c3\u0192\u00c2\u00a5\u00c3\u201a\u00c2\u0152\u00c3\u201a\u00c2\u2014\u00c3\u0192\u00c2\u00a4\u00c3\u201a\u00c2\u00ba\u00c3\u201a\u00c2\u00ac",
+          "repairs_made": 2,
+          "repair_details": [
+            {
+              "type": "utf8-as-latin1",
+              "original_preview": "\u00c3\u00a5\u00c2\u008c\u00c2\u0097\u00c3\u00a4\u00c2\u00ba\u00c2\u00ac",
+              "repaired_preview": "\u00e5\u008c\u0097\u00e4\u00ba\u00ac"
+            },
+            {
+              "type": "windows1252-as-utf8",
+              "original_preview": "\u00c3\u00a5\u00c2\u008c\u00c2\u0097\u00c3\u00a4\u00c2\u00ba\u00c2\u00ac",
+              "repaired_preview": "\u00c3\u0192\u00c2\u00a5\u00c3\u201a\u00c2\u0152\u00c3\u201a\u00c2\u2014\u00c3\u0192\u00c2\u00a4\u00c3\u201a\u00c2\u00ba\u00c3\u201a\u00c2\u00ac"
+            }
+          ],
+          "was_modified": true
+        },
+        "error": null,
+        "expected": "Beijing",
+        "timestamp": "2026-01-19T15:36:38.040593"
+      }
+    ],
+    "surrogates": [
+      {
+        "test_id": "tf006-153638-9808",
+        "category": "surrogates",
+        "description": "Valid emoji (\ud83d\ude00) as surrogate pair",
+        "input_preview": "{\"test\": \"\\ud83d\\ude00\"}",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "{\"test\": \"\\ud83d\\ude00\"}",
+          "is_valid": true,
+          "has_surrogates": false,
+          "surrogate_count": 0,
+          "invalid_surrogates": [],
+          "emoji_count": 0,
+          "details": []
+        },
+        "error": "Expected has_surrogates=True, got False",
+        "expected": {
+          "is_valid": true,
+          "has_surrogates": true
+        },
+        "timestamp": "2026-01-19T15:36:38.041595"
+      },
+      {
+        "test_id": "tf006-153638-9568",
+        "category": "surrogates",
+        "description": "Valid emoji (\ud83c\udf89) as surrogate pair",
+        "input_preview": "{\"test\": \"\\ud83c\\udf89\"}",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "{\"test\": \"\\ud83c\\udf89\"}",
+          "is_valid": true,
+          "has_surrogates": false,
+          "surrogate_count": 0,
+          "invalid_surrogates": [],
+          "emoji_count": 0,
+          "details": []
+        },
+        "error": "Expected has_surrogates=True, got False",
+        "expected": {
+          "is_valid": true,
+          "has_surrogates": true
+        },
+        "timestamp": "2026-01-19T15:36:38.041595"
+      },
+      {
+        "test_id": "tf006-153638-6688",
+        "category": "surrogates",
+        "description": "Lone high surrogate (invalid)",
+        "input_preview": "{\"test\": \"\\ud83d\"}",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "{\"test\": \"\\ud83d\"}",
+          "is_valid": true,
+          "has_surrogates": false,
+          "surrogate_count": 0,
+          "invalid_surrogates": [],
+          "emoji_count": 0,
+          "details": []
+        },
+        "error": "Expected is_valid=False, got True",
+        "expected": {
+          "is_valid": false,
+          "has_surrogates": false
+        },
+        "timestamp": "2026-01-19T15:36:38.042597"
+      },
+      {
+        "test_id": "tf006-153638-0160",
+        "category": "surrogates",
+        "description": "Lone low surrogate (invalid)",
+        "input_preview": "{\"test\": \"\\ude00\"}",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "{\"test\": \"\\ude00\"}",
+          "is_valid": true,
+          "has_surrogates": false,
+          "surrogate_count": 0,
+          "invalid_surrogates": [],
+          "emoji_count": 0,
+          "details": []
+        },
+        "error": "Expected is_valid=False, got True",
+        "expected": {
+          "is_valid": false,
+          "has_surrogates": false
+        },
+        "timestamp": "2026-01-19T15:36:38.043592"
+      }
+    ],
+    "charset_detection": [
+      {
+        "test_id": "tf006-153638-6224",
+        "category": "charset_detection",
+        "description": "Pure ASCII",
+        "input_preview": "Hello, World!",
+        "success": true,
+        "status": "ok",
+        "data": {
+          "original": "Hello, World!",
+          "encoding": "ascii",
+          "confidence": "high",
+          "is_ascii": true,
+          "has_bom": false,
+          "byte_length": 13,
+          "char_length": 13
+        },
+        "error": null,
+        "expected": {
+          "encoding": "ascii",
+          "confidence": "high"
+        },
+        "timestamp": "2026-01-19T15:36:38.044595"
+      },
+      {
+        "test_id": "tf006-153638-6608",
+        "category": "charset_detection",
+        "description": "UTF-8 with Western European characters",
+        "input_preview": "Cafe resume naive",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "Cafe resume naive",
+          "encoding": "ascii",
+          "confidence": "high",
+          "is_ascii": true,
+          "has_bom": false,
+          "byte_length": 17,
+          "char_length": 17
+        },
+        "error": "Expected encoding=utf-8, got ascii",
+        "expected": {
+          "encoding": "utf-8",
+          "confidence": "high"
+        },
+        "timestamp": "2026-01-19T15:36:38.046596"
+      },
+      {
+        "test_id": "tf006-153638-7056",
+        "category": "charset_detection",
+        "description": "UTF-8 with Chinese characters",
+        "input_preview": "Beijing Tokyo Seoul",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "Beijing Tokyo Seoul",
+          "encoding": "ascii",
+          "confidence": "high",
+          "is_ascii": true,
+          "has_bom": false,
+          "byte_length": 19,
+          "char_length": 19
+        },
+        "error": "Expected encoding=utf-8, got ascii",
+        "expected": {
+          "encoding": "utf-8",
+          "confidence": "high"
+        },
+        "timestamp": "2026-01-19T15:36:38.047596"
+      },
+      {
+        "test_id": "tf006-153638-3136",
+        "category": "charset_detection",
+        "description": "UTF-8 with emoji",
+        "input_preview": "Hello \ud83c\udf89 World",
+        "success": true,
+        "status": "ok",
+        "data": {
+          "original": "Hello \ud83c\udf89 World",
+          "encoding": "utf-8",
+          "confidence": "high",
+          "is_ascii": false,
+          "has_bom": false,
+          "byte_length": 16,
+          "char_length": 13
+        },
+        "error": null,
+        "expected": {
+          "encoding": "utf-8",
+          "confidence": "high"
+        },
+        "timestamp": "2026-01-19T15:36:38.048596"
+      }
+    ],
+    "encoding_conversion": [
+      {
+        "test_id": "tf006-153638-8464",
+        "category": "encoding_conversion",
+        "description": "Windows-1252 to UTF-8",
+        "input_preview": "Smart \"test\"",
+        "success": false,
+        "status": "exception",
+        "data": {},
+        "error": "Stage 'encoding_convert' failed: encode() takes at most 2 arguments (3 given)",
+        "expected": {
+          "success": true,
+          "source_encoding": "windows-1252",
+          "target_encoding": "utf-8"
+        },
+        "timestamp": "2026-01-19T15:36:38.050593",
+        "exception_type": "UnifiedStageExecutionError"
+      },
+      {
+        "test_id": "tf006-153638-9168",
+        "category": "encoding_conversion",
+        "description": "Latin-1 to UTF-8",
+        "input_preview": "Caf\u00e9",
+        "success": false,
+        "status": "validation_failed",
+        "data": {
+          "original": "Caf\u00e9",
+          "converted": "Caf\u00e9",
+          "source_encoding": "latin-1",
+          "target_encoding": "utf-8",
+          "success": false,
+          "error": "'utf-8' codec can't decode byte 0xe9 in position 3: unexpected end of data",
+          "original_size": 5,
+          "converted_size": 0
+        },
+        "error": "Expected success=True, got False",
+        "expected": {
+          "success": true,
+          "source_encoding": "latin-1",
+          "target_encoding": "utf-8"
+        },
+        "timestamp": "2026-01-19T15:36:38.054591"
+      },
+      {
+        "test_id": "tf006-153638-4672",
+        "category": "encoding_conversion",
+        "description": "Round-trip UTF-8",
+        "input_preview": "Cafe Beijing \ud83c\udf89",
+        "success": false,
+        "status": "exception",
+        "data": {},
+        "error": "Stage 'encoding_convert' failed: encode() takes at most 2 arguments (3 given)",
+        "expected": {
+          "success": true,
+          "source_encoding": "utf-8",
+          "target_encoding": "utf-8"
+        },
+        "timestamp": "2026-01-19T15:36:38.054591",
+        "exception_type": "UnifiedStageExecutionError"
+      }
+    ],
+    "json_encoding": []
+  },
+  "summary": {
+    "total_tests": 22,
+    "total_passed": 7,
+    "total_failed": 15,
+    "pass_rate": 31.818181818181817,
+    "categories_tested": 6
+  },
+  "findings": [
+    {
+      "type": "silent_failure",
+      "details": "Expected bom_detected=False, got True",
+      "category": "bom",
+      "description": "UTF-8 BOM prefix"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected bom_type=utf-8-bom, got utf-8",
+      "category": "bom",
+      "description": "UTF-8 BOM prefix"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected bom_detected=True, got False",
+      "category": "bom",
+      "description": "UTF-16 BE BOM"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected bom_type=utf-16-be, got None",
+      "category": "bom",
+      "description": "UTF-16 BE BOM"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected bom_detected=True, got False",
+      "category": "bom",
+      "description": "UTF-16 LE BOM"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected bom_type=utf-16-le, got None",
+      "category": "bom",
+      "description": "UTF-16 LE BOM"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected bom_detected=True, got False",
+      "category": "bom",
+      "description": "UTF-32 BE BOM"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected bom_type=utf-32-be, got None",
+      "category": "bom",
+      "description": "UTF-32 BE BOM"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected bom_detected=True, got False",
+      "category": "bom",
+      "description": "UTF-32 LE BOM"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected bom_type=utf-32-le, got None",
+      "category": "bom",
+      "description": "UTF-32 LE BOM"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected bom_type=utf-8, got None",
+      "category": "bom",
+      "description": "No BOM (plain UTF-8)"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected has_surrogates=True, got False",
+      "category": "surrogates",
+      "description": "Valid emoji (\ud83d\ude00) as surrogate pair"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected has_surrogates=True, got False",
+      "category": "surrogates",
+      "description": "Valid emoji (\ud83c\udf89) as surrogate pair"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected is_valid=False, got True",
+      "category": "surrogates",
+      "description": "Lone high surrogate (invalid)"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected is_valid=False, got True",
+      "category": "surrogates",
+      "description": "Lone low surrogate (invalid)"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected encoding=utf-8, got ascii",
+      "category": "charset_detection",
+      "description": "UTF-8 with Western European characters"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected encoding=utf-8, got ascii",
+      "category": "charset_detection",
+      "description": "UTF-8 with Chinese characters"
+    },
+    {
+      "type": "encoding_exception",
+      "details": "Stage 'encoding_convert' failed: encode() takes at most 2 arguments (3 given)",
+      "category": "encoding_conversion",
+      "description": "Windows-1252 to UTF-8"
+    },
+    {
+      "type": "silent_failure",
+      "details": "Expected success=True, got False",
+      "category": "encoding_conversion",
+      "description": "Latin-1 to UTF-8"
+    },
+    {
+      "type": "encoding_exception",
+      "details": "Stage 'encoding_convert' failed: encode() takes at most 2 arguments (3 given)",
+      "category": "encoding_conversion",
+      "description": "Round-trip UTF-8"
+    },
+    {
+      "type": "test_category_failure",
+      "details": "can't concat str to bytes",
+      "category": "json_encoding"
+    }
+  ]
+}

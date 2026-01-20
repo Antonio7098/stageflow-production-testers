@@ -1,0 +1,241 @@
+{
+  "pipeline_name": "chaos",
+  "timestamp": "2026-01-20T19:15:28.519106",
+  "total_tests": 30,
+  "passed": 17,
+  "failed": 13,
+  "recall_rate": 0.5666666666666667,
+  "precision_rate": 1.0,
+  "false_negative_rate": 0.43333333333333335,
+  "false_positive_rate": 0.0,
+  "avg_latency_ms": 0.507389999741766,
+  "p95_latency_ms": 0.7027999999991152,
+  "p99_latency_ms": 0.7538999998359941,
+  "silent_failures": [
+    "PHI missed (chaos): person_name - Patient: Sarah Wilson...",
+    "PHI missed (chaos): date_of_birth - DOB: April 25, 1959...",
+    "PHI missed (chaos): ip_address - IP: 98.138.112.176...",
+    "PHI missed (chaos): phone_number - Phone: 9537672423.9537672423.9537672423X...",
+    "PHI missed (chaos): web_url - Visit: http://demo.net...",
+    "PHI missed (chaos): phone_number - Phone: 451462704845146270484514627048X...",
+    "PHI missed (chaos): ip_address - IP: 5.57.185.225...",
+    "PHI missed (chaos): phone_number - My number is one two three four five six seven eig...",
+    "PHI missed (chaos): email - Contact at john at doe dot com...",
+    "PHI missed (chaos): ssn - SSN is 1 2 3 - 4 5 - 6 7 8 9...",
+    "PHI missed (chaos): person_name - Patient J.D. for short, full name John David Smith...",
+    "PHI missed (chaos): date_of_birth - Born on the 5th of January, 1985...",
+    "PHI missed (chaos): ip_address - IP address two fifty five dot one hundred one dot ..."
+  ],
+  "test_results": [
+    {
+      "test_id": "chaos_0",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.7538999998359941
+    },
+    {
+      "test_id": "chaos_1",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5629999977827538
+    },
+    {
+      "test_id": "chaos_2",
+      "category": "person_name",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.459999999293359
+    },
+    {
+      "test_id": "chaos_3",
+      "category": "date_of_birth",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.45739999768557027
+    },
+    {
+      "test_id": "chaos_4",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5095999986224342
+    },
+    {
+      "test_id": "chaos_5",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.4920999999740161
+    },
+    {
+      "test_id": "chaos_6",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.6190999993123114
+    },
+    {
+      "test_id": "chaos_7",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5994999992253724
+    },
+    {
+      "test_id": "chaos_8",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5597000017587561
+    },
+    {
+      "test_id": "chaos_9",
+      "category": "ip_address",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.4453000001376495
+    },
+    {
+      "test_id": "chaos_10",
+      "category": "address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5474999998114072
+    },
+    {
+      "test_id": "chaos_11",
+      "category": "phone_number",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.640199999907054
+    },
+    {
+      "test_id": "chaos_12",
+      "category": "web_url",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.7027999999991152
+    },
+    {
+      "test_id": "chaos_13",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.49539999963599257
+    },
+    {
+      "test_id": "chaos_14",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.4714999995485414
+    },
+    {
+      "test_id": "chaos_15",
+      "category": "web_url",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.40970000191009603
+    },
+    {
+      "test_id": "chaos_16",
+      "category": "ip_address",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.40320000334759243
+    },
+    {
+      "test_id": "chaos_17",
+      "category": "phone_number",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.40829999852576293
+    },
+    {
+      "test_id": "chaos_18",
+      "category": "phone_number",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.46999999904073775
+    },
+    {
+      "test_id": "chaos_19",
+      "category": "ip_address",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.3797999997914303
+    },
+    {
+      "test_id": "chaos_20",
+      "category": "phone_number",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.4576999999699183
+    },
+    {
+      "test_id": "chaos_21",
+      "category": "email",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.39150000156951137
+    },
+    {
+      "test_id": "chaos_22",
+      "category": "ssn",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.5980999994790182
+    },
+    {
+      "test_id": "chaos_23",
+      "category": "person_name",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.4928999987896532
+    },
+    {
+      "test_id": "chaos_24",
+      "category": "zip_code",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.45590000081574544
+    },
+    {
+      "test_id": "chaos_25",
+      "category": "date_of_birth",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.4205999975965824
+    },
+    {
+      "test_id": "chaos_26",
+      "category": "email",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.4001000015705358
+    },
+    {
+      "test_id": "chaos_27",
+      "category": "ip_address",
+      "passed": false,
+      "recall_achieved": false,
+      "processing_time_ms": 0.4564000009850133
+    },
+    {
+      "test_id": "chaos_28",
+      "category": "date_of_birth",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5697999986296054
+    },
+    {
+      "test_id": "chaos_29",
+      "category": "ssn",
+      "passed": true,
+      "recall_achieved": true,
+      "processing_time_ms": 0.5906999977014493
+    }
+  ]
+}

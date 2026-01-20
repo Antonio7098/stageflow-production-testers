@@ -1,1 +1,1 @@
-{ "permission": { "bash": "allow", "edit": "allow" } }
+{ "permission": { "*": "allow", "external_directory": "deny" } }
