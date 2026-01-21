@@ -1566,6 +1566,47 @@
       "rationale": "Implementing Saga pattern requires custom tracking of undo operations",
       "proposed_solution": "Create CompensatingActionStage that wraps other stages and records compensation actions",
       "roleplay_perspective": "As a financial services architect, I need compensating actions for transaction rollback when downstream services fail"
+    },
+    {
+      "id": "IMP-113",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-21T12:33:29.903914+00:00",
+      "title": "PlanningStage base class with iteration limits",
+      "description": "A configurable PlanningStage base class that provides built-in iteration limits, loop detection, and checkpoint management for AGENT stages",
+      "type": "component_suggestion",
+      "priority": "P1",
+      "category": "plus_package",
+      "context": "Building IterativePlanningStage for AGENT-001 testing required implementing iteration tracking, loop detection, and checkpoint management from scratch",
+      "rationale": "Planning-specific patterns are common across agent implementations. Having a prebuilt component would reduce boilerplate and ensure consistent resilience patterns",
+      "proposed_solution": "Create a PlanningStage class with configurable max_iterations, loop_detection_enabled, checkpoint_interval, and recovery_callback parameters",
+      "roleplay_perspective": "As a reliability engineer testing agent planning systems, having a PlanningStage base class would allow me to focus on testing planning behavior rather than implementing resilience infrastructure"
+    },
+    {
+      "id": "IMP-114",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-21T12:33:45.505117+00:00",
+      "title": "Loop detection utilities",
+      "description": "Standalone loop detection utilities that can be used in any AGENT stage to detect circular reasoning patterns",
+      "type": "component_suggestion",
+      "priority": "P0",
+      "category": "plus_package",
+      "context": "Testing circular reasoning scenarios for AGENT-001 required implementing custom loop detection logic",
+      "rationale": "Circular reasoning detection is a common requirement for agent planning systems. Having a reusable utility would simplify implementation",
+      "proposed_solution": "Create a detect_loop(plan_history, threshold=3) function that returns (is_loop, loop_pattern, confidence)",
+      "roleplay_perspective": "As a reliability engineer, I need loop detection to be a utility function I can import and use, not something I have to reimplement for each agent"
+    },
+    {
+      "id": "IMP-115",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-21T12:34:16.644213+00:00",
+      "title": "Planning patterns documentation",
+      "description": "Documentation section covering common planning patterns for AGENT stages including iteration limits, loop detection, checkpointing, and recovery",
+      "type": "documentation",
+      "priority": "P1",
+      "category": "documentation",
+      "context": "Building test pipelines for AGENT-001 required researching planning patterns independently",
+      "rationale": "Having documented patterns would help developers implement planning agents correctly the first time",
+      "proposed_solution": "Add a planning-patterns.md guide with examples for iteration limits, loop detection, and checkpointing"
     }
   ]
 }

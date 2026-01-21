@@ -118,7 +118,7 @@
 ### 2.6 AGENT Stages
 | ID | Target | Priority | Risk | Status |
 |----|--------|----------|------|--------|
-| AGENT-001 | Planning collapse prevention | P0 | Severe | ☐ Not Started |
+| AGENT-001 | Planning collapse prevention | P0 | Severe | ✅ Completed (2026-01-21) |
 | AGENT-002 | Reasoning drift accumulation | P0 | Severe | ☐ Not Started |
 | AGENT-003 | Hallucination detection and mitigation | P0 | Severe | ☐ Not Started |
 | AGENT-004 | Tool-call recursion traps | P1 | High | ☐ Not Started |

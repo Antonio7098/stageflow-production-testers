@@ -965,6 +965,19 @@
       "context": "Had to derive checkpoint pattern from ContextSnapshot.to_dict/from_dict API",
       "impact": "Increased development time for implementing rollback testing",
       "recommendation": "Add dedicated section on state management with checkpoint/restore examples"
+    },
+    {
+      "id": "DX-076",
+      "agent": "claude-3.5-sonnet",
+      "created_at": "2026-01-21T12:33:59.401872+00:00",
+      "title": "StageContext constructor requires multiple dependencies",
+      "description": "Creating a StageContext for testing requires providing inputs, stage_name, and timer, making unit testing stages more complex",
+      "category": "error_messages",
+      "severity": "medium",
+      "component": "StageContext",
+      "context": "Writing unit tests for IterativePlanningStage required mocking multiple StageContext dependencies",
+      "impact": "Increases test boilerplate and makes it harder to write simple unit tests for stages",
+      "recommendation": "Provide a create_test_context() helper or make these parameters optional with defaults for testing"
     }
   ]
 }
