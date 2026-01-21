@@ -1,0 +1,182 @@
+[
+  {
+    "test_name": "sequential_execution",
+    "success": true,
+    "execution_time_ms": 74.92804527282715,
+    "details": {
+      "tool_count": 5,
+      "successful": 5,
+      "failed": 0,
+      "results": [
+        {
+          "index": 0,
+          "success": true
+        },
+        {
+          "index": 1,
+          "success": true
+        },
+        {
+          "index": 2,
+          "success": true
+        },
+        {
+          "index": 3,
+          "success": true
+        },
+        {
+          "index": 4,
+          "success": true
+        }
+      ]
+    },
+    "error": null
+  },
+  {
+    "test_name": "parallel_execution",
+    "success": true,
+    "execution_time_ms": 14.17088508605957,
+    "details": {
+      "tool_count": 10,
+      "successful": 10,
+      "failed": 0,
+      "results": [
+        {
+          "index": 0,
+          "success": true
+        },
+        {
+          "index": 1,
+          "success": true
+        },
+        {
+          "index": 2,
+          "success": true
+        },
+        {
+          "index": 3,
+          "success": true
+        },
+        {
+          "index": 4,
+          "success": true
+        }
+      ],
+      "note": "Showing first 5 results"
+    },
+    "error": null
+  },
+  {
+    "test_name": "parallel_execution",
+    "success": true,
+    "execution_time_ms": 14.184713363647461,
+    "details": {
+      "tool_count": 25,
+      "successful": 25,
+      "failed": 0,
+      "results": [
+        {
+          "index": 0,
+          "success": true
+        },
+        {
+          "index": 1,
+          "success": true
+        },
+        {
+          "index": 2,
+          "success": true
+        },
+        {
+          "index": 3,
+          "success": true
+        },
+        {
+          "index": 4,
+          "success": true
+        }
+      ],
+      "note": "Showing first 5 results"
+    },
+    "error": null
+  },
+  {
+    "test_name": "high_concurrency_50",
+    "success": true,
+    "execution_time_ms": 31.426429748535156,
+    "details": {
+      "concurrency_level": 50,
+      "successful": 50,
+      "failed": 0,
+      "max_concurrent": 50,
+      "throughput": 1591.0175097866659,
+      "avg_execution_time_ms": 28.550915718078613
+    },
+    "error": null
+  },
+  {
+    "test_name": "high_concurrency_100",
+    "success": true,
+    "execution_time_ms": 19.191265106201172,
+    "details": {
+      "concurrency_level": 100,
+      "successful": 100,
+      "failed": 0,
+      "max_concurrent": 100,
+      "throughput": 5210.703903396527,
+      "avg_execution_time_ms": 12.627053260803223
+    },
+    "error": null
+  },
+  {
+    "test_name": "race_condition_test",
+    "success": false,
+    "execution_time_ms": 9.53531265258789,
+    "details": {
+      "tool_count": 20,
+      "expected_counter": 20,
+      "actual_counter": 1,
+      "race_detected": true,
+      "severity": "high"
+    },
+    "error": null
+  },
+  {
+    "test_name": "rate_limit_simulation",
+    "success": true,
+    "execution_time_ms": 56.86545372009277,
+    "details": {
+      "request_count": 50,
+      "max_per_second": 10.0,
+      "successful": 20,
+      "rate_limited": 0,
+      "throughput_per_second": 351.70738456507246
+    },
+    "error": null
+  },
+  {
+    "test_name": "cascading_failure",
+    "success": true,
+    "execution_time_ms": 0.0,
+    "details": {
+      "total_tools": 20,
+      "fail_ratio": 0.3,
+      "successful": 14,
+      "failed": 6,
+      "expected_failures": 6
+    },
+    "error": null
+  },
+  {
+    "test_name": "resource_exhaustion",
+    "success": true,
+    "execution_time_ms": 68.60947608947754,
+    "details": {
+      "tool_count": 5,
+      "memory_kb_per_tool": 2048,
+      "successful": 5,
+      "failed": 0
+    },
+    "error": null
+  }
+]

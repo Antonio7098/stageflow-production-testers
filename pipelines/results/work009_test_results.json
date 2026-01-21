@@ -1,0 +1,184 @@
+{
+  "timestamp": "2026-01-20T23:23:54.956825+00:00",
+  "test_type": "tool_output_validation",
+  "metrics": {
+    "total_tests": 7,
+    "passed": 4,
+    "failed": 3,
+    "silent_failures": 0,
+    "exceptions": 0,
+    "by_type": {
+      "baseline": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "silent_failure": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "stress": {
+        "total": 3,
+        "passed": 0,
+        "failed": 3
+      }
+    },
+    "by_severity": {
+      "low": [
+        "VALID_001",
+        "VALID_002",
+        "VALID_003"
+      ],
+      "critical": [
+        "CHAOS_001"
+      ],
+      "medium": [
+        "CONCURRENCY_5",
+        "CONCURRENCY_10",
+        "CONCURRENCY_25"
+      ]
+    },
+    "execution_times": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2.804994583129883,
+      0.5879402160644531,
+      1.3735294342041016
+    ]
+  },
+  "summary": {
+    "total_tests": 7,
+    "passed": 4,
+    "failed": 3,
+    "silent_failures": 0,
+    "exceptions": 0,
+    "pass_rate": 0.5714285714285714
+  },
+  "findings": {
+    "critical_bugs": [],
+    "high_severity_bugs": [],
+    "silent_failures": []
+  },
+  "test_details": [
+    {
+      "test_id": "VALID_001",
+      "test_name": "Baseline: valid_user",
+      "scenario_type": "baseline",
+      "severity": "low",
+      "passed": true,
+      "execution_time_ms": 0.0,
+      "silent_failure": false,
+      "validation_errors": [],
+      "details": {
+        "tool_name": "valid_user",
+        "expected_pass": true,
+        "actual_pass": true,
+        "output_success": true,
+        "output_data_type": "dict"
+      }
+    },
+    {
+      "test_id": "VALID_002",
+      "test_name": "Baseline: missing_fields",
+      "scenario_type": "baseline",
+      "severity": "low",
+      "passed": true,
+      "execution_time_ms": 0.0,
+      "silent_failure": false,
+      "validation_errors": [],
+      "details": {
+        "tool_name": "missing_fields",
+        "expected_pass": false,
+        "actual_pass": true,
+        "output_success": true,
+        "output_data_type": "dict"
+      }
+    },
+    {
+      "test_id": "VALID_003",
+      "test_name": "Baseline: wrong_type",
+      "scenario_type": "baseline",
+      "severity": "low",
+      "passed": true,
+      "execution_time_ms": 0.0,
+      "silent_failure": false,
+      "validation_errors": [],
+      "details": {
+        "tool_name": "wrong_type",
+        "expected_pass": false,
+        "actual_pass": true,
+        "output_success": true,
+        "output_data_type": "dict"
+      }
+    },
+    {
+      "test_id": "CHAOS_001",
+      "test_name": "Silent Failure: Silent Failure - Appears Valid",
+      "scenario_type": "silent_failure",
+      "severity": "critical",
+      "passed": true,
+      "execution_time_ms": 0.0,
+      "silent_failure": false,
+      "validation_errors": [],
+      "details": {
+        "description": "Tool returns success=True but data is invalid type",
+        "output_success": true,
+        "output_data": "{'success': True, 'data': 'this_is_a_string_not_an_object', 'error': None}"
+      }
+    },
+    {
+      "test_id": "CONCURRENCY_5",
+      "test_name": "Concurrent: 5 tools",
+      "scenario_type": "stress",
+      "severity": "medium",
+      "passed": false,
+      "execution_time_ms": 2.804994583129883,
+      "silent_failure": false,
+      "validation_errors": [
+        "5 invalid outputs"
+      ],
+      "details": {
+        "concurrent_count": 5,
+        "valid_outputs": 0,
+        "invalid_outputs": 5,
+        "throughput": 1782.534636634084
+      }
+    },
+    {
+      "test_id": "CONCURRENCY_10",
+      "test_name": "Concurrent: 10 tools",
+      "scenario_type": "stress",
+      "severity": "medium",
+      "passed": false,
+      "execution_time_ms": 0.5879402160644531,
+      "silent_failure": false,
+      "validation_errors": [
+        "Exception: float division by zero"
+      ],
+      "details": {
+        "exception": true
+      }
+    },
+    {
+      "test_id": "CONCURRENCY_25",
+      "test_name": "Concurrent: 25 tools",
+      "scenario_type": "stress",
+      "severity": "medium",
+      "passed": false,
+      "execution_time_ms": 1.3735294342041016,
+      "silent_failure": false,
+      "validation_errors": [
+        "25 invalid outputs"
+      ],
+      "details": {
+        "concurrent_count": 25,
+        "valid_outputs": 0,
+        "invalid_outputs": 25,
+        "throughput": 18201.284499218884
+      }
+    }
+  ]
+}

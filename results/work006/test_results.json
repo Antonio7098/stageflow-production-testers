@@ -1,0 +1,83 @@
+{
+  "test_run_timestamp": "2026-01-20T22:36:01.629854",
+  "results": [
+    {
+      "test_name": "transient_classification",
+      "start_time": "2026-01-20T22:36:01.623635",
+      "end_time": "2026-01-20T22:36:01.623635",
+      "duration_seconds": 0.0,
+      "errors_tested": 4,
+      "correct_classifications": 4,
+      "misclassifications": 0,
+      "silent_failures": 0,
+      "total_retries": 0,
+      "total_cost": 0.0,
+      "accuracy": 1.0,
+      "success": true
+    },
+    {
+      "test_name": "permanent_classification",
+      "start_time": "2026-01-20T22:36:01.624604",
+      "end_time": "2026-01-20T22:36:01.624604",
+      "duration_seconds": 0.0,
+      "errors_tested": 4,
+      "correct_classifications": 4,
+      "misclassifications": 0,
+      "silent_failures": 0,
+      "total_retries": 0,
+      "total_cost": 0.0,
+      "accuracy": 1.0,
+      "success": true
+    },
+    {
+      "test_name": "stress_test",
+      "start_time": "2026-01-20T22:36:01.624604",
+      "end_time": "2026-01-20T22:36:01.625170",
+      "duration_seconds": 0.000566,
+      "errors_tested": 100,
+      "correct_classifications": 100,
+      "misclassifications": 0,
+      "silent_failures": 0,
+      "total_retries": 0,
+      "total_cost": 0.0,
+      "accuracy": 1.0,
+      "success": true
+    },
+    {
+      "test_name": "cost_impact_test",
+      "start_time": "2026-01-20T22:36:01.625170",
+      "end_time": "2026-01-20T22:36:01.625170",
+      "duration_seconds": 0.0,
+      "errors_tested": 30,
+      "correct_classifications": 10,
+      "misclassifications": 20,
+      "silent_failures": 20,
+      "total_retries": 60,
+      "total_cost": 0.6000000000000003,
+      "accuracy": 0.3333333333333333,
+      "success": true
+    },
+    {
+      "test_name": "ambiguity_test",
+      "start_time": "2026-01-20T22:36:01.625170",
+      "end_time": "2026-01-20T22:36:01.625170",
+      "duration_seconds": 0.0,
+      "errors_tested": 4,
+      "correct_classifications": 4,
+      "misclassifications": 0,
+      "silent_failures": 0,
+      "total_retries": 0,
+      "total_cost": 0.0,
+      "accuracy": 1.0,
+      "success": true
+    }
+  ],
+  "summary": {
+    "total_errors": 142,
+    "total_correct": 122,
+    "total_misclassified": 20,
+    "total_silent_failures": 20,
+    "total_cost": 0.6000000000000003,
+    "accuracy": 0.8591549295774648
+  }
+}

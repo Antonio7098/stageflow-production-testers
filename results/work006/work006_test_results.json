@@ -1,0 +1,816 @@
+{
+  "test_type": "baseline",
+  "results": [
+    {
+      "test_name": "baseline_transient",
+      "start_time": "2026-01-20T22:33:09.877378",
+      "end_time": "2026-01-20T22:33:09.879241",
+      "duration_seconds": 0.001863,
+      "stages_executed": 0,
+      "errors_encountered": [
+        {
+          "error": "create_stage_context() missing 3 required positional arguments: 'inputs', 'stage_name', and 'timer'",
+          "type": "test_execution_error"
+        }
+      ],
+      "errors_classified_correctly": 0,
+      "errors_misclassified": 0,
+      "silent_failures": [],
+      "total_retries": 0,
+      "total_cost_estimate": 0.0,
+      "success": false,
+      "classification_accuracy": 0.0
+    },
+    {
+      "test_name": "baseline_permanent",
+      "start_time": "2026-01-20T22:33:09.879241",
+      "end_time": "2026-01-20T22:33:09.880206",
+      "duration_seconds": 0.000965,
+      "stages_executed": 0,
+      "errors_encountered": [
+        {
+          "error": "create_stage_context() missing 3 required positional arguments: 'inputs', 'stage_name', and 'timer'",
+          "type": "test_execution_error"
+        }
+      ],
+      "errors_classified_correctly": 0,
+      "errors_misclassified": 0,
+      "silent_failures": [],
+      "total_retries": 0,
+      "total_cost_estimate": 0.0,
+      "success": false,
+      "classification_accuracy": 0.0
+    },
+    {
+      "test_name": "stress_mixed",
+      "start_time": "2026-01-20T22:33:09.880206",
+      "end_time": "2026-01-20T22:33:09.880206",
+      "duration_seconds": 0.0,
+      "stages_executed": 0,
+      "errors_encountered": [
+        {
+          "category": "transient",
+          "severity": "medium",
+          "message": "openai request timed out after 30s",
+          "error_code": "TIMEOUT",
+          "http_status": 504,
+          "provider": "openai",
+          "retryable": true,
+          "retry_after_ms": 1000,
+          "expected_recovery": "retry",
+          "metadata": {
+            "timeout_ms": 30000,
+            "attempt": 1
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "medium",
+          "message": "openai request timed out after 30s",
+          "error_code": "TIMEOUT",
+          "http_status": 504,
+          "provider": "openai",
+          "retryable": true,
+          "retry_after_ms": 1000,
+          "expected_recovery": "retry",
+          "metadata": {
+            "timeout_ms": 30000,
+            "attempt": 1
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Stream interrupted before completion",
+          "error_code": "STREAM_INTERRUPTED",
+          "http_status": null,
+          "provider": "groq",
+          "retryable": true,
+          "retry_after_ms": 1000,
+          "expected_recovery": "retry",
+          "metadata": {
+            "bytes_received": 3461,
+            "expected_bytes": 37899
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Stream interrupted before completion",
+          "error_code": "STREAM_INTERRUPTED",
+          "http_status": null,
+          "provider": "groq",
+          "retryable": true,
+          "retry_after_ms": 1000,
+          "expected_recovery": "retry",
+          "metadata": {
+            "bytes_received": 3461,
+            "expected_bytes": 37899
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "medium",
+          "message": "document not found",
+          "error_code": "NOT_FOUND",
+          "http_status": 404,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "resource_type": "document"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Stream interrupted before completion",
+          "error_code": "STREAM_INTERRUPTED",
+          "http_status": null,
+          "provider": "groq",
+          "retryable": true,
+          "retry_after_ms": 1000,
+          "expected_recovery": "retry",
+          "metadata": {
+            "bytes_received": 3461,
+            "expected_bytes": 37899
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "high",
+          "message": "Rate limit exceeded. Retry after 4738ms",
+          "error_code": "RATE_LIMITED",
+          "http_status": 429,
+          "provider": "openai",
+          "retryable": true,
+          "retry_after_ms": 4738,
+          "expected_recovery": "defer",
+          "metadata": {
+            "limit_type": "rpm",
+            "current_usage": 80,
+            "retry_after_ms": 4738
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Connection reset by peer",
+          "error_code": "NETWORK_ERROR",
+          "http_status": null,
+          "provider": "network",
+          "retryable": true,
+          "retry_after_ms": 500,
+          "expected_recovery": "retry",
+          "metadata": {
+            "error_type": "ConnectionResetError"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "high",
+          "message": "Malformed request: missing required field 'messages'",
+          "error_code": "INVALID_REQUEST",
+          "http_status": 400,
+          "provider": "groq",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "field": "messages",
+            "validation_error": "required field missing"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Connection reset by peer",
+          "error_code": "NETWORK_ERROR",
+          "http_status": null,
+          "provider": "network",
+          "retryable": true,
+          "retry_after_ms": 500,
+          "expected_recovery": "retry",
+          "metadata": {
+            "error_type": "ConnectionResetError"
+          }
+        },
+        {
+          "category": "policy",
+          "severity": "high",
+          "message": "Permission denied: cannot read",
+          "error_code": "FORBIDDEN",
+          "http_status": 403,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "escalate",
+          "metadata": {
+            "action": "read",
+            "required_permission": "admin"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "critical",
+          "message": "Invalid API key provided",
+          "error_code": "UNAUTHORIZED",
+          "http_status": 401,
+          "provider": "openai",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "auth_method": "bearer"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "medium",
+          "message": "document not found",
+          "error_code": "NOT_FOUND",
+          "http_status": 404,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "resource_type": "document"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Connection reset by peer",
+          "error_code": "NETWORK_ERROR",
+          "http_status": null,
+          "provider": "network",
+          "retryable": true,
+          "retry_after_ms": 500,
+          "expected_recovery": "retry",
+          "metadata": {
+            "error_type": "ConnectionResetError"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "high",
+          "message": "groq model overloaded, system at capacity",
+          "error_code": "MODEL_OVERLOADED",
+          "http_status": 503,
+          "provider": "groq",
+          "retryable": true,
+          "retry_after_ms": 5000,
+          "expected_recovery": "defer",
+          "metadata": {
+            "model": "llama-3.1-8b-instant",
+            "queue_depth": 57
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "medium",
+          "message": "document not found",
+          "error_code": "NOT_FOUND",
+          "http_status": 404,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "resource_type": "document"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "high",
+          "message": "groq model overloaded, system at capacity",
+          "error_code": "MODEL_OVERLOADED",
+          "http_status": 503,
+          "provider": "groq",
+          "retryable": true,
+          "retry_after_ms": 5000,
+          "expected_recovery": "defer",
+          "metadata": {
+            "model": "llama-3.1-8b-instant",
+            "queue_depth": 57
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "high",
+          "message": "Rate limit exceeded. Retry after 2070ms",
+          "error_code": "RATE_LIMITED",
+          "http_status": 429,
+          "provider": "openai",
+          "retryable": true,
+          "retry_after_ms": 2070,
+          "expected_recovery": "defer",
+          "metadata": {
+            "limit_type": "rpm",
+            "current_usage": 85,
+            "retry_after_ms": 2070
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Stream interrupted before completion",
+          "error_code": "STREAM_INTERRUPTED",
+          "http_status": null,
+          "provider": "groq",
+          "retryable": true,
+          "retry_after_ms": 1000,
+          "expected_recovery": "retry",
+          "metadata": {
+            "bytes_received": 3461,
+            "expected_bytes": 37899
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "critical",
+          "message": "Invalid API key provided",
+          "error_code": "UNAUTHORIZED",
+          "http_status": 401,
+          "provider": "openai",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "auth_method": "bearer"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "medium",
+          "message": "document not found",
+          "error_code": "NOT_FOUND",
+          "http_status": 404,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "resource_type": "document"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Connection reset by peer",
+          "error_code": "NETWORK_ERROR",
+          "http_status": null,
+          "provider": "network",
+          "retryable": true,
+          "retry_after_ms": 500,
+          "expected_recovery": "retry",
+          "metadata": {
+            "error_type": "ConnectionResetError"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "high",
+          "message": "Malformed request: missing required field 'messages'",
+          "error_code": "INVALID_REQUEST",
+          "http_status": 400,
+          "provider": "groq",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "field": "messages",
+            "validation_error": "required field missing"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Stream interrupted before completion",
+          "error_code": "STREAM_INTERRUPTED",
+          "http_status": null,
+          "provider": "groq",
+          "retryable": true,
+          "retry_after_ms": 1000,
+          "expected_recovery": "retry",
+          "metadata": {
+            "bytes_received": 3461,
+            "expected_bytes": 37899
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "medium",
+          "message": "document not found",
+          "error_code": "NOT_FOUND",
+          "http_status": 404,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "resource_type": "document"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "high",
+          "message": "Malformed request: missing required field 'messages'",
+          "error_code": "INVALID_REQUEST",
+          "http_status": 400,
+          "provider": "groq",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "field": "messages",
+            "validation_error": "required field missing"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "medium",
+          "message": "document not found",
+          "error_code": "NOT_FOUND",
+          "http_status": 404,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "resource_type": "document"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "high",
+          "message": "Malformed request: missing required field 'messages'",
+          "error_code": "INVALID_REQUEST",
+          "http_status": 400,
+          "provider": "groq",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "field": "messages",
+            "validation_error": "required field missing"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "medium",
+          "message": "document not found",
+          "error_code": "NOT_FOUND",
+          "http_status": 404,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "resource_type": "document"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Stream interrupted before completion",
+          "error_code": "STREAM_INTERRUPTED",
+          "http_status": null,
+          "provider": "groq",
+          "retryable": true,
+          "retry_after_ms": 1000,
+          "expected_recovery": "retry",
+          "metadata": {
+            "bytes_received": 3461,
+            "expected_bytes": 37899
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Stream interrupted before completion",
+          "error_code": "STREAM_INTERRUPTED",
+          "http_status": null,
+          "provider": "groq",
+          "retryable": true,
+          "retry_after_ms": 1000,
+          "expected_recovery": "retry",
+          "metadata": {
+            "bytes_received": 3461,
+            "expected_bytes": 37899
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "critical",
+          "message": "Invalid API key provided",
+          "error_code": "UNAUTHORIZED",
+          "http_status": 401,
+          "provider": "openai",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "auth_method": "bearer"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "high",
+          "message": "Rate limit exceeded. Retry after 3168ms",
+          "error_code": "RATE_LIMITED",
+          "http_status": 429,
+          "provider": "openai",
+          "retryable": true,
+          "retry_after_ms": 3168,
+          "expected_recovery": "defer",
+          "metadata": {
+            "limit_type": "rpm",
+            "current_usage": 94,
+            "retry_after_ms": 3168
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Connection reset by peer",
+          "error_code": "NETWORK_ERROR",
+          "http_status": null,
+          "provider": "network",
+          "retryable": true,
+          "retry_after_ms": 500,
+          "expected_recovery": "retry",
+          "metadata": {
+            "error_type": "ConnectionResetError"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Connection reset by peer",
+          "error_code": "NETWORK_ERROR",
+          "http_status": null,
+          "provider": "network",
+          "retryable": true,
+          "retry_after_ms": 500,
+          "expected_recovery": "retry",
+          "metadata": {
+            "error_type": "ConnectionResetError"
+          }
+        },
+        {
+          "category": "policy",
+          "severity": "high",
+          "message": "Permission denied: cannot read",
+          "error_code": "FORBIDDEN",
+          "http_status": 403,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "escalate",
+          "metadata": {
+            "action": "read",
+            "required_permission": "admin"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "high",
+          "message": "groq model overloaded, system at capacity",
+          "error_code": "MODEL_OVERLOADED",
+          "http_status": 503,
+          "provider": "groq",
+          "retryable": true,
+          "retry_after_ms": 5000,
+          "expected_recovery": "defer",
+          "metadata": {
+            "model": "llama-3.1-8b-instant",
+            "queue_depth": 57
+          }
+        },
+        {
+          "category": "policy",
+          "severity": "high",
+          "message": "Permission denied: cannot read",
+          "error_code": "FORBIDDEN",
+          "http_status": 403,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "escalate",
+          "metadata": {
+            "action": "read",
+            "required_permission": "admin"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Connection reset by peer",
+          "error_code": "NETWORK_ERROR",
+          "http_status": null,
+          "provider": "network",
+          "retryable": true,
+          "retry_after_ms": 500,
+          "expected_recovery": "retry",
+          "metadata": {
+            "error_type": "ConnectionResetError"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "medium",
+          "message": "document not found",
+          "error_code": "NOT_FOUND",
+          "http_status": 404,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "resource_type": "document"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "high",
+          "message": "Rate limit exceeded. Retry after 2572ms",
+          "error_code": "RATE_LIMITED",
+          "http_status": 429,
+          "provider": "openai",
+          "retryable": true,
+          "retry_after_ms": 2572,
+          "expected_recovery": "defer",
+          "metadata": {
+            "limit_type": "rpm",
+            "current_usage": 80,
+            "retry_after_ms": 2572
+          }
+        },
+        {
+          "category": "policy",
+          "severity": "high",
+          "message": "Permission denied: cannot read",
+          "error_code": "FORBIDDEN",
+          "http_status": 403,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "escalate",
+          "metadata": {
+            "action": "read",
+            "required_permission": "admin"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "high",
+          "message": "Malformed request: missing required field 'messages'",
+          "error_code": "INVALID_REQUEST",
+          "http_status": 400,
+          "provider": "groq",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "field": "messages",
+            "validation_error": "required field missing"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "medium",
+          "message": "document not found",
+          "error_code": "NOT_FOUND",
+          "http_status": 404,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "resource_type": "document"
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "high",
+          "message": "Malformed request: missing required field 'messages'",
+          "error_code": "INVALID_REQUEST",
+          "http_status": 400,
+          "provider": "groq",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "field": "messages",
+            "validation_error": "required field missing"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "medium",
+          "message": "openai request timed out after 30s",
+          "error_code": "TIMEOUT",
+          "http_status": 504,
+          "provider": "openai",
+          "retryable": true,
+          "retry_after_ms": 1000,
+          "expected_recovery": "retry",
+          "metadata": {
+            "timeout_ms": 30000,
+            "attempt": 1
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "medium",
+          "message": "document not found",
+          "error_code": "NOT_FOUND",
+          "http_status": 404,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "resource_type": "document"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "low",
+          "message": "Connection reset by peer",
+          "error_code": "NETWORK_ERROR",
+          "http_status": null,
+          "provider": "network",
+          "retryable": true,
+          "retry_after_ms": 500,
+          "expected_recovery": "retry",
+          "metadata": {
+            "error_type": "ConnectionResetError"
+          }
+        },
+        {
+          "category": "transient",
+          "severity": "high",
+          "message": "Rate limit exceeded. Retry after 3253ms",
+          "error_code": "RATE_LIMITED",
+          "http_status": 429,
+          "provider": "openai",
+          "retryable": true,
+          "retry_after_ms": 3253,
+          "expected_recovery": "defer",
+          "metadata": {
+            "limit_type": "rpm",
+            "current_usage": 91,
+            "retry_after_ms": 3253
+          }
+        },
+        {
+          "category": "permanent",
+          "severity": "medium",
+          "message": "document not found",
+          "error_code": "NOT_FOUND",
+          "http_status": 404,
+          "provider": "internal",
+          "retryable": false,
+          "retry_after_ms": null,
+          "expected_recovery": "no_retry",
+          "metadata": {
+            "resource_type": "document"
+          }
+        }
+      ],
+      "errors_classified_correctly": 46,
+      "errors_misclassified": 4,
+      "silent_failures": [],
+      "total_retries": 0,
+      "total_cost_estimate": 0.08,
+      "success": true,
+      "classification_accuracy": 0.92
+    },
+    {
+      "test_name": "cost_impact",
+      "start_time": "2026-01-20T22:33:09.880206",
+      "end_time": "2026-01-20T22:33:09.881237",
+      "duration_seconds": 0.001031,
+      "stages_executed": 0,
+      "errors_encountered": [],
+      "errors_classified_correctly": 0,
+      "errors_misclassified": 0,
+      "silent_failures": [],
+      "total_retries": 0,
+      "total_cost_estimate": 0.0,
+      "success": false,
+      "classification_accuracy": 0.0
+    }
+  ],
+  "summary": {
+    "total_tests": 4,
+    "total_errors": 52,
+    "total_correct": 46,
+    "total_misclassified": 4,
+    "total_cost": 0.08
+  }
+}

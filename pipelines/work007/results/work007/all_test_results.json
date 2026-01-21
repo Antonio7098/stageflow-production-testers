@@ -1,0 +1,111 @@
+{
+  "summary": {
+    "total_tests": 7,
+    "passed": 7,
+    "failed": 0,
+    "total_duration_ms": 13215.569019317627
+  },
+  "results": [
+    {
+      "test_name": "slow_tool_timeout",
+      "timeout_ms": 2000,
+      "success": true,
+      "execution_time_ms": 2001.1842250823975,
+      "details": {
+        "execution_time_ms": 2001.1842250823975,
+        "timeout_occurred": true,
+        "error": null,
+        "expected_timeout": true
+      }
+    },
+    {
+      "test_name": "partial_result_tool",
+      "timeout_ms": 2000,
+      "success": true,
+      "execution_time_ms": 2029.1516780853271,
+      "details": {
+        "timeout_occurred": true,
+        "partial_data_available": true,
+        "partial_delay_ms": 500
+      }
+    },
+    {
+      "test_name": "streaming_tool_timeout",
+      "timeout_ms": 2000,
+      "success": true,
+      "execution_time_ms": 2018.6667442321777,
+      "details": {
+        "timeout_occurred": true,
+        "chunks_received": 0,
+        "total_chunks": 20,
+        "completion_rate": 0.0
+      }
+    },
+    {
+      "test_name": "concurrent_timeout",
+      "timeout_ms": 3000,
+      "success": true,
+      "execution_time_ms": 3016.92795753479,
+      "details": {
+        "num_tools": 20,
+        "successful_count": 0,
+        "timed_out_count": 20,
+        "success_rate": 0.0,
+        "all_timed_out": true
+      }
+    },
+    {
+      "test_name": "resource_cleanup",
+      "timeout_ms": 2000,
+      "success": true,
+      "execution_time_ms": 2018.9874172210693,
+      "details": {
+        "num_tools": 30,
+        "successful_count": 0,
+        "timed_out_count": 30,
+        "cleanups_called": 1,
+        "cleanup_rate": 0.03333333333333333
+      }
+    },
+    {
+      "test_name": "async_generator_timeout",
+      "timeout_ms": 2000,
+      "success": true,
+      "execution_time_ms": 2014.3258571624756,
+      "details": {
+        "items_collected": 4,
+        "expected_items": 5,
+        "timeout_leaked": false
+      }
+    },
+    {
+      "test_name": "error_injection",
+      "timeout_ms": 3000,
+      "success": true,
+      "execution_time_ms": 101.09686851501465,
+      "details": {
+        "total_tests": 3,
+        "results": [
+          {
+            "error_type": "none",
+            "timeout_occurred": false,
+            "tool_error": null,
+            "execution_time_ms": 0.0
+          },
+          {
+            "error_type": "timeout",
+            "timeout_occurred": true,
+            "tool_error": null,
+            "execution_time_ms": 0.0
+          },
+          {
+            "error_type": "connection",
+            "timeout_occurred": false,
+            "tool_error": "Simulated connection error",
+            "execution_time_ms": 100.06904602050781
+          }
+        ]
+      }
+    }
+  ]
+}

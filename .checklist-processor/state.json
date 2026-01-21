@@ -1,40 +1,10 @@
 {
   "active": true,
-  "currentBatch": 15,
-  "totalBatches": 260,
-  "itemsProcessed": [
-    "ROUTE-003",
-    "ROUTE-004",
-    "ROUTE-005",
-    "ROUTE-006",
-    "ROUTE-007",
-    "GUARD-001",
-    "GUARD-002",
-    "GUARD-003",
-    "GUARD-004",
-    "GUARD-005",
-    "GUARD-006",
-    "GUARD-007",
-    "GUARD-008",
-    "GUARD-009"
-  ],
-  "itemsCompleted": [
-    "ROUTE-003",
-    "ROUTE-004",
-    "ROUTE-005",
-    "ROUTE-006",
-    "ROUTE-007",
-    "GUARD-001",
-    "GUARD-002",
-    "GUARD-003",
-    "GUARD-004",
-    "GUARD-005",
-    "GUARD-006",
-    "GUARD-007",
-    "GUARD-008",
-    "GUARD-009"
-  ],
+  "currentBatch": 0,
+  "totalBatches": 235,
+  "itemsProcessed": [],
+  "itemsCompleted": [],
   "itemsFailed": [],
-  "startedAt": "2026-01-20T17:08:13.817Z",
-  "lastCheckpoint": "2026-01-20T20:36:28.220Z"
+  "startedAt": "2026-01-21T10:55:19.343Z",
+  "lastCheckpoint": "2026-01-21T10:55:19.345Z"
 }
